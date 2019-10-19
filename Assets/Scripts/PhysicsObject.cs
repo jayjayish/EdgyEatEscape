@@ -26,7 +26,7 @@ public class PhysicsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // yes
     }
 
     void FixedUpdate()
@@ -45,7 +45,7 @@ public class PhysicsObject : MonoBehaviour
         float distance = move.magnitude;
         if (distance > minMoveDistance)
         {
-            
+
         }
         rb2d.position = rb2d.position + move;
     }
