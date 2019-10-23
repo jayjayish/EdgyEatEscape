@@ -68,6 +68,7 @@ public class DialogueProximity : MonoBehaviour
         if (inRange) {
             if (Input.GetButtonDown("Submit") && !talking)
             {
+                done = false;
                 Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
@@ -76,7 +77,8 @@ public class DialogueProximity : MonoBehaviour
             }
         }
 
-        if (done) {
+        if (done && talking) {
+            Object.Destroy(dialogueBoxInst);
             talking = false;
         }
         
