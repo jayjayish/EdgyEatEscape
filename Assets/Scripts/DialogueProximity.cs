@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DialogueProximity : MonoBehaviour
 {
-    //unique items
-    public string dialogue;
+    Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
+
+    //inputs for dialogue
+    public GameObject Portrait;
+    public string Name;
+    public string Dialogue;
+
+    //unique values for each character
     public float offX, offY;
 
     //exclamation point above head
-    public GameObject exclam;
-    private GameObject exclamInst;
+    public GameObject exclam; //Public reference
+    private GameObject exclamInst; //private clone
+
+    //dialogue Box
+    public GameObject dialogueBox; //public reference
+    private GameObject dialogueBoxInst; //private clone
 
     //control
     private bool talking;
@@ -18,6 +28,7 @@ public class DialogueProximity : MonoBehaviour
     private float rangeSquare;
     private bool inRange;
     private GameObject player;
+    private GameObject camera;
 
     //set for all objects that use this script
     private float range = 5.0f;
@@ -29,6 +40,7 @@ public class DialogueProximity : MonoBehaviour
         //set private variables
         rangeSquare = Mathf.Pow(range, 2);
         player = GameObject.FindGameObjectWithTag("Player");
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
         inRange = false;
         done = false;
         talking = false;
@@ -56,7 +68,10 @@ public class DialogueProximity : MonoBehaviour
         if (inRange) {
             if (Input.GetButtonDown("Submit") && !talking)
             {
-                Debug.Log(dialogue);
+                Debug.Log(Dialogue);
+                dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
+                dialogueBoxInst.transform.parent = camera.transform;
+                talking = true;
                 //done = dialogue play function
             }
         }
