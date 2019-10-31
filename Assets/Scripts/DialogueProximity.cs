@@ -19,8 +19,8 @@ public class DialogueProximity : MonoBehaviour
     private GameObject exclamInst; //private clone
 
     //dialogue Box
-    public GameObject dialogueBox; //public reference
-    private GameObject dialogueBoxInst; //private clone
+    public DialogueBox dialogueBox; //public reference
+    private DialogueBox dialogueBoxInst; //private clone
 
     //control
     private bool talking;
@@ -72,6 +72,7 @@ public class DialogueProximity : MonoBehaviour
                 Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
+                dialogueBoxInst.setDialogue(Dialogue);
                 talking = true;
                 //done = dialogue play function
             }

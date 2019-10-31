@@ -119,5 +119,5 @@ MonoBehaviour:
   offX: 0.1
   offY: 0.5
   exclam: {fileID: 2308769304944645822, guid: 3c06c45ddf7a7b04fbf039fb0905df75, type: 3}
-  dialogueBox: {fileID: 3962172672674027169, guid: b54865720dbb18d47ae28d17f72c53d3,
+  dialogueBox: {fileID: 4511431600369790456, guid: b54865720dbb18d47ae28d17f72c53d3,
     type: 3}

@@ -34,6 +34,7 @@ public class Dialogue : MonoBehaviour
     private string text = "";
 
     public void setText(string _text) {
+        Debug.Log("1 "+ _text);
         this.text = (string) _text.Clone();
     }
 
@@ -45,7 +46,7 @@ public class Dialogue : MonoBehaviour
         hanger = Instantiate(empty, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         words.transform.parent = hanger.transform;
         hanger.transform.parent = gameObject.transform;
-        Debug.Log(text);
+        Debug.Log("bruh " + text);
         int row = 0;
 
         while (index < text.Length && row <= rowY.Length)

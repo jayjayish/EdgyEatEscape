@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3962172672674027171}
   - component: {fileID: 3962172672674027168}
+  - component: {fileID: 4511431600369790456}
   m_Layer: 0
   m_Name: Generic Text Box
   m_TagString: Untagged
@@ -79,3 +80,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4511431600369790456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3962172672674027169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cea9df05c242648be32e3e92e9bf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 2541552540222844647, guid: 3641a13a8037ec84082743947117b351,
+    type: 3}
+  dialogueFin: 0
