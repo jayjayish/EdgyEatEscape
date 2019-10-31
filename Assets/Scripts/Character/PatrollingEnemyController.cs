@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PatrollingEnemyController : EnemyController
 {
+
     public float speed;
     public float distance;
 
-    public int counter = 0;
+    private int counter = 0;
 
     private bool movingRight = true;
 
-    public Transform RightGroundRay;
-    public Transform LeftGroundRay;
+    [SerializeField]
+    private Transform RightGroundRay;
+    [SerializeField]
+    private Transform LeftGroundRay;
 
-    void Update()
+    protected override void Update()
     {
         if (movingRight){
             targetVelocity = new Vector2(speed, 0f);

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PhysicsObject : MonoBehaviour
 {
-    public float minGroundNormalY = .65f;
-    public float gravityModifier = 1f;
+    [SerializeField]
+    protected float minGroundNormalY = .65f;
+    [SerializeField]
+    protected float gravityModifier = 1f;
 
     protected bool grounded;
     protected Vector2 groundNormal;
@@ -21,14 +23,14 @@ public class PhysicsObject : MonoBehaviour
     protected const float minMoveDistance = 0.001f;
     protected const float shellRadius = 0.01f;
 
-    void OnEnable()
+    protected virtual void OnEnable()
         //Stores a component reference
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         contactFilter.useTriggers = false; //Won't check collisions against triggers
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer)); 
@@ -36,19 +38,21 @@ public class PhysicsObject : MonoBehaviour
         contactFilter.useLayerMask = true;
     }
 
+    protected virtual void Awake()
+    {
+
+
+    }
+
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         targetVelocity = Vector2.zero; // zeros out velocity so we don't use velocity from previous frame
         ComputeVelocity ();
     }
 
-    protected virtual void ComputeVelocity() // no implentation in this class, but called in update
-    {
 
-    }
-
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime; //gravity
 
@@ -69,7 +73,7 @@ public class PhysicsObject : MonoBehaviour
         Movement(move, true); //vertical movement
     }
 
-    void Movement(Vector2 move, bool yMovement)
+    protected virtual void Movement(Vector2 move, bool yMovement)
         //Function for movement
     {
         float distance = move.magnitude; // "distance" is the distance we're attempting to move
@@ -114,5 +118,10 @@ public class PhysicsObject : MonoBehaviour
 
         }
         rb2d.position = rb2d.position + move.normalized * distance; 
+    }
+
+    protected virtual void ComputeVelocity() // no implentation in this class, but called in update
+    {
+
     }
 }
