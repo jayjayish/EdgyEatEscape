@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPlatformerController : PhysicsObject
+public class PlayerMovementController : CharacterController
 {
 
     public float maxSpeed = 7;
