@@ -1,0 +1,16 @@
+relative to generic text box
+text size 15
+
+row 0 -0.95, 0.03, -1
+row 1 -0.95, -0.07, -1
+row 2 -0.95, -0.17, -1
+
+25 chars max per row
+
+Space to the Next Letter
+1px -> 0.015
+2px -> 0.030
+3px -> 0.045
+4px -> 0.060
+5px -> 0.075
+6px -> 0.090
