@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtEnemy : MonoBehaviour
+public class HitboxManager : MonoBehaviour
 {
 
     public int damageToGive;
