@@ -14,6 +14,7 @@ public class PhysicsObject : MonoBehaviour
 
     protected Vector2 targetVelocity;
     protected Rigidbody2D rb2d;
+    protected BoxCollider2D box;
     protected Vector2 velocity;
     protected ContactFilter2D contactFilter;
     protected RaycastHit2D[] hitBuffer = new RaycastHit2D[16];
@@ -27,6 +28,7 @@ public class PhysicsObject : MonoBehaviour
         //Stores a component reference
     {
         rb2d = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -85,7 +87,7 @@ public class PhysicsObject : MonoBehaviour
          - this way our object is constantly checking for collisions if it's standing still 
         */
         {
-            int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
+            int count = box.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
             //checks if colliders in our rigidbody2d is going to overlap with anything
             // int count is the number of contacts that were made 
             hitBufferList.Clear();
