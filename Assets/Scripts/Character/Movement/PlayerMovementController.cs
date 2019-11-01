@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// This class is for all player movement including jumps, dashes, ducking etc.
+// If there are attacks that move the character, it will be in a seperate script
+
+
+
+
+
 public class PlayerMovementController : CharacterController
 {
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     protected override void ComputeVelocity()
     {
