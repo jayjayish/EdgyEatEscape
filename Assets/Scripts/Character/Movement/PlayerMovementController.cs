@@ -16,7 +16,7 @@ public class PlayerMovementController : CharacterController
     public float jumpTakeOffSpeed = 7;
 
     // constants for dash detection
-    public const float DOUBLE_PRESS_TIME = .25f;
+    public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
     private float lastRightTime = 0f;
 
