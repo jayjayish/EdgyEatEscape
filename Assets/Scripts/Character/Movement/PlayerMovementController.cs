@@ -9,7 +9,6 @@ using UnityEngine;
 
 
 
-
 public class PlayerMovementController : CharacterController
 {
 
@@ -20,6 +19,19 @@ public class PlayerMovementController : CharacterController
     Animator animator;
     private bool playerMoving;
     private float lastMoveX;
+
+    // constants for dash detection
+    public const float DOUBLE_PRESS_TIME = .20f;
+    private float lastLeftTime = 0f;
+    private float lastRightTime = 0f;
+
+    //dash time constants
+    private int dashDirection;
+    private const float dashMultiplier = 10f;
+    private int dashingRight;
+    private float dashTime;
+    public float dashSpeed;
+    public const float startDashTime = .1f;
 
     protected override void Start()
     {
@@ -51,9 +63,6 @@ public class PlayerMovementController : CharacterController
         {
             animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
         }
-
-
-       // animator.SetFloat("LastMoveX", targetVelocity.x); 
     }
 
     protected override void ComputeVelocity()
@@ -71,6 +80,62 @@ public class PlayerMovementController : CharacterController
             if (velocity.y > 0)
                 velocity.y = velocity.y * 0.5f;
         }
+
+        // detect dash
+
+        if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
+        {
+            float timesinceLastLeft = Time.time - lastLeftTime;
+
+            if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
+            {
+                dashDirection = -1;
+                dashTime = startDashTime;//timer for dash
+                Debug.Log("dashTime:" + dashTime);
+                Debug.Log("double left");//delta tiime
+            }
+            //Double click
+            else
+            {
+                //Normal Click
+                lastLeftTime = Time.time;
+                //Debug.Log("left clicked" + lastLeftTime);
+            }
+
+
+        }
+
+        if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
+        {
+            Debug.Log("DashRight");// checks for input
+
+            float timesinceLastRight = Time.time - lastRightTime;
+
+            if (timesinceLastRight <= DOUBLE_PRESS_TIME)
+            {
+                dashDirection = 1;
+                dashTime = startDashTime;//timer for dash
+                Debug.Log("dashTime:" + dashTime);
+
+                Debug.Log("double right");//debug delta time
+            }
+            //double click
+            else
+            {
+                //Normal Click
+                lastRightTime = Time.time;
+                //Debug.Log("right clicked" + lastRightTime);
+            }
+        }
+
+        if (dashTime > 0)
+        {
+            move.x = dashDirection * dashMultiplier;
+            dashTime -= Time.deltaTime; //Decrease time counter
+            //Debug.Log("dashTime:" + dashTime);
+        }
+
+
 
         targetVelocity = move * maxSpeed;
 
