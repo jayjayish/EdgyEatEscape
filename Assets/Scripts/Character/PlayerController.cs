@@ -9,7 +9,7 @@ using UnityEngine;
 
 
 
-public class PlayerMovementController : CharacterController
+public class PlayerController : CharacterController
 {
 
     public float maxSpeed = 7;
@@ -136,5 +136,21 @@ public class PlayerMovementController : CharacterController
         // for each input, set array element to inputted key
         // on end of combo, reset array
     }
+
+
+
+
+
+
+    /*
+     * 
+     * THE STYLE OF HOW TO SPAWN A HITBOX
+ private void SOME TYPE OF HITBOX()
+{
+    GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
+    hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
+}
+
+ */
 }
 
