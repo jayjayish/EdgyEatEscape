@@ -32,6 +32,7 @@ public class PlayerMovementController : CharacterController
     // 'h' for hardware and 's' for software
     private string[] comboExecuted;
     private float TriggerTime = 0f;
+    private float COMBO_TIME = 1.5f;
 
 
     protected override void ComputeVelocity()
@@ -119,12 +120,21 @@ public class PlayerMovementController : CharacterController
 
         // define key inputs
         // learn how arrays work, ask Amy lol
-        if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL"))
+        if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
         {
             float timesinceLastTrigger = Time.time - TriggerTime;
 
+            if (timesinceLastTrigger <= COMBO_TIME)
+            {
+                Debug.Log("Triggered");
 
 
+            }
+            else
+            {
+                //Start another combo attack
+                timesinceLastTrigger = Time.time;
+            }
             Debug.Log("Triggered"); //checks for which attack key is pressed
 
         }
