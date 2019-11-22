@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitboxController : MonoBehaviour
+public class HitboxController : IPooledObject
 {
     [SerializeField] protected float damage;
 
@@ -13,14 +13,21 @@ public class HitboxController : MonoBehaviour
 
     protected float frames;
     protected bool isActive; //hitbox is active or not
+    GameObject hitbox;
 
     protected string[] listofObstacleTags = {Tags.ENEMY};
 
 
-    protected virtual void Awake()
+    public void OnObjectSpawn()
     {
         frames = 0;
-        isActive = false;        
+        isActive = false;
+    }
+
+
+    protected virtual void Awake()
+    {
+   
     }
 
     protected virtual void Update()
@@ -47,8 +54,7 @@ public class HitboxController : MonoBehaviour
         }
         else
         {
-            //attack is finished
-            //set character to inactive
+            hitbox.SetActive(false); //This may cause bug
         }
 
 
@@ -87,7 +93,7 @@ public class HitboxController : MonoBehaviour
 
 
 
-    
+
 
 
 
