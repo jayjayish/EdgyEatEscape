@@ -28,6 +28,11 @@ public class PlayerMovementController : CharacterController
     public float dashSpeed;
     public const float startDashTime = .1f;
 
+    //combo array
+    // 'h' for hardware and 's' for software
+    private string[] comboExecuted;
+    private float TriggerTime = 0f;
+
 
     protected override void ComputeVelocity()
     {
@@ -104,4 +109,32 @@ public class PlayerMovementController : CharacterController
         targetVelocity = move * maxSpeed;
 
     }
+
+    // detect combo input
+    protected virtual void detectCombo()
+    {
+        // just use Debug.Log to indicate what was pressed and what "combo" was execcuted
+        comboExecuted[0] = "yes";
+        //just detect combo sequence input, check key clicks in timing
+
+        // define key inputs
+        // learn how arrays work, ask Amy lol
+        if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL"))
+        {
+            float timesinceLastTrigger = Time.time - TriggerTime;
+
+
+
+            Debug.Log("Triggered"); //checks for which attack key is pressed
+
+        }
+        // check initial attack key
+        // set timing
+        // check next key
+        // repeat for up to 6 keys
+
+        // for each input, set array element to inputted key
+        // on end of combo, reset array
+    }
 }
+
