@@ -16,7 +16,7 @@ public class HitboxPooler : MonoBehaviour {
     }
 
     #region Singleton
-    public static ObjectPooler Instance;
+    public static HitboxPooler Instance;
 
     private void Awake()
     {
@@ -35,13 +35,9 @@ public class HitboxPooler : MonoBehaviour {
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
 
-            for (int i = 0; i < pool.size; i++)
-            {
-                GameObject obj = Instantiate(pool.prefab);
-                obj.SetActive(false);
-                objectPool.Enqueue(obj);
-            }
-
+            GameObject obj = Instantiate(pool.prefab);
+            obj.SetActive(false);
+            objectPool.Enqueue(obj);
             poolDictionary.Add(pool.tag,  objectPool);
         }
 	}
