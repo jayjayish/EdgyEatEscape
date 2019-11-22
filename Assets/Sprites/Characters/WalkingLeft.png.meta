@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 57d1cebf188dc374fa1f667d0e0cbb1f
+guid: 0bc89ad9ab963a648b045ceec2f92bea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2987179049035696926
-    second: walking_0
+      213: -1535948673906825851
+    second: WalkingLeft_0
   - first:
-      213: -4154626181522259262
-    second: walking_1
+      213: 1332348189550758880
+    second: WalkingLeft_1
   - first:
-      213: -7423615830899905516
-    second: walking_2
+      213: 1030117702665322244
+    second: WalkingLeft_2
   - first:
-      213: 4036955197636849006
-    second: walking_3
+      213: 8227008933381841998
+    second: WalkingLeft_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -53,7 +53,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_0
+      name: WalkingLeft_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5af966df633ad843aefa0a2938377e3
-      internalID: -2987179049035696926
+      spriteID: 9196e4e6afffe554cac083a40c96ecf2
+      internalID: -1535948673906825851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_1
+      name: WalkingLeft_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 39
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7144d1556e8097e469d82d6ae0209c48
-      internalID: -4154626181522259262
+      spriteID: 344a70a764fd9074da28bc9bd14b4e37
+      internalID: 1332348189550758880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_2
+      name: WalkingLeft_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 71
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37efff56d8618824a8c54bc2ccd6b60a
-      internalID: -7423615830899905516
+      spriteID: 68a87bc8093c5a9428846b39b7db6169
+      internalID: 1030117702665322244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_3
+      name: WalkingLeft_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 103
         y: 0
-        width: 32
-        height: 32
+        width: 21
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81597f0496f204d46851552b0896158e
-      internalID: 4036955197636849006
+      spriteID: 83c22665572a1cc49b4d34d67a8bdec0
+      internalID: 8227008933381841998
       vertices: []
       indices: 
       edges: []
@@ -193,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1acc46c622772544db31bcdc1588bd1b
+    spriteID: c9d75af99793f554cb4bda63883753ee
     internalID: 0
     vertices: []
     indices: 

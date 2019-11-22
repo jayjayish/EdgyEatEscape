@@ -15,6 +15,11 @@ public class PlayerController : CharacterController
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
+    // animation variables
+    Animator animator;
+    private bool playerMoving;
+    private float lastMoveX;
+
     // constants for dash detection
     public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
@@ -33,6 +38,37 @@ public class PlayerController : CharacterController
     private string[] comboExecuted;
     private float TriggerTime = 0f;
 
+    protected override void Start()
+    {
+        base.Start();
+        animator = GetComponent<Animator>();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        
+        //check if player is moving to set idle or moving animations
+        playerMoving = (targetVelocity.x != 0);
+
+
+        animator.SetFloat("Move X", targetVelocity.x);
+        animator.SetBool("PlayerMoving", playerMoving);
+
+        if (targetVelocity.x > 0)
+        {
+            animator.SetFloat("LastMoveX", 1f);
+
+        }
+        else if (targetVelocity.x < 0)
+        {
+            animator.SetFloat("LastMoveX", -1f);
+        }
+        else
+        {
+            animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
+        }
+    }
 
     protected override void ComputeVelocity()
     {
