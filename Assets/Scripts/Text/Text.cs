@@ -23,13 +23,13 @@ public class Text : MonoBehaviour
         y = initY;
         string text = (string) _text.Clone();
         text = text.ToUpper();
-        //Debug.Log(text);
+        Debug.Log(text);
         
         for (int i = 0; i < text.Length; i++) {
             if (text[i] != ' ')
             {
                 //printing letter
-                //Debug.Log("Letter = " + text[i]);
+                Debug.Log("Letter = " + text[i]);
                 GameObject letter = Instantiate((GameObject)letters.letters[(char)text[i]], new Vector3(x, y, z), Quaternion.identity);
                 letter.transform.parent = gameObject.transform;
 

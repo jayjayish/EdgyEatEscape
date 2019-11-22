@@ -36,6 +36,7 @@ public class Dialogue : MonoBehaviour
     public void setText(string _text) {
         Debug.Log("1 "+ _text);
         this.text = (string) _text.Clone();
+        DialogueChain();
     }
 
     //bool returns if dialogue is finished
@@ -103,7 +104,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool touch = Input.GetMouseButtonDown(0);
+        bool touch = Input.GetButtonDown("Submit");
         if ((index < text.Length || !(line.Length == 0))&& !dialogueExists)
         {
             DialogueChain();
