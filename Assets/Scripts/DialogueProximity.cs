@@ -22,9 +22,13 @@ public class DialogueProximity : MonoBehaviour
     public DialogueBox dialogueBox; //public reference
     private DialogueBox dialogueBoxInst; //private clone
 
+    //Empty
+    public GameObject empty;
+    private GameObject hanger;
+
     //control
     private bool talking;
-    private bool done;
+    //private bool done;
     private float rangeSquare;
     private bool inRange;
     private GameObject player;
@@ -42,7 +46,7 @@ public class DialogueProximity : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindGameObjectWithTag("MainCamera");
         inRange = false;
-        done = false;
+        //done = false;
         talking = false;
     }
 
@@ -68,7 +72,7 @@ public class DialogueProximity : MonoBehaviour
         if (inRange) {
             if (Input.GetButtonDown("Submit") && !talking)
             {
-                done = false;
+                //done = false;
                 Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
@@ -78,9 +82,16 @@ public class DialogueProximity : MonoBehaviour
             }
         }
 
-        if (done && talking) {
-            Object.Destroy(dialogueBoxInst);
-            talking = false;
+        if (dialogueBoxInst != null)
+        {
+            if (dialogueBoxInst.dialogueFin && talking)
+            {
+                hanger = Instantiate(empty, new Vector3(), Quaternion.identity); 
+                dialogueBoxInst.transform.parent = hanger.transform;
+                Destroy(hanger);
+                talking = false;
+            }
+            //Object.Destroy(dialogueBoxInst);
         }
         
     }
