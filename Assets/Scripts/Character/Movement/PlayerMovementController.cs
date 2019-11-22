@@ -30,9 +30,12 @@ public class PlayerMovementController : CharacterController
 
     //combo array
     // 'h' for hardware and 's' for software
-    private string[] comboExecuted;
-    private float TriggerTime = 0f;
-    private float COMBO_TIME = 1.5f;
+    private List<string> comboExecuted = new List<string>();
+    private float lastTriggerTime = 0f;
+    private float COMBO_TIME = 0.3f;
+    private float TriggeredTime;
+    public const float startTriggerTime = 0f;
+    private int comboCount = 0;
 
 
     protected override void ComputeVelocity()
@@ -55,6 +58,8 @@ public class PlayerMovementController : CharacterController
 
         if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
         {
+            //Debug.Log("DashLeft");//checks for input
+
             float timesinceLastLeft = Time.time - lastLeftTime;
 
             if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
@@ -77,7 +82,7 @@ public class PlayerMovementController : CharacterController
 
         if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
         {
-            Debug.Log("DashRight");// checks for input
+            //Debug.Log("DashRight");// checks for input
 
             float timesinceLastRight = Time.time - lastRightTime;
 
@@ -105,6 +110,7 @@ public class PlayerMovementController : CharacterController
             //Debug.Log("dashTime:" + dashTime);
         }
 
+        detectCombo();
 
 
         targetVelocity = move * maxSpeed;
@@ -114,28 +120,43 @@ public class PlayerMovementController : CharacterController
     // detect combo input
     protected virtual void detectCombo()
     {
-        // just use Debug.Log to indicate what was pressed and what "combo" was execcuted
-        comboExecuted[0] = "yes";
-        //just detect combo sequence input, check key clicks in timing
+     
+        //comboExecuted.Insert(0, "yeet");
+       
 
-        // define key inputs
-        // learn how arrays work, ask Amy lol
         if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
         {
-            float timesinceLastTrigger = Time.time - TriggerTime;
+            //  Debug.Log("Triggered"); //checks for attack key input
+
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+
+            
 
             if (timesinceLastTrigger <= COMBO_TIME)
             {
-                Debug.Log("Triggered");
+                TriggeredTime = startTriggerTime;//timer for combo
+                comboCount++;
+
+                Debug.Log("combos:" + comboCount);
+
+                lastTriggerTime = Time.time;
 
 
             }
             else
             {
-                //Start another combo attack
-                timesinceLastTrigger = Time.time;
+
+                comboCount = 0;
+                Debug.Log("combos:" + comboCount);
+                lastTriggerTime = Time.time;
             }
-            Debug.Log("Triggered"); //checks for which attack key is pressed
+
+            
+
+            
+           
+
+
 
         }
         // check initial attack key
@@ -148,3 +169,8 @@ public class PlayerMovementController : CharacterController
     }
 }
 
+ //if (TriggeredTime > 0)
+            //{
+                //TriggeredTime -= Time.deltaTime;
+
+            //}
