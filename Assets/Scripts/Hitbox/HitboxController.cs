@@ -58,7 +58,7 @@ public class HitboxController : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D col) //check for collisions, aka dmg
     {
-        checkIfHitObject(col.tag)
+        checkIfHitObject(col.tag);
     }
 
 
@@ -69,21 +69,25 @@ public class HitboxController : MonoBehaviour
         {
             for (int i = 0; i < listofObstacleTags.Length; i++)
             {
-                if  (tag == listofObstacleTags[i])
+                if (tag == listofObstacleTags[i])
                 {
                     onHitObject();
                 }
 
             }
 
-           
+
         }
-
-        protected abstract void onHitObject(); //deal damage and other effects
-
-
-
     }
+
+
+    protected virtual void onHitObject() {
+        return;
+    } //deal damage and other effects
+
+
+
+    
 
 
 
