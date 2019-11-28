@@ -26,6 +26,10 @@ public class DialogueProximity : MonoBehaviour
     public GameObject empty;
     private GameObject hanger;
 
+    //text
+    public Text texter;
+    private Text nameTag;
+
     //control
     private bool talking;
     //private bool done;
@@ -76,6 +80,9 @@ public class DialogueProximity : MonoBehaviour
                 Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
+                nameTag = Instantiate(texter, camera.transform.position, Quaternion.identity);
+                nameTag.transform.parent = camera.transform;
+                nameTag.printer(Name, 0.0f, 0.0f, -5.0f);
                 dialogueBoxInst.setDialogue(Dialogue);
                 talking = true;
                 //done = dialogue play function
@@ -88,6 +95,7 @@ public class DialogueProximity : MonoBehaviour
             {
                 hanger = Instantiate(empty, new Vector3(), Quaternion.identity); 
                 dialogueBoxInst.transform.parent = hanger.transform;
+                nameTag.transform.parent = hanger.transform;
                 Destroy(hanger);
                 talking = false;
             }
