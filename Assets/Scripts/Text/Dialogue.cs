@@ -17,11 +17,11 @@ public class Dialogue : MonoBehaviour
 
     //variables
     //limit per textbox
-    private int limit = 25;
+    private int limit = 38;
 
     //locations
-    private float[] rowY = new float[3] { 0.03f, -0.07f, -0.17f };
-    private float rowX = -0.95f;
+    private float[] rowY = new float[4] { 0.4f, -0.3f, -1.0f, -1.7f };
+    private float rowX = -9.8f;
     private float rowZ = -1f;
 
     private bool dialogueExists;
@@ -43,14 +43,14 @@ public class Dialogue : MonoBehaviour
     private void DialogueChain() {
         //set variables and inst objects
         finished = false;
-        words = Instantiate(printer, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-        hanger = Instantiate(empty, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+        words = Instantiate(printer, gameObject.transform.position, Quaternion.identity);
+        hanger = Instantiate(empty, gameObject.transform.position, Quaternion.identity);
         words.transform.parent = hanger.transform;
         hanger.transform.parent = gameObject.transform;
         Debug.Log("bruh " + text);
         int row = 0;
 
-        while (index < text.Length && row <= rowY.Length)
+        while (index < text.Length && row < rowY.Length)
         {
 
             while (text[index] != ' ' && index < text.Length)
@@ -67,6 +67,7 @@ public class Dialogue : MonoBehaviour
             if (nextWord.Length + line.Length > limit)
             {
                 Debug.Log(line);
+                Debug.Log("Row = " + row);
                 words.printer(line, rowX, rowY[row], rowZ);
                 line = "" + nextWord;
                 if (line.Length > 0)
@@ -84,7 +85,7 @@ public class Dialogue : MonoBehaviour
             }
 
         }
-        if (line.Length > 0 && row <= rowY.Length)
+        if (line.Length > 0 && row < rowY.Length)
         {
             words.printer(line, rowX, rowY[row], rowZ);
             Debug.Log(line);

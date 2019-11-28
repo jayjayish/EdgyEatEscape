@@ -8,19 +8,21 @@ public class Text : MonoBehaviour
 
     private float x;
     private float y;
+    private float z;
     //each pixel is approximately 0.015f;
-    private float deltaX2 = 0.030f;
-    private float deltaX3 = 0.045f;
-    private float deltaX = 0.060f;
-    private float deltaX5 = 0.075f;
-    private float deltaX6 = 0.090f;
-    private float space = 0.030f;
+    private float deltaX2 = 0.2f;
+    private float deltaX3 = 0.3f;
+    private float deltaX = 0.4f;
+    private float deltaX5 = 0.5f;
+    private float deltaX6 = 0.6f;
+    private float space = 0.3f;
     
-    public void printer(string _text, float initX, float initY, float z)
+    public void printer(string _text, float initX, float initY, float initZ)
     {
         letters = GameObject.FindObjectOfType<Letters>();
-        x = initX;
-        y = initY;
+        x = initX + gameObject.transform.position.x;
+        y = initY + gameObject.transform.position.y;
+        z = initZ + gameObject.transform.position.z;
         string text = (string) _text.Clone();
         text = text.ToUpper();
         Debug.Log(text);
