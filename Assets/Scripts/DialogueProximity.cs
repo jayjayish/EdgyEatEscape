@@ -7,9 +7,12 @@ public class DialogueProximity : MonoBehaviour
     Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
 
     //inputs for dialogue
-    public GameObject Portrait;
     public string Name;
     public string Dialogue;
+
+    //portraits
+    public GameObject Portrait;
+    private GameObject PortraitInst;
 
     //unique values for each character
     public float offX, offY;
@@ -82,8 +85,10 @@ public class DialogueProximity : MonoBehaviour
                 dialogueBoxInst.transform.parent = camera.transform;
                 nameTag = Instantiate(texter, camera.transform.position, Quaternion.identity);
                 nameTag.transform.parent = camera.transform;
-                nameTag.printer(Name, 0.0f, 0.0f, -5.0f);
+                nameTag.printer(Name, -13.0f, -0.7f, 4.0f);
                 dialogueBoxInst.setDialogue(Dialogue);
+                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f, -3.3f, 4.0f), Quaternion.identity);
+                PortraitInst.transform.parent = camera.transform;
                 talking = true;
                 //done = dialogue play function
             }
@@ -93,7 +98,8 @@ public class DialogueProximity : MonoBehaviour
         {
             if (dialogueBoxInst.dialogueFin && talking)
             {
-                hanger = Instantiate(empty, new Vector3(), Quaternion.identity); 
+                hanger = Instantiate(empty, new Vector3(), Quaternion.identity);
+                PortraitInst.transform.parent = hanger.transform;
                 dialogueBoxInst.transform.parent = hanger.transform;
                 nameTag.transform.parent = hanger.transform;
                 Destroy(hanger);
