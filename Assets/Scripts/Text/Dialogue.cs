@@ -106,25 +106,25 @@ public class Dialogue : MonoBehaviour
             line = "";
         }
 
-        float aspect = Screen.width / Screen.height;
+        float aspect = (float)Screen.width / (float)Screen.height;
         //check aspect ratio
-        if (aspect >= 16 / 9)
+        if (aspect >= 16.0 / 9.0 - 0.01)
         {
             ratio = width9 / refWidth;
         }
-        else if (aspect >= 16 / 10)
+        else if (aspect >= 16.0 / 10.0 - 0.01)
         {
             ratio = width10 / refWidth;
         }
-        else if (aspect >= 3 / 2)
+        else if (aspect >= 3.0 / 2.0 - 0.01)
         {
             ratio = width3 / refWidth;
         }
-        else if (aspect >= 4 / 3)
+        else if (aspect >= 4.0 / 3.0 - 0.01)
         {
             ratio = width4 / refWidth;
         }
-        else if (aspect >= 5 / 4)
+        else if (aspect >= 5.0 / 4.0 - 0.01)
         {
             ratio = width5 / refWidth;
         }

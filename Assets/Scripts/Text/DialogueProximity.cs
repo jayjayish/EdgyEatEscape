@@ -63,29 +63,39 @@ public class DialogueProximity : MonoBehaviour
     void Start()
     {
         //set private variables
-        float aspect = Screen.width/Screen.height;
+        float aspect = (float)Screen.width / (float)Screen.height;
+        Debug.Log("width = " + Screen.width);
+        Debug.Log("height = " + Screen.height);
+        Debug.Log("aspect = " + aspect);
         //check aspect ratio
-        if (aspect >= 16 / 9)
+        if (aspect >= 16.0 / 9.0 - 0.01)
         {
+            Debug.Log("16:9");
             ratio = width9 / refWidth;
         }
-        else if (aspect >= 16 / 10)
+        else if (aspect >= 16.0 / 10.0 - 0.01)
         {
+            Debug.Log("16:10");
             ratio = width10 / refWidth;
         }
-        else if (aspect >= 3 / 2)
+        else if (aspect >= 3.0 / 2.0 - 0.01)
         {
+            Debug.Log("3:2");
             ratio = width3 / refWidth;
         }
-        else if (aspect >= 4 / 3)
+        else if (aspect >= 4.0 / 3.0 - 0.01)
         {
+            Debug.Log("4:3");
             ratio = width4 / refWidth;
         }
-        else if (aspect >= 5 / 4)
+        else if (aspect >= 5.0 / 4.0 - 0.01)
         {
+            Debug.Log("5:4");
             ratio = width5 / refWidth;
         }
-        else {
+        else
+        {
+            Debug.Log("Free Aspect");
             ratio = 1.0f;
         }
 
