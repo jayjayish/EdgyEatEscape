@@ -7,6 +7,7 @@ public class Dialogue : MonoBehaviour
     //resizing
     private float refWidth = 898.0f;
     private float refHeight = 363.0f;
+    private float ratio = 0.0f;
 
     //real objects from files
     public GameObject empty;
@@ -96,7 +97,15 @@ public class Dialogue : MonoBehaviour
             line = "";
         }
 
-        words.transform.localScale = new Vector3(words.transform.localScale.x * (Screen.width / refWidth), words.transform.localScale.y * (Screen.height / refHeight), words.transform.localScale.z);
+        if (ratio == 0) {
+            ratio = Screen.width / refWidth;
+            if (Screen.height / refHeight < ratio)
+            {
+                ratio = Screen.height / refHeight;
+            }
+        }
+
+        words.transform.localScale = new Vector3(words.transform.localScale.x * ratio, words.transform.localScale.y * ratio, words.transform.localScale.z);
         dialogueExists = true;
         Debug.Log("dialogue Exists = " + dialogueExists);
     }
