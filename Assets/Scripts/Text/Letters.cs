@@ -12,12 +12,12 @@ public class Letters : MonoBehaviour
     void Start()
     {
         for (int i = 0; A + i <= 'Z'; i++) {
-            Debug.Log("Storing Letter" + (char)(A + i));
+            // Debug.Log("Storing Letter" + (char)(A + i));
             letters.Add((char) (A + i), (GameObject) letterObjects[i]);
         }
 
         for (int i = 0; i <= 9; i++) {
-            Debug.Log("Storing Number" + (char)i.ToString()[0]);
+            // Debug.Log("Storing Number" + (char)i.ToString()[0]);
             letters.Add( (char) i.ToString()[0], (GameObject) letterObjects[26 + i] );
         }
         

@@ -31,7 +31,7 @@ public class Text : MonoBehaviour
             if (text[i] != ' ')
             {
                 //printing letter
-                Debug.Log("Letter = " + text[i]);
+                // Debug.Log("Letter = " + text[i]);
                 GameObject letter = Instantiate((GameObject)letters.letters[(char)text[i]], new Vector3(x, y, z), Quaternion.identity);
                 letter.transform.parent = gameObject.transform;
 
