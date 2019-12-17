@@ -6,6 +6,10 @@ public class DialogueProximity : MonoBehaviour
 {
     Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
 
+    //resizing
+    private float refWidth = 898.0f;
+    private float refHeight = 363.0f;
+
     //inputs for dialogue
     public string Name;
     public string Dialogue;
@@ -49,6 +53,9 @@ public class DialogueProximity : MonoBehaviour
     void Start()
     {
         //set private variables
+        //Debug.Log("width" + Screen.width);
+        //Debug.Log("height" + Screen.height);
+
         rangeSquare = Mathf.Pow(range, 2);
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -79,15 +86,17 @@ public class DialogueProximity : MonoBehaviour
         if (inRange) {
             if (Input.GetButtonDown("Submit") && !talking)
             {
-                //done = false;
                 Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
+                dialogueBoxInst.transform.localScale = new Vector3(dialogueBoxInst.transform.localScale.x * (Screen.width/refWidth), dialogueBoxInst.transform.localScale.y * (Screen.height / refHeight), dialogueBoxInst.transform.localScale.z);
                 nameTag = Instantiate(texter, camera.transform.position, Quaternion.identity);
                 nameTag.transform.parent = camera.transform;
                 nameTag.printer(Name, -13.0f, -0.7f, 4.0f);
+                nameTag.transform.localScale = new Vector3(nameTag.transform.localScale.x * (Screen.width / refWidth), nameTag.transform.localScale.y * (Screen.height / refHeight), nameTag.transform.localScale.z);
                 dialogueBoxInst.setDialogue(Dialogue);
-                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f, -3.3f, 4.0f), Quaternion.identity);
+                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f * (Screen.width / refWidth), -3.3f * (Screen.height / refHeight), 4.0f), Quaternion.identity);
+                PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x * (Screen.width / refWidth), PortraitInst.transform.localScale.y * (Screen.height / refHeight), PortraitInst.transform.localScale.z);
                 PortraitInst.transform.parent = camera.transform;
                 talking = true;
                 //done = dialogue play function

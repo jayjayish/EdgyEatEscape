@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
+    //resizing
+    private float refWidth = 898.0f;
+    private float refHeight = 363.0f;
+
     //real objects from files
     public GameObject empty;
     public Text printer;
@@ -91,7 +95,8 @@ public class Dialogue : MonoBehaviour
             Debug.Log(line);
             line = "";
         }
-        
+
+        words.transform.localScale = new Vector3(words.transform.localScale.x * (Screen.width / refWidth), words.transform.localScale.y * (Screen.height / refHeight), words.transform.localScale.z);
         dialogueExists = true;
         Debug.Log("dialogue Exists = " + dialogueExists);
     }
