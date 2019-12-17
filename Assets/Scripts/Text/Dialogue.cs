@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
-    //resizing
+    //resizing from Free Aspect
     private float refWidth = 898.0f;
-    private float refHeight = 363.0f;
-    private float ratio = 0.0f;
+    private float ratio;
+    //5:4 ref
+    private float width5 = 454.0f;
+    //4:3 ref
+    private float width4 = 484.0f;
+    //3:2 ref
+    private float width3 = 544.0f;
+    //16:10 ref
+    private float width10 = 581.0f;
+    //16:9 ref
+    private float width9 = 645.0f;
 
     //real objects from files
     public GameObject empty;
@@ -97,12 +106,31 @@ public class Dialogue : MonoBehaviour
             line = "";
         }
 
-        if (ratio == 0) {
-            ratio = Screen.width / refWidth;
-            if (Screen.height / refHeight < ratio)
-            {
-                ratio = Screen.height / refHeight;
-            }
+        float aspect = Screen.width / Screen.height;
+        //check aspect ratio
+        if (aspect >= 16 / 9)
+        {
+            ratio = width9 / refWidth;
+        }
+        else if (aspect >= 16 / 10)
+        {
+            ratio = width10 / refWidth;
+        }
+        else if (aspect >= 3 / 2)
+        {
+            ratio = width3 / refWidth;
+        }
+        else if (aspect >= 4 / 3)
+        {
+            ratio = width4 / refWidth;
+        }
+        else if (aspect >= 5 / 4)
+        {
+            ratio = width5 / refWidth;
+        }
+        else
+        {
+            ratio = 1.0f;
         }
 
         words.transform.localScale = new Vector3(words.transform.localScale.x * ratio, words.transform.localScale.y * ratio, words.transform.localScale.z);

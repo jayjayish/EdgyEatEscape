@@ -6,10 +6,19 @@ public class DialogueProximity : MonoBehaviour
 {
     Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
 
-    //resizing
+    //resizing from Free Aspect
     private float refWidth = 898.0f;
-    private float refHeight = 363.0f;
     private float ratio;
+    //5:4 ref
+    private float width5 = 454.0f;
+    //4:3 ref
+    private float width4 = 484.0f;
+    //3:2 ref
+    private float width3 = 544.0f;
+    //16:10 ref
+    private float width10 = 581.0f;
+    //16:9 ref
+    private float width9 = 645.0f;
 
     //inputs for dialogue
     public string Name;
@@ -54,13 +63,32 @@ public class DialogueProximity : MonoBehaviour
     void Start()
     {
         //set private variables
-        //Debug.Log("width" + Screen.width);
-        //Debug.Log("height" + Screen.height);
-        ratio = Screen.width / refWidth;
-        if (Screen.height / refHeight < ratio)
+        float aspect = Screen.width/Screen.height;
+        //check aspect ratio
+        if (aspect >= 16 / 9)
         {
-            ratio = Screen.height / refHeight;
+            ratio = width9 / refWidth;
         }
+        else if (aspect >= 16 / 10)
+        {
+            ratio = width10 / refWidth;
+        }
+        else if (aspect >= 3 / 2)
+        {
+            ratio = width3 / refWidth;
+        }
+        else if (aspect >= 4 / 3)
+        {
+            ratio = width4 / refWidth;
+        }
+        else if (aspect >= 5 / 4)
+        {
+            ratio = width5 / refWidth;
+        }
+        else {
+            ratio = 1.0f;
+        }
+
         rangeSquare = Mathf.Pow(range, 2);
         player = GameObject.FindGameObjectWithTag("Player");
         camera = GameObject.FindGameObjectWithTag("MainCamera");
