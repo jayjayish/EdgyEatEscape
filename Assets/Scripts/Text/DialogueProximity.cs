@@ -6,11 +6,9 @@ public class DialogueProximity : MonoBehaviour
 {
     Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
 
-    //resizing based on dialogue box
-    private float refWidth = 272.0f;
-    private float refHeight = 520.0f;
-    private float screenHeight;
-    private float screenWidth;
+    //resizing
+    private float refWidth = 898.0f;
+    private float refHeight = 363.0f;
 
     //inputs for dialogue
     public string Name;
@@ -88,38 +86,18 @@ public class DialogueProximity : MonoBehaviour
         if (inRange) {
             if (Input.GetButtonDown("Submit") && !talking)
             {
-                screenHeight = Camera.main.orthographicSize * 2f;
-                screenWidth = screenHeight / Screen.height * Screen.width;
-                // Debug.Log(Dialogue);
+                Debug.Log(Dialogue);
                 dialogueBoxInst = Instantiate(dialogueBox, dialoguePos + camera.transform.position, Quaternion.identity);
                 dialogueBoxInst.transform.parent = camera.transform;
-                // dialogueBoxInst.transform.localScale = new Vector3(dialogueBoxInst.transform.localScale.x * (Screen.width/refWidth), dialogueBoxInst.transform.localScale.y * (Screen.height / refHeight), dialogueBoxInst.transform.localScale.z);
+                dialogueBoxInst.transform.localScale = new Vector3(dialogueBoxInst.transform.localScale.x * (Screen.width/refWidth), dialogueBoxInst.transform.localScale.y * (Screen.height / refHeight), dialogueBoxInst.transform.localScale.z);
                 nameTag = Instantiate(texter, camera.transform.position, Quaternion.identity);
                 nameTag.transform.parent = camera.transform;
-                nameTag.printer(Name, -13.0f* (screenWidth / refWidth), -0.7f* (screenWidth / refWidth), 4.0f);
-                // nameTag.transform.localScale = new Vector3(nameTag.transform.localScale.x * (Screen.width / refWidth), nameTag.transform.localScale.y * (Screen.height / refHeight), nameTag.transform.localScale.z);
+                nameTag.printer(Name, -13.0f, -0.7f, 4.0f);
+                nameTag.transform.localScale = new Vector3(nameTag.transform.localScale.x * (Screen.width / refWidth), nameTag.transform.localScale.y * (Screen.height / refHeight), nameTag.transform.localScale.z);
                 dialogueBoxInst.setDialogue(Dialogue);
-                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f * (screenWidth / refWidth), -3.3f * (screenWidth / refWidth), 4.0f), Quaternion.identity);
-                // PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x * (Screen.width / refWidth), PortraitInst.transform.localScale.y * (Screen.height / refHeight), PortraitInst.transform.localScale.z);
+                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f * (Screen.width / refWidth), -3.3f * (Screen.height / refHeight), 4.0f), Quaternion.identity);
+                PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x * (Screen.width / refWidth), PortraitInst.transform.localScale.y * (Screen.height / refHeight), PortraitInst.transform.localScale.z);
                 PortraitInst.transform.parent = camera.transform;
-
-                // scaling
-                // check that height is within half of screen and scale to full width, otherwise scale to height
-                Debug.Log("screen width:" + Screen.width);
-                Debug.Log("screen height:" + Screen.height);
-                Debug.Log("dpi:" + Screen.dpi);
-                Camera actual = Camera.main;
-                Debug.Log("camera scale x"+Camera.main.orthographicSize * 2f);
-
-                // Debug.Log("camera scale y" + camera.transform.localScale.y);
-                // Debug.Log("lossy scale:" +dialogueBoxInst.transform.lossyScale.x );
-                // Debug.Log("new scale:" + dialogueBoxInst.transform.localScale.x * (Screen.width / refWidth));
-                //TODO
-                dialogueBoxInst.transform.localScale = new Vector3((screenWidth /refWidth), (screenWidth /refWidth), dialogueBoxInst.transform.localScale.z);
-                // nameTag.transform.localScale = new Vector3(nameTag.transform.localScale.x * (screenWidth /refWidth), nameTag.transform.localScale.y *(screenWidth /refWidth), nameTag.transform.localScale.z);
-                PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x *(screenWidth /refWidth), PortraitInst.transform.localScale.y *(screenWidth /refWidth), PortraitInst.transform.localScale.z);
-                
-                
                 talking = true;
                 //done = dialogue play function
             }

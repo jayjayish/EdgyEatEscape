@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
-    //resizing based on dialogue box
-    private float refWidth = 272.0f;
-    private float refHeight = 520.0f;
-    private float screenHeight;
-    private float screenWidth;
+    //resizing
+    private float refWidth = 898.0f;
+    private float refHeight = 363.0f;
 
     //real objects from files
     public GameObject empty;
@@ -40,7 +38,7 @@ public class Dialogue : MonoBehaviour
     private string text = "";
 
     public void setText(string _text) {
-        // Debug.Log("1 "+ _text);
+        Debug.Log("1 "+ _text);
         this.text = (string) _text.Clone();
         DialogueChain();
     }
@@ -53,7 +51,7 @@ public class Dialogue : MonoBehaviour
         hanger = Instantiate(empty, gameObject.transform.position, Quaternion.identity);
         words.transform.parent = hanger.transform;
         hanger.transform.parent = gameObject.transform;
-        // Debug.Log("bruh " + text);
+        Debug.Log("bruh " + text);
         int row = 0;
 
         while (index < text.Length && row < rowY.Length)
@@ -72,8 +70,8 @@ public class Dialogue : MonoBehaviour
 
             if (nextWord.Length + line.Length > limit)
             {
-                // Debug.Log(line);
-                // Debug.Log("Row = " + row);
+                Debug.Log(line);
+                Debug.Log("Row = " + row);
                 words.printer(line, rowX, rowY[row], rowZ);
                 line = "" + nextWord;
                 if (line.Length > 0)
@@ -94,13 +92,11 @@ public class Dialogue : MonoBehaviour
         if (line.Length > 0 && row < rowY.Length)
         {
             words.printer(line, rowX, rowY[row], rowZ);
-            // Debug.Log(line);
+            Debug.Log(line);
             line = "";
         }
 
-        // working on rescaling TODO
-        words.transform.localScale = new Vector3(words.transform.localScale.x * (screenWidth / refWidth), words.transform.localScale.y * (screenWidth / refWidth), words.transform.localScale.z);
-        
+        words.transform.localScale = new Vector3(words.transform.localScale.x * (Screen.width / refWidth), words.transform.localScale.y * (Screen.height / refHeight), words.transform.localScale.z);
         dialogueExists = true;
         Debug.Log("dialogue Exists = " + dialogueExists);
     }

@@ -18,7 +18,7 @@ public class DialogueBox : MonoBehaviour
             active = true;
         }
 
-        // Debug.Log(txt);
+        Debug.Log(txt);
         dialogueInst.setText(txt);
     }
 
