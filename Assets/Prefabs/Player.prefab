@@ -253,6 +253,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3973501, y: 2.182228}
   m_EdgeRadius: 0
+--- !u!114 &502535961014141224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180974854786362218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd55d7456abe904385c1e4c04d4dbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  maxSpeed: 7
+  jumpTakeOffSpeed: 7
+  dashSpeed: 0
 --- !u!95 &1361747101
 Animator:
   serializedVersion: 3
