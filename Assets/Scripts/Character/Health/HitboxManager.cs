@@ -23,6 +23,7 @@ public class HitboxManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
+            Debug.Log("Touchy Touch");
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive); 
         }    
     }

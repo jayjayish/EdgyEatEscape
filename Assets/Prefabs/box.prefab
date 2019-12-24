@@ -153,6 +153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3624545623890530115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f9c0654a7bb0f42a527b1f24fa32ed, type: 3}
+  m_Script: {fileID: 11500000, guid: e8b4e73bf937a5b468a8a0ef4f82f0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 50
