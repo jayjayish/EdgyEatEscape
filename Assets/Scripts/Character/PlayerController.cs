@@ -14,10 +14,12 @@ public class PlayerController : CharacterController
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    private bool isAttacking = false;
+    private float attackFrames = 0;
 
     // animation variables
     Animator animator;
-    private bool playerMoving;
+    private bool isPlayerMoving;
     private float lastMoveX;
 
     // constants for dash detection
@@ -51,13 +53,72 @@ public class PlayerController : CharacterController
     protected override void Update()
     {
         base.Update();
-        
+        UpdateAnimator();
+        DetectAttack();
+        //DetectCombo();
+
+    }
+
+
+
+    #region Attacks
+
+    //Hitbox Creation is HERE
+    protected void DetectAttack()
+    {
+        if (Input.GetButtonDown("Fire1") && !isAttacking)
+        {
+            isAttacking = true;
+            //Animator and Data Table stuff goes here
+
+
+            StartCoroutine(DoAttack());
+        }
+    }
+
+
+    IEnumerator DoAttack()
+    {
+        //Startup
+
+        yield return new WaitForSeconds( 1f * (1f/60f));
+        //yield return new WaitForSeconds(startupFrames * (1f / 60f));
+
+
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(HitboxPool.TESTBOX, new Vector3(-1.444f, -0.671f, 0f));
+        //GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(HitboxPool.Name of Hitbox, Position of hitbox, Damage);
+
+
+        hitbox.GetComponent<PlayerHitboxController>().setDamage(10f);
+        //Vector3 temp = hitbox.transform.localScale;
+        //temp.z = animator.GetFloat("LastMoveX");
+        //hitbox.transform.localScale = temp;
+
+        yield return new WaitForSeconds(4f * (1f / 60f));
+
+        hitbox.SetActive(false);
+        isAttacking = false;
+
+    }
+
+
+    #endregion
+
+
+
+
+
+
+
+
+    protected void UpdateAnimator()
+    {
         //check if player is moving to set idle or moving animations
-        playerMoving = (targetVelocity.x != 0);
+        isPlayerMoving = (targetVelocity.x != 0);
 
 
         animator.SetFloat("Move X", targetVelocity.x);
-        animator.SetBool("PlayerMoving", playerMoving);
+        animator.SetBool("PlayerMoving", isPlayerMoving);
 
         if (targetVelocity.x > 0)
         {
@@ -74,13 +135,23 @@ public class PlayerController : CharacterController
         }
     }
 
+
+
+
+
+
+
+
+
+    #region Movement
+
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded) //checks if jump button is pressed while grounded
+        if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
         {
             velocity.y = jumpTakeOffSpeed;
         }
@@ -146,15 +217,33 @@ public class PlayerController : CharacterController
             //Debug.Log("dashTime:" + dashTime);
         }
 
-        detectCombo();
+
 
 
         targetVelocity = move * maxSpeed;
 
     }
 
+
+
+
+
+    #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     // detect combo input
-    protected virtual void detectCombo()
+    protected virtual void DetectCombo()
     {
      
         //comboExecuted.Insert(0, "yeet");
@@ -205,7 +294,7 @@ public class PlayerController : CharacterController
     }
 
 
-
+    */
 
 
 
@@ -221,8 +310,8 @@ public class PlayerController : CharacterController
  */
 }
 
- //if (TriggeredTime > 0)
-            //{
-                //TriggeredTime -= Time.deltaTime;
+//if (TriggeredTime > 0)
+//{
+//TriggeredTime -= Time.deltaTime;
 
-            //}
+//}
