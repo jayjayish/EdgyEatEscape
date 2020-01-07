@@ -51,7 +51,18 @@ public class PlayerController : CharacterController
     protected override void Update()
     {
         base.Update();
-        
+
+        AnimationUpdate();
+
+        detectCombo();
+    }
+
+
+
+
+
+    protected void AnimationUpdate()
+    {
         //check if player is moving to set idle or moving animations
         playerMoving = (targetVelocity.x != 0);
 
@@ -73,6 +84,10 @@ public class PlayerController : CharacterController
             animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
         }
     }
+
+
+
+
 
     protected override void ComputeVelocity()
     {
@@ -146,12 +161,16 @@ public class PlayerController : CharacterController
             //Debug.Log("dashTime:" + dashTime);
         }
 
-        detectCombo();
+        
 
 
         targetVelocity = move * maxSpeed;
 
     }
+
+
+
+
 
     // detect combo input
     protected virtual void detectCombo()
