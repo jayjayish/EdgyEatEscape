@@ -37,6 +37,7 @@ public class PlayerController : CharacterController
 
     //combo array
     // 'h' for hardware and 's' for software
+    private PlayerComboJSON comboJSON;
     private List<string> comboExecuted = new List<string>();
     private float lastTriggerTime = 0f;
     private float COMBO_TIME = 0.3f;
@@ -48,6 +49,7 @@ public class PlayerController : CharacterController
     {
         base.Start();
         animator = GetComponent<Animator>();
+        comboJSON = GetComponent<PlayerComboJSON>();
     }
 
     protected override void Update()
@@ -72,29 +74,27 @@ public class PlayerController : CharacterController
             //Animator and Data Table stuff goes here
 
 
-            StartCoroutine(DoAttack());
+            StartCoroutine(DoAttack("TESTBOX"));
         }
     }
 
 
-    IEnumerator DoAttack()
+    IEnumerator DoAttack(string hitboxName)
     {
         //Startup
-
-        yield return new WaitForSeconds( 1f * (1f/60f));
-        //yield return new WaitForSeconds(startupFrames * (1f / 60f));
-
-
-        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(HitboxPool.TESTBOX, new Vector3(-1.444f, -0.671f, 0f));
-        //GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(HitboxPool.Name of Hitbox, Position of hitbox, Damage);
+        
+        yield return new WaitForSeconds( comboJSON.getStartup(hitboxName.ToUpper()) * (1f/60f));
 
 
-        hitbox.GetComponent<PlayerHitboxController>().setDamage(10f);
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(hitboxName.ToUpper(), comboJSON.getPosition(hitboxName.ToUpper()));
+
+
+       // hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage(hitboxName.ToUpper()));
         //Vector3 temp = hitbox.transform.localScale;
         //temp.z = animator.GetFloat("LastMoveX");
         //hitbox.transform.localScale = temp;
 
-        yield return new WaitForSeconds(4f * (1f / 60f));
+        yield return new WaitForSeconds(comboJSON.getActive(hitboxName.ToUpper()) * (1f / 60f));
 
         hitbox.SetActive(false);
         isAttacking = false;

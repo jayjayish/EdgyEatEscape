@@ -17,4 +17,11 @@
     "active":6,
     "endlag":2,
     "damage":5}
+  "TESTBOX":{
+    "position":[-1.444, -0.671, 0f],
+    "startup":1,
+    "active":4,
+    "endlag":0,
+    "damage":10
+	}
 }
