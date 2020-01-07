@@ -10,7 +10,7 @@ public class PlayerComboJSON : MonoBehaviour
     private string comboInput;
     private JSONArray hitboxes;
     // optional add-on function to be called, HAVEN'T ADDED THIS YET
-    public string function;
+    private string function;
 
     // HITBOX DATA
     // private string hitboxName;
@@ -92,28 +92,27 @@ public class PlayerComboJSON : MonoBehaviour
         Debug.Log(hitboxTable);
     }
 
-    // returns JSONArray of hitbox names, use JSONArray as you would a normal array
-    JSONArray getHitboxes(string comboInput) {
+    public JSONArray getHitboxes(string comboInput) {
         return comboTable[comboInput].AsArray;
     }
 
-    Vector3 getPosition(string hitboxName) {
+    public Vector3 getPosition(string hitboxName) {
         return hitboxTable[hitboxName]["position"].ReadVector3();
     }
 
-    int getStartup(string hitboxName) {
+    public int getStartup(string hitboxName) {
         return hitboxTable[hitboxName]["startup"];
     }
 
-    int getActive(string hitboxName) {
+    public int getActive(string hitboxName) {
         return hitboxTable[hitboxName]["active"];
     }
 
-    int getEndlag(string hitboxName) {
+    public int getEndlag(string hitboxName) {
         return hitboxTable[hitboxName]["endlag"];
     }
 
-    int getDamage(string hitboxName) {
+    public int getDamage(string hitboxName) {
         return hitboxTable[hitboxName]["damage"];
     }
 
