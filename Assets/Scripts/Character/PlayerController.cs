@@ -20,6 +20,7 @@ public class PlayerController : CharacterController
     // animation variables
     Animator animator;
     private bool isPlayerMoving;
+    private bool facingLeft = true;
     private float lastMoveX;
 
     // constants for dash detection
@@ -117,25 +118,31 @@ public class PlayerController : CharacterController
         isPlayerMoving = (targetVelocity.x != 0);
 
 
-        animator.SetFloat("Move X", targetVelocity.x);
-        animator.SetBool("PlayerMoving", isPlayerMoving);
+        animator.SetFloat("speed", Mathf.Abs(targetVelocity.x));
 
-        if (targetVelocity.x > 0)
-        {
-            animator.SetFloat("LastMoveX", 1f);
+        BasicAttackAnimation();
+        Flip(targetVelocity.x);     
 
-        }
-        else if (targetVelocity.x < 0)
+    }
+
+    private void Flip(float xVelocity)
+    {
+        if (xVelocity > 0 && facingLeft || xVelocity < 0 && !facingLeft)
         {
-            animator.SetFloat("LastMoveX", -1f);
-        }
-        else
-        {
-            animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
+            facingLeft = !facingLeft;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+
+            transform.localScale = theScale;
         }
     }
 
-
+    private void BasicAttackAnimation()
+    {
+        if (isAttacking)
+            animator.SetTrigger("attack");
+    }
 
 
 
