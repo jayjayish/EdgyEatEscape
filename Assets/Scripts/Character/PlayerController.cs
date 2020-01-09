@@ -19,12 +19,15 @@ public class PlayerController : CharacterController
     Animator animator;
     private bool playerMoving;
     private float lastMoveX;
-
+    
+    #region DashVariables
     // constants for dash detection
     public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
     private float lastRightTime = 0f;
-
+    #endregion
+    
+    #region DashConstants
     //dash time constants
     private int dashDirection;
     private const float dashMultiplier = 10f;
@@ -32,7 +35,9 @@ public class PlayerController : CharacterController
     private float dashTime;
     public float dashSpeed;
     public const float startDashTime = .1f;
+    #endregion
 
+    #region ComboVariables
     //combo array
     // 'h' for hardware and 's' for software
     private List<string> comboExecuted = new List<string>();
@@ -41,6 +46,7 @@ public class PlayerController : CharacterController
     private float TriggeredTime;
     public const float startTriggerTime = 0f;
     private int comboCount = 0;
+    #endregion
 
     protected override void Start()
     {
