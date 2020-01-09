@@ -13,7 +13,7 @@ public class PlayerMovementController : CharacterController
 {
 
     public float maxSpeed = 7;
-    public float jumpTakeOffSpeed = 7;
+    public float jumpTakeOffSpeed = 50;
 
     // animation variables
     Animator animator;
@@ -46,22 +46,26 @@ public class PlayerMovementController : CharacterController
         //check if player is moving to set idle or moving animations
         playerMoving = (targetVelocity.x != 0);
 
+        AnimationLayers();
 
         animator.SetFloat("Move X", targetVelocity.x);
+        animator.SetFloat("Move Y", targetVelocity.y); 
         animator.SetBool("PlayerMoving", playerMoving);
 
         if (targetVelocity.x > 0)
-        {
             animator.SetFloat("LastMoveX", 1f);
-
-        }
         else if (targetVelocity.x < 0)
-        {
             animator.SetFloat("LastMoveX", -1f);
-        }
         else
-        {
             animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
+
+        if (targetVelocity.y < 0)
+            animator.SetBool("Landing", true);
+
+        if (grounded)
+        {
+            animator.ResetTrigger("jump");
+            animator.SetBool("Landing", false);
         }
     }
 
@@ -74,6 +78,7 @@ public class PlayerMovementController : CharacterController
         if (Input.GetButtonDown("Jump") && grounded) //checks if jump button is pressed while grounded
         {
             velocity.y = jumpTakeOffSpeed;
+            animator.SetTrigger("jump");
         }
         else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
         {
@@ -138,6 +143,20 @@ public class PlayerMovementController : CharacterController
 
 
         targetVelocity = move * maxSpeed;
+
+    }
+
+    //changes weight of animation layers
+    private void AnimationLayers()
+    {
+        if (!grounded)
+            animator.SetLayerWeight(1, 1);
+        else
+            animator.SetLayerWeight(1, 0);
+    }
+
+    private void FlipDirection(float HorizontalDirection)
+    {
 
     }
 }
