@@ -9,7 +9,7 @@ public class PhysicsObject : MonoBehaviour
     [SerializeField]
     protected float gravityModifier = 1f;
 
-    protected bool grounded;
+    protected bool isGrounded;
     protected Vector2 groundNormal;
 
     protected Vector2 targetVelocity;
@@ -60,7 +60,7 @@ public class PhysicsObject : MonoBehaviour
 
         velocity.x = targetVelocity.x;
 
-        grounded = false; //switches to true when collision is found
+        isGrounded = false; //switches to true when collision is found
 
         Vector2 deltaPosition = velocity * Time.deltaTime;
 
@@ -100,7 +100,7 @@ public class PhysicsObject : MonoBehaviour
                 Vector2 currentNormal = hitBufferList[i].normal;
                 if (currentNormal.y > minGroundNormalY)
                 {
-                    grounded = true;
+                    isGrounded = true;
                     if (yMovement)
                     {
                         groundNormal = currentNormal;
