@@ -46,11 +46,15 @@ public class PlayerController : CharacterController
     public const float startTriggerTime = 0f;
     private int comboCount = 0;
 
+
+    private Rigidbody2D rb2d;
+
     protected override void Start()
     {
         base.Start();
         animator = GetComponent<Animator>();
         comboJSON = GetComponent<PlayerComboJSON>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     protected override void Update()
@@ -167,18 +171,30 @@ public class PlayerController : CharacterController
 
     private void jumpAnimation()
     {
+        Debug.Log("rigidbody velocity y:" + rb2d.velocity.y);
         if (Input.GetButtonDown("Jump") && isGrounded)//checks if jump button is pressed while grounded
         {
             animator.SetTrigger("jump");
-            animator.ResetTrigger("jump");
+            Debug.Log(1);
         }
-        if (isGrounded)
+        else if (rb2d.velocity.y == 0 && !isGrounded)
         {
-            //animator.ResetTrigger("jump");
-            animator.SetBool("isfalling", false);
-        }
-        if (targetVelocity.y < 0)
+             animator.ResetTrigger("jump");
             animator.SetBool("isfalling", true);
+            Debug.Log(2);
+        }
+
+        //if (rb2d.velocity.y == 0 && !isGrounded)
+        //{
+        //}
+
+        else if (isGrounded)
+        {
+            animator.SetBool("isfalling", false);
+            Debug.Log(3);
+
+        }
+
 
     }
 
