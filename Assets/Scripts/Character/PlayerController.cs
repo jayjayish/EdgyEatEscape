@@ -38,9 +38,9 @@ public class PlayerController : CharacterController
     //combo array
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
-    private List<string> comboExecuted = new List<string>();
+    private string comboExecuted;
     private float lastTriggerTime = 0f;
-    private float COMBO_TIME = 0.3f;
+    private float COMBO_TIME = 1f;
     private float TriggeredTime;
     public const float startTriggerTime = 0f;
     private int comboCount = 0;
@@ -57,7 +57,7 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectAttack();
-        //DetectCombo();
+        DetectCombo();
 
     }
 
@@ -241,48 +241,65 @@ public class PlayerController : CharacterController
 
 
 
-    /*
+    
     // detect combo input
     protected virtual void DetectCombo()
     {
-     
-        //comboExecuted.Insert(0, "yeet");
-       
-
-        if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+        if (Input.GetButtonDown("TriggerR"))
         {
-            //  Debug.Log("Triggered"); //checks for attack key input
-
             float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
-
-            
-
-            if (timesinceLastTrigger <= COMBO_TIME)
+                       
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
             {
+            comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
                 TriggeredTime = startTriggerTime;//timer for combo
                 comboCount++;
+                //Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+            }
+            else
+            {
+                comboCount = 1; //otherwise combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "h";
+            }
+        }
+        else if (Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+        {
 
-                Debug.Log("combos:" + comboCount);
-
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+              
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+            {
+                comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
+                TriggeredTime = startTriggerTime;//timer for combo
+                comboCount++;
+                //Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
 
 
             }
             else
             {
+                comboCount = 1; //otherwise, combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "s";
+            }
+        }
+        else
+        {
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+            if (timesinceLastTrigger > COMBO_TIME && comboCount > 0) // if the combo isn't within the timee frame and >0
+            {
 
                 comboCount = 0;
-                Debug.Log("combos:" + comboCount);
+                Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
+                comboExecuted = "";
             }
-
             
-
-            
-           
-
-
-
         }
         // check initial attack key
         // set timing
@@ -293,8 +310,7 @@ public class PlayerController : CharacterController
         // on end of combo, reset array
     }
 
-
-    */
+    
 
 
 
