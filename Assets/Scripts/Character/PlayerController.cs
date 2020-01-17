@@ -111,18 +111,20 @@ public class PlayerController : CharacterController
 
 
 
-
+    #region Animations
     protected void UpdateAnimator()
     {
         //check if player is moving to set idle or moving animations
+        layerTransitions();
         isPlayerMoving = (targetVelocity.x != 0);
 
 
         animator.SetFloat("speed", Mathf.Abs(targetVelocity.x));
 
         BasicAttackAnimation();
-        Flip(targetVelocity.x);     
+        Flip(targetVelocity.x);
 
+        jumpAnimation();
     }
 
     private void Flip(float xVelocity)
@@ -142,9 +144,45 @@ public class PlayerController : CharacterController
     {
         if (isAttacking)
             animator.SetTrigger("attack");
+        else
+            animator.ResetTrigger("attack");
+
     }
 
+    private void layerTransitions()
+    {
+        if (!isGrounded)
+        {
+            animator.SetLayerWeight(1, 1);
+            animator.SetLayerWeight(0, 0);
+        }
 
+        else
+        {
+            animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(0, 1);
+        }
+
+    }
+
+    private void jumpAnimation()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)//checks if jump button is pressed while grounded
+        {
+            animator.SetTrigger("jump");
+            animator.ResetTrigger("jump");
+        }
+        if (isGrounded)
+        {
+            //animator.ResetTrigger("jump");
+            animator.SetBool("isfalling", false);
+        }
+        if (targetVelocity.y < 0)
+            animator.SetBool("isfalling", true);
+
+    }
+
+    #endregion
 
 
 
