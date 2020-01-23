@@ -554,6 +554,39 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 88eb08ff82728314babb8dc3b1bd7e83, type: 2}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: offY
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: empty
+      value: 
+      objectReference: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51,
+        type: 3}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Dialogue
+      value: Liking bois is gay? June likes bois? june = gay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Name
+      value: Bill Peet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: texter
+      value: 
+      objectReference: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73,
+        type: 3}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cdcb43bf806dd40a958b59b7018f20, type: 3}
 --- !u!1001 &1124640676
@@ -719,6 +752,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bdc8b9c4a50664ebce2174081d715d, type: 3}
+--- !u!1001 &4829420057764927987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4829420058947310315, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fb3abe9f002a5348aa01bc7ee315dbf, type: 3}
 --- !u!1001 &7463669963816421908
 PrefabInstance:
   m_ObjectHideFlags: 0
