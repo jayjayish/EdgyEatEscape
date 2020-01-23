@@ -14,17 +14,22 @@ public class PlayerController : CharacterController
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    private bool isAttacking = false;
+    private float attackFrames = 0;
 
     // animation variables
     Animator animator;
-    private bool playerMoving;
+    private bool isPlayerMoving;
     private float lastMoveX;
-
+    
+    #region DashVariables
     // constants for dash detection
     public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
     private float lastRightTime = 0f;
-
+    #endregion
+    
+    #region DashConstants
     //dash time constants
     private int dashDirection;
     private const float dashMultiplier = 10f;
@@ -32,32 +37,94 @@ public class PlayerController : CharacterController
     private float dashTime;
     public float dashSpeed;
     public const float startDashTime = .1f;
+    #endregion
 
+    #region ComboVariables
     //combo array
     // 'h' for hardware and 's' for software
-    private List<string> comboExecuted = new List<string>();
+    private PlayerComboJSON comboJSON;
+    private string comboExecuted;
     private float lastTriggerTime = 0f;
-    private float COMBO_TIME = 0.3f;
+    private float COMBO_TIME = 1f;
     private float TriggeredTime;
     public const float startTriggerTime = 0f;
     private int comboCount = 0;
+    #endregion
 
     protected override void Start()
     {
         base.Start();
         animator = GetComponent<Animator>();
+        comboJSON = GetComponent<PlayerComboJSON>();
     }
 
     protected override void Update()
     {
         base.Update();
+        UpdateAnimator();
+        DetectAttack();
+        DetectCombo();
+
+    }
+
+
+
+    #region Attacks
+
+    //Hitbox Creation is HERE
+    protected void DetectAttack()
+    {
+        if (Input.GetButtonDown("Fire1") && !isAttacking)
+        {
+            isAttacking = true;
+            //Animator and Data Table stuff goes here
+
+
+            StartCoroutine(DoAttack("TESTBOX"));
+        }
+    }
+
+
+    IEnumerator DoAttack(string hitboxName)
+    {
+        //Startup
         
+        yield return new WaitForSeconds( comboJSON.getStartup(hitboxName.ToUpper()) * (1f/60f));
+
+
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(hitboxName.ToUpper(), comboJSON.getPosition(hitboxName.ToUpper()));
+
+
+       // hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage(hitboxName.ToUpper()));
+        //Vector3 temp = hitbox.transform.localScale;
+        //temp.z = animator.GetFloat("LastMoveX");
+        //hitbox.transform.localScale = temp;
+
+        yield return new WaitForSeconds(comboJSON.getActive(hitboxName.ToUpper()) * (1f / 60f));
+
+        hitbox.SetActive(false);
+        isAttacking = false;
+
+    }
+
+
+    #endregion
+
+
+
+
+
+
+
+
+    protected void UpdateAnimator()
+    {
         //check if player is moving to set idle or moving animations
-        playerMoving = (targetVelocity.x != 0);
+        isPlayerMoving = (targetVelocity.x != 0);
 
 
         animator.SetFloat("Move X", targetVelocity.x);
-        animator.SetBool("PlayerMoving", playerMoving);
+        animator.SetBool("PlayerMoving", isPlayerMoving);
 
         if (targetVelocity.x > 0)
         {
@@ -74,13 +141,23 @@ public class PlayerController : CharacterController
         }
     }
 
+
+
+
+
+
+
+
+
+    #region Movement
+
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded) //checks if jump button is pressed while grounded
+        if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
         {
             velocity.y = jumpTakeOffSpeed;
         }
@@ -146,66 +223,100 @@ public class PlayerController : CharacterController
             //Debug.Log("dashTime:" + dashTime);
         }
 
-        detectCombo();
+
 
 
         targetVelocity = move * maxSpeed;
 
     }
 
+
+
+
+
+    #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+    
     // detect combo input
-    protected virtual void detectCombo()
+    protected virtual void DetectCombo()
     {
-     
-        //comboExecuted.Insert(0, "yeet");
-       
-
-        if (Input.GetButtonDown("TriggerR") || Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+        if (Input.GetButtonDown("TriggerR"))
         {
-            //  Debug.Log("Triggered"); //checks for attack key input
-
             float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
-
-            
-
-            if (timesinceLastTrigger <= COMBO_TIME)
+                       
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
             {
+            comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
                 TriggeredTime = startTriggerTime;//timer for combo
                 comboCount++;
+                //Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+            }
+            else
+            {
+                comboCount = 1; //otherwise combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "h";
+            }
+        }
+        else if (Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+        {
 
-                Debug.Log("combos:" + comboCount);
-
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+              
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+            {
+                comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
+                TriggeredTime = startTriggerTime;//timer for combo
+                comboCount++;
+                //Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
 
 
             }
             else
             {
+                comboCount = 1; //otherwise, combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "s";
+            }
+        }
+        else
+        {
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+            if (timesinceLastTrigger > COMBO_TIME && comboCount > 0) // if the combo isn't within the timee frame and >0
+            {
 
                 comboCount = 0;
-                Debug.Log("combos:" + comboCount);
+                Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
+                comboExecuted = "";
             }
-
             
-
-            
-           
-
-
-
         }
         // check initial attack key
         // set timing
-        // check next key
+        // check next key 
         // repeat for up to 6 keys
 
         // for each input, set array element to inputted key
         // on end of combo, reset array
     }
 
-
-
+    
 
 
 
@@ -221,8 +332,8 @@ public class PlayerController : CharacterController
  */
 }
 
- //if (TriggeredTime > 0)
-            //{
-                //TriggeredTime -= Time.deltaTime;
+//if (TriggeredTime > 0)
+//{
+//TriggeredTime -= Time.deltaTime;
 
-            //}
+//}
