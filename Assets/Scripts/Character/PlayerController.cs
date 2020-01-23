@@ -171,28 +171,22 @@ public class PlayerController : CharacterController
 
     private void jumpAnimation()
     {
-        Debug.Log("rigidbody velocity y:" + rb2d.velocity.y);
-        if (Input.GetButtonDown("Jump") && isGrounded)//checks if jump button is pressed while grounded
+        Debug.Log("total velocity" + (rb2d.velocity.y + velocity.y));
+        if (Input.GetButtonDown("Jump"))// && isGrounded)
         {
             animator.SetTrigger("jump");
-            Debug.Log(1);
-        }
-        else if (rb2d.velocity.y == 0 && !isGrounded)
-        {
-             animator.ResetTrigger("jump");
-            animator.SetBool("isfalling", true);
-            Debug.Log(2);
+            Debug.Log("jumped");
         }
 
-        //if (rb2d.velocity.y == 0 && !isGrounded)
-        //{
-        //}
+        else if ((rb2d.velocity.y + velocity.y) < 0 && !isGrounded)
+        {
+            animator.SetBool("isfalling", true);
+        }
 
         else if (isGrounded)
         {
             animator.SetBool("isfalling", false);
-            Debug.Log(3);
-
+            animator.ResetTrigger("jump");
         }
 
 
@@ -216,6 +210,7 @@ public class PlayerController : CharacterController
         {
             velocity.y = jumpTakeOffSpeed;
         }
+
         else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
         {
             if (velocity.y > 0)
