@@ -430,26 +430,7 @@ PrefabInstance:
     - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
         type: 3}
       propertyPath: Dialogue
-      value: The Wump World was a small world, very much smaller than our world. There
-        were no great oceans, lofty mountains, giant forests, or broad sandy deserts.
-        The Wump World was mostly grassy meadows and clumps of leafy green trees with
-        a few winding rivers and lakes. But it was perfect for the Wumps, who were
-        the only creatures living there. The Wumps were simple grass-eaters and spent
-        most of their time grazing on the tall tender grass that grew in the meadows.
-        In warm weather they cooled themselves in the crystal-clear rivers and lakes.
-        And at night they slept in the shelter of the bumbershoot trees to keep the
-        dew off their backs. Since the Wumps had no enemies they wandered around just
-        as they pleased with nothing whatever to worry about. ever, the Wumps would
-        have worried if they had known that someone a million miles away was watching
-        their little world. One morning the Wumps were awakened by a far-off humming
-        sound. It seemed to be coming from somewhere above, and as the humming grew
-        into a heavy roar, the sleepy-eyed Wumps crept through the trees for a peek
-        at the sky. Zooming straight for the earth came a great flock of potbellied
-        monsters, with tails and fins, spitting fire and shooting out streaks of black
-        smoke. As the monsters swooped down to land, huge legs sprang from their bulging
-        sides, and like gaping mouths doors flew open, then ramps shot to the ground.
-        And down the ramps came a horde of tiny creatures swarming out onto the meadow.
-        These were the Pollutians from the planet Pollutus.
+      value: Liking bois is gay? June likes bois? june = gay?
       objectReference: {fileID: 0}
     - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
         type: 3}
@@ -628,6 +609,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bdc8b9c4a50664ebce2174081d715d, type: 3}
+--- !u!1001 &4829420057764927987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4829420058947310315, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829420058947310312, guid: 0fb3abe9f002a5348aa01bc7ee315dbf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fb3abe9f002a5348aa01bc7ee315dbf, type: 3}
 --- !u!1001 &7463669963816421908
 PrefabInstance:
   m_ObjectHideFlags: 0
