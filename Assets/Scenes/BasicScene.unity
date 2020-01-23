@@ -473,6 +473,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
         type: 3}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: offY
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: empty
+      value: 
+      objectReference: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51,
+        type: 3}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Dialogue
+      value: Liking bois is gay? June likes bois? june = gay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Name
+      value: Bill Peet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: texter
+      value: 
+      objectReference: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73,
+        type: 3}
+    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
+        type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
+        type: 3}
     - target: {fileID: 6965256790920480730, guid: d2cdcb43bf806dd40a958b59b7018f20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -533,39 +566,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 88eb08ff82728314babb8dc3b1bd7e83, type: 2}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: offY
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: empty
-      value: 
-      objectReference: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Dialogue
-      value: Liking bois is gay? June likes bois? june = gay?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Name
-      value: Bill Peet
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: texter
-      value: 
-      objectReference: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Portrait
-      value: 
-      objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cdcb43bf806dd40a958b59b7018f20, type: 3}
 --- !u!1001 &1124640676
@@ -895,5 +895,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.51
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1345652757, guid: cba6586479c624e428eefcd799be36c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cba6586479c624e428eefcd799be36c1, type: 3}
