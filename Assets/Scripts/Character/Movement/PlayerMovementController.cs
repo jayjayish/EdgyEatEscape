@@ -71,7 +71,7 @@ public class PlayerMovementController : CharacterController
 
         move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded) //checks if jump button is pressed while grounded
+        if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
         {
             velocity.y = jumpTakeOffSpeed;
         }

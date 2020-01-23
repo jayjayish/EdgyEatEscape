@@ -6,11 +6,6 @@ public class shootingEnemy : MonoBehaviour
 {
 
 
-    [SerializeField]
-    GameObject enemyBullet;
-
-
-
     float fireRate;
 
     float nextFire;
@@ -21,7 +16,7 @@ public class shootingEnemy : MonoBehaviour
     void Start()
     {
         fireRate = 1f;
-        nextFire = Time.time;
+        nextFire = 0;
     }
 
     
@@ -34,7 +29,8 @@ public class shootingEnemy : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
-            Instantiate(enemyBullet, transform.position, Quaternion.identity);
+            GameObject bullet = ObjectPooler.Instance.SpawnFromPool(Pool.HORIZONTAL_ENEMY_BULLET, transform.position, Quaternion.identity);
+            bullet.GetComponent<HorizontalEnemyBullet>().OnObjectSpawn();
             nextFire = Time.time + fireRate;
         }
     }

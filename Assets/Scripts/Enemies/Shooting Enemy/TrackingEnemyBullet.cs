@@ -2,33 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackingEnemyBullet : MonoBehaviour
+public class TrackingEnemyBullet : ProjectileController, IPooledObject
 {
-    float moveSpeed = 7f;
 
-    Rigidbody2D rb;
 
     PhysicsObject target;
-    Vector2 moveDirection;
 
-    void Start()
+
+    protected override void OnMovementTimeToLiveStopped()
     {
-        rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindObjectOfType<PlayerController>();
-        moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
-        rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        Destroy(gameObject, 3f);
-        
+        gameObject.SetActive(false);
     }
-    
-    void onTriggerEnter2D(Collider2D col)
+
+
+    public void OnObjectSpawn()
     {
-        if (col.gameObject.name.Equals("Player"))
+        target = GameObject.FindObjectOfType<PlayerController>();
+        angle = Vector2.Angle(target.transform.position, transform.position);
+        currentTimeToLive = 0;
+        GetComponent<CircleCollider2D>().enabled = true;
+        isMoving = true;
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D col)
+    {
+        GameObject hitTarget = col.gameObject;
+        if (hitTarget.tag == Tags.PLAYER)
         {
             Debug.Log("Hit");
-            Destroy(gameObject);
         }
+
+        base.OnTriggerEnter2D(col);
     }
-    
+
+    protected override void OnHitObject()
+    {
+        isMoving = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        gameObject.SetActive(false);
+    }
+
+
+
 }
 

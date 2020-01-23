@@ -2,37 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HorizontalEnemyBullet : PhysicsObject
+public class HorizontalEnemyBullet : ProjectileController, IPooledObject
 {
-    [SerializeField]
-    float moveSpeed = 7f;
+
 
     PhysicsObject target;
 
-    private float moveX;
 
-    void Start()
+    protected override void OnMovementTimeToLiveStopped()
+    {
+        gameObject.SetActive(false);
+    }
+
+
+    public void OnObjectSpawn()
     {
         target = GameObject.FindObjectOfType<PlayerController>();
-        moveX = Mathf.Sign(target.transform.position.x - transform.position.x) * moveSpeed;
-        velocity = new Vector2(moveX, 0f);
-        Destroy(gameObject, 3f);
-
+        angle = Mathf.Sign(target.transform.position.x - transform.position.x) * 180;
+        currentTimeToLive = 0;
+        GetComponent<CircleCollider2D>().enabled = true;
+        isMoving = true;
     }
 
-    protected override void ComputeVelocity()
+    protected override void OnTriggerEnter2D(Collider2D col)
     {
-
-    }
-
-    void onTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.name.Equals("Player"))
+        GameObject hitTarget = col.gameObject;
+        if (hitTarget.tag == Tags.PLAYER)
         {
             Debug.Log("Hit");
-            Destroy(gameObject);
         }
+
+        base.OnTriggerEnter2D(col);
     }
+
+    protected override void OnHitObject()
+    {
+        isMoving = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        gameObject.SetActive(false);
+    }
+
+
+
 
 }
 
