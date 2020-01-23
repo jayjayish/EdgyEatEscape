@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: d1892a6feab5d604dbfd0320933015b5
+guid: 8c0c02e9d7fab1c41bfadb6980d90172
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5853133172695266767
-    second: JumpingRight_0
+      213: -2987179049035696926
+    second: walking_0
   - first:
-      213: -1226714692381782998
-    second: JumpingRight_1
+      213: -4154626181522259262
+    second: walking_1
   - first:
-      213: 2986409077452993378
-    second: JumpingRight_2
+      213: -7423615830899905516
+    second: walking_2
   - first:
-      213: -247340803596154583
-    second: JumpingRight_3
+      213: 4036955197636849006
+    second: walking_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,12 +96,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpingRight_0
+      name: walking_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 20
+        x: 7
+        y: 0
+        width: 21
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -110,61 +110,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fc44ad722dd174693876f74d98a619
-      internalID: -5853133172695266767
+      spriteID: 603eb74eac8701645ac6dddf924582c8
+      internalID: -2987179049035696926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpingRight_1
+      name: walking_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 3
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44ea2e0dc95fe774cbe2669cf8088941
-      internalID: -1226714692381782998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpingRight_2
-      rect:
-        serializedVersion: 2
-        x: 88
+        x: 39
         y: 0
-        width: 20
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94159379e4862a443b90bb31c788bb88
-      internalID: 2986409077452993378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpingRight_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 20
+        width: 21
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,8 +131,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71e8d3c1fe4818447bc1e4b397838cde
-      internalID: -247340803596154583
+      spriteID: 72756094b8a654440ac99a8e13a85056
+      internalID: -4154626181522259262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f1a21b40b97bd4d8d4986c3386c034
+      internalID: -7423615830899905516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5767198b6f3a8442b69f7abca57b744
+      internalID: 4036955197636849006
       vertices: []
       indices: 
       edges: []
@@ -182,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: df1da2adc4b15cb419c47a85eca3e15b
+    spriteID: bdd31b4ab10f48448b72eb48a30b151a
     internalID: 0
     vertices: []
     indices: 

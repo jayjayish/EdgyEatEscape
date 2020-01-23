@@ -171,11 +171,9 @@ public class PlayerController : CharacterController
 
     private void jumpAnimation()
     {
-        Debug.Log("total velocity" + (rb2d.velocity.y + velocity.y));
         if (Input.GetButtonDown("Jump"))// && isGrounded)
         {
             animator.SetTrigger("jump");
-            Debug.Log("jumped");
         }
 
         else if ((rb2d.velocity.y + velocity.y) < 0 && !isGrounded)
