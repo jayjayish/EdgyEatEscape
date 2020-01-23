@@ -25,7 +25,7 @@ public class Text : MonoBehaviour
         z = initZ + gameObject.transform.position.z;
         string text = (string) _text.Clone();
         text = text.ToUpper();
-        Debug.Log(text);
+        //Debug.Log(text);
         
         for (int i = 0; i < text.Length; i++) {
             if (text[i] != ' ')
