@@ -909,5 +909,6 @@ PrefabInstance:
       propertyPath: jumpTakeOffSpeed
       value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1345652757, guid: cba6586479c624e428eefcd799be36c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cba6586479c624e428eefcd799be36c1, type: 3}
