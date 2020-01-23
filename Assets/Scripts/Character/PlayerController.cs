@@ -303,7 +303,7 @@ public class PlayerController : CharacterController
         }
         // check initial attack key
         // set timing
-        // check next key
+        // check next key 
         // repeat for up to 6 keys
 
         // for each input, set array element to inputted key
