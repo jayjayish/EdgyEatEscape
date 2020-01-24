@@ -7,21 +7,25 @@ public class HorizontalEnemyBullet : ProjectileController, IPooledObject
 
 
     PhysicsObject target;
-
+    //protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE };
 
     protected override void OnMovementTimeToLiveStopped()
     {
         gameObject.SetActive(false);
+        GetComponent<CircleCollider2D>().enabled = false;
     }
 
 
     public void OnObjectSpawn()
     {
+        
         target = GameObject.FindObjectOfType<PlayerController>();
-        angle = Mathf.Sign(target.transform.position.x - transform.position.x) * 180;
+        angle = Mathf.Sign(target.transform.position.x - transform.position.x) * 90 + 90;
         currentTimeToLive = 0;
         GetComponent<CircleCollider2D>().enabled = true;
         isMoving = true;
+
+        Debug.Log(angle);
     }
 
     protected override void OnTriggerEnter2D(Collider2D col)

@@ -31,6 +31,7 @@ public class shootingEnemy : MonoBehaviour
         {
             GameObject bullet = ObjectPooler.Instance.SpawnFromPool(Pool.HORIZONTAL_ENEMY_BULLET, transform.position, Quaternion.identity);
             bullet.GetComponent<HorizontalEnemyBullet>().OnObjectSpawn();
+           // Debug.Log("Spawn Bullet");
             nextFire = Time.time + fireRate;
         }
     }

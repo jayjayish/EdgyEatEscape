@@ -11,13 +11,14 @@ public abstract class ProjectileController : MonoBehaviour
     protected float currentTimeToLive; //currentDuration
     protected bool isMoving = true;
 
-    protected string[] listOfObstacleTags = { Tags.ENEMY, Tags.SOLID_OBSTACLE };
+    protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE };
 
 
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        //Debug.Log(currentTimeToLive);
         if (isMoving)
         {
             transform.Translate(-VectorFromAngle(angle) * velocity);
