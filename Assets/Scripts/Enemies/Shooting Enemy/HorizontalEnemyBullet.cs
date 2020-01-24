@@ -25,7 +25,7 @@ public class HorizontalEnemyBullet : ProjectileController, IPooledObject
         GetComponent<CircleCollider2D>().enabled = true;
         isMoving = true;
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 
     protected override void OnTriggerEnter2D(Collider2D col)
