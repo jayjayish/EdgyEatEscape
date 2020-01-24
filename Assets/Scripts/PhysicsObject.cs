@@ -57,7 +57,7 @@ public class PhysicsObject : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime; //gravity
-
+        
         velocity.x = targetVelocity.x;
 
         isGrounded = false; //switches to true when collision is found

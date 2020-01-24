@@ -20,6 +20,7 @@ public class PlayerController : CharacterController
     // animation variables
     Animator animator;
     private bool isPlayerMoving;
+    private bool facingLeft = true;
     private float lastMoveX;
     
     #region DashVariables
@@ -51,11 +52,15 @@ public class PlayerController : CharacterController
     private int comboCount = 0;
     #endregion
 
+
+    private Rigidbody2D rb2d;
+
     protected override void Start()
     {
         base.Start();
         animator = GetComponent<Animator>();
         comboJSON = GetComponent<PlayerComboJSON>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     protected override void Update()
@@ -116,34 +121,83 @@ public class PlayerController : CharacterController
 
 
 
-
+    #region Animations
     protected void UpdateAnimator()
     {
         //check if player is moving to set idle or moving animations
+        layerTransitions();
         isPlayerMoving = (targetVelocity.x != 0);
 
 
-        animator.SetFloat("Move X", targetVelocity.x);
-        animator.SetBool("PlayerMoving", isPlayerMoving);
+        animator.SetFloat("speed", Mathf.Abs(targetVelocity.x));
 
-        if (targetVelocity.x > 0)
-        {
-            animator.SetFloat("LastMoveX", 1f);
+        BasicAttackAnimation();
+        Flip(targetVelocity.x);
 
-        }
-        else if (targetVelocity.x < 0)
+        jumpAnimation();
+    }
+
+    private void Flip(float xVelocity)
+    {
+        if (xVelocity > 0 && facingLeft || xVelocity < 0 && !facingLeft)
         {
-            animator.SetFloat("LastMoveX", -1f);
-        }
-        else
-        {
-            animator.SetFloat("LastMoveX", animator.GetFloat("LastMoveX"));
+            facingLeft = !facingLeft;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+
+            transform.localScale = theScale;
         }
     }
 
+    private void BasicAttackAnimation()
+    {
+        if (isAttacking)
+            animator.SetTrigger("attack");
+        else
+            animator.ResetTrigger("attack");
+
+    }
+
+    private void layerTransitions()
+    {
+        if (!isGrounded)
+        {
+            animator.SetLayerWeight(1, 1);
+            animator.SetLayerWeight(0, 0);
+        }
+
+        else
+        {
+            animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(0, 1);
+        }
+
+    }
+
+    private void jumpAnimation()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            animator.SetTrigger("jump");
+            Debug.Log("jumped");
+        }
+
+        else if ((rb2d.velocity.y + velocity.y) < 0 && !isGrounded)
+        {
+            animator.SetBool("isfalling", true);
+        }
+
+        else if (isGrounded)
+        {
+            animator.SetBool("isfalling", false);
+            animator.ResetTrigger("jump");
+        }
 
 
+    }
 
+    #endregion
 
 
 
@@ -161,6 +215,7 @@ public class PlayerController : CharacterController
         {
             velocity.y = jumpTakeOffSpeed;
         }
+
         else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
         {
             if (velocity.y > 0)
@@ -171,7 +226,6 @@ public class PlayerController : CharacterController
 
         if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
         {
-            //Debug.Log("DashLeft");//checks for input
 
             float timesinceLastLeft = Time.time - lastLeftTime;
 
@@ -187,7 +241,6 @@ public class PlayerController : CharacterController
             {
                 //Normal Click
                 lastLeftTime = Time.time;
-                //Debug.Log("left clicked" + lastLeftTime);
             }
 
 
@@ -195,7 +248,6 @@ public class PlayerController : CharacterController
 
         if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
         {
-            //Debug.Log("DashRight");// checks for input
 
             float timesinceLastRight = Time.time - lastRightTime;
 
@@ -212,7 +264,6 @@ public class PlayerController : CharacterController
             {
                 //Normal Click
                 lastRightTime = Time.time;
-                //Debug.Log("right clicked" + lastRightTime);
             }
         }
 
@@ -220,7 +271,6 @@ public class PlayerController : CharacterController
         {
             move.x = dashDirection * dashMultiplier;
             dashTime -= Time.deltaTime; //Decrease time counter
-            //Debug.Log("dashTime:" + dashTime);
         }
 
 
@@ -243,10 +293,6 @@ public class PlayerController : CharacterController
 
 
 
-
-
-
-
     
     // detect combo input
     protected virtual void DetectCombo()
@@ -260,7 +306,6 @@ public class PlayerController : CharacterController
             comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
                 TriggeredTime = startTriggerTime;//timer for combo
                 comboCount++;
-                //Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
             }
             else
@@ -281,7 +326,6 @@ public class PlayerController : CharacterController
                 comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
                 TriggeredTime = startTriggerTime;//timer for combo
                 comboCount++;
-                //Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
 
 
@@ -320,7 +364,7 @@ public class PlayerController : CharacterController
 
 
 
-    /*
+     /*
      * 
      * THE STYLE OF HOW TO SPAWN A HITBOX
  private void SOME TYPE OF HITBOX()
@@ -328,12 +372,5 @@ public class PlayerController : CharacterController
     GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
     hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
 }
-
  */
 }
-
-//if (TriggeredTime > 0)
-//{
-//TriggeredTime -= Time.deltaTime;
-
-//}
