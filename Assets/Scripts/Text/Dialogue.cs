@@ -48,7 +48,7 @@ public class Dialogue : MonoBehaviour
     private string text = "";
 
     public void setText(string _text) {
-        Debug.Log("1 "+ _text);
+        //Debug.Log("1 "+ _text);
         this.text = (string) _text.Clone();
         DialogueChain();
     }
@@ -61,7 +61,7 @@ public class Dialogue : MonoBehaviour
         hanger = Instantiate(empty, gameObject.transform.position, Quaternion.identity);
         words.transform.parent = hanger.transform;
         hanger.transform.parent = gameObject.transform;
-        Debug.Log("bruh " + text);
+        //Debug.Log("bruh " + text);
         int row = 0;
 
         while (index < text.Length && row < rowY.Length)
@@ -80,8 +80,8 @@ public class Dialogue : MonoBehaviour
 
             if (nextWord.Length + line.Length > limit)
             {
-                Debug.Log(line);
-                Debug.Log("Row = " + row);
+                //Debug.Log(line);
+                //Debug.Log("Row = " + row);
                 words.printer(line, rowX, rowY[row], rowZ);
                 line = "" + nextWord;
                 if (line.Length > 0)
@@ -102,7 +102,7 @@ public class Dialogue : MonoBehaviour
         if (line.Length > 0 && row < rowY.Length)
         {
             words.printer(line, rowX, rowY[row], rowZ);
-            Debug.Log(line);
+            //Debug.Log(line);
             line = "";
         }
 
@@ -135,7 +135,7 @@ public class Dialogue : MonoBehaviour
 
         words.transform.localScale = new Vector3(words.transform.localScale.x * ratio, words.transform.localScale.y * ratio, words.transform.localScale.z);
         dialogueExists = true;
-        Debug.Log("dialogue Exists = " + dialogueExists);
+        //Debug.Log("dialogue Exists = " + dialogueExists);
     }
 
     // Start is called before the first frame update
@@ -154,16 +154,16 @@ public class Dialogue : MonoBehaviour
         }
         if (touch && dialogueExists)
         {
-            Debug.Log("destroy words");
+            //Debug.Log("destroy words");
             Object.Destroy(hanger);
-            Debug.Log("index = " + index);
-            Debug.Log("text length = " + text.Length);
-            Debug.Log("line = " + line);
+            //Debug.Log("index = " + index);
+            //Debug.Log("text length = " + text.Length);
+            //Debug.Log("line = " + line);
             dialogueExists = false;
             if (index >= text.Length && line.Length == 0) {
                 finished = true;
-                Debug.Log("thats all for now folks");
-                Debug.Log("finished = " + finished);
+                //Debug.Log("thats all for now folks");
+                //Debug.Log("finished = " + finished);
             }
         }
 

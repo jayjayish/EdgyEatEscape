@@ -22,12 +22,15 @@ public class PlayerController : CharacterController
     private bool isPlayerMoving;
     private bool facingLeft = true;
     private float lastMoveX;
-
+    
+    #region DashVariables
     // constants for dash detection
     public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
     private float lastRightTime = 0f;
-
+    #endregion
+    
+    #region DashConstants
     //dash time constants
     private int dashDirection;
     private const float dashMultiplier = 10f;
@@ -35,16 +38,19 @@ public class PlayerController : CharacterController
     private float dashTime;
     public float dashSpeed;
     public const float startDashTime = .1f;
+    #endregion
 
+    #region ComboVariables
     //combo array
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
-    private List<string> comboExecuted = new List<string>();
+    private string comboExecuted;
     private float lastTriggerTime = 0f;
-    private float COMBO_TIME = 0.3f;
+    private float COMBO_TIME = 1f;
     private float TriggeredTime;
     public const float startTriggerTime = 0f;
     private int comboCount = 0;
+    #endregion
 
 
     private Rigidbody2D rb2d;
@@ -62,7 +68,7 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectAttack();
-        //DetectCombo();
+        DetectCombo();
 
     }
 
@@ -171,8 +177,7 @@ public class PlayerController : CharacterController
 
     private void jumpAnimation()
     {
-        Debug.Log("total velocity" + (rb2d.velocity.y + velocity.y));
-        if (Input.GetButtonDown("Jump"))// && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
             animator.SetTrigger("jump");
             Debug.Log("jumped");
@@ -221,7 +226,6 @@ public class PlayerController : CharacterController
 
         if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
         {
-            //Debug.Log("DashLeft");//checks for input
 
             float timesinceLastLeft = Time.time - lastLeftTime;
 
@@ -237,7 +241,6 @@ public class PlayerController : CharacterController
             {
                 //Normal Click
                 lastLeftTime = Time.time;
-                //Debug.Log("left clicked" + lastLeftTime);
             }
 
 
@@ -245,7 +248,6 @@ public class PlayerController : CharacterController
 
         if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
         {
-            //Debug.Log("DashRight");// checks for input
 
             float timesinceLastRight = Time.time - lastRightTime;
 
@@ -262,7 +264,6 @@ public class PlayerController : CharacterController
             {
                 //Normal Click
                 lastRightTime = Time.time;
-                //Debug.Log("right clicked" + lastRightTime);
             }
         }
 
@@ -270,7 +271,6 @@ public class PlayerController : CharacterController
         {
             move.x = dashDirection * dashMultiplier;
             dashTime -= Time.deltaTime; //Decrease time counter
-            //Debug.Log("dashTime:" + dashTime);
         }
 
 
@@ -293,6 +293,84 @@ public class PlayerController : CharacterController
 
 
 
+    
+    // detect combo input
+    protected virtual void DetectCombo()
+    {
+        if (Input.GetButtonDown("TriggerR"))
+        {
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+                       
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+            {
+            comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
+                TriggeredTime = startTriggerTime;//timer for combo
+                comboCount++;
+                lastTriggerTime = Time.time;
+            }
+            else
+            {
+                comboCount = 1; //otherwise combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "h";
+            }
+        }
+        else if (Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+        {
+
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+              
+            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+            {
+                comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
+                TriggeredTime = startTriggerTime;//timer for combo
+                comboCount++;
+                lastTriggerTime = Time.time;
 
 
+            }
+            else
+            {
+                comboCount = 1; //otherwise, combo is not executed
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "s";
+            }
+        }
+        else
+        {
+            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+            if (timesinceLastTrigger > COMBO_TIME && comboCount > 0) // if the combo isn't within the timee frame and >0
+            {
+
+                comboCount = 0;
+                Debug.Log(comboExecuted);
+                lastTriggerTime = Time.time;
+                comboExecuted = "";
+            }
+            
+        }
+        // check initial attack key
+        // set timing
+        // check next key 
+        // repeat for up to 6 keys
+
+        // for each input, set array element to inputted key
+        // on end of combo, reset array
+    }
+
+    
+
+
+
+     /*
+     * 
+     * THE STYLE OF HOW TO SPAWN A HITBOX
+ private void SOME TYPE OF HITBOX()
+{
+    GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
+    hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
+}
+ */
 }

@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: d1892a6feab5d604dbfd0320933015b5
+guid: 7850f535c53b042489fd50f0f42f8fa3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5853133172695266767
-    second: JumpingRight_0
+      213: 5213229242370633579
+    second: Door_0
   - first:
-      213: -1226714692381782998
-    second: JumpingRight_1
-  - first:
-      213: 2986409077452993378
-    second: JumpingRight_2
-  - first:
-      213: -247340803596154583
-    second: JumpingRight_3
+      213: 436563815456543028
+    second: Door_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -75,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +80,18 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpingRight_0
+      name: Door_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 20
-        height: 22
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,41 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fc44ad722dd174693876f74d98a619
-      internalID: -5853133172695266767
+      spriteID: b34462848546bd440aeb1fee6a030e9b
+      internalID: 5213229242370633579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: JumpingRight_1
+      name: Door_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 3
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44ea2e0dc95fe774cbe2669cf8088941
-      internalID: -1226714692381782998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpingRight_2
-      rect:
-        serializedVersion: 2
-        x: 88
+        x: 0
         y: 0
-        width: 20
-        height: 21
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,29 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94159379e4862a443b90bb31c788bb88
-      internalID: 2986409077452993378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JumpingRight_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 20
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71e8d3c1fe4818447bc1e4b397838cde
-      internalID: -247340803596154583
+      spriteID: 22b21bc5ddd086e4091c43f56649aa7e
+      internalID: 436563815456543028
       vertices: []
       indices: 
       edges: []
@@ -182,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: df1da2adc4b15cb419c47a85eca3e15b
+    spriteID: e73001d28fed8ed4587a4562a82ebe17
     internalID: 0
     vertices: []
     indices: 

@@ -113,7 +113,7 @@ public class DialogueProximity : MonoBehaviour
         //check if the object is currently set to out of range, but the player object is now in the circular radius
         if (!inRange && ((Mathf.Pow(player.transform.position.x - gameObject.transform.position.x, 2) + Mathf.Pow(player.transform.position.y - gameObject.transform.position.y, 2)) - offset <= rangeSquare))
         {
-            Debug.Log("In range");
+            //Debug.Log("In range");
             exclamInst = Instantiate(exclam, new Vector3(gameObject.transform.position.x + offX, gameObject.transform.position.y + offY, gameObject.transform.position.z), Quaternion.identity);
             exclamInst.transform.parent = gameObject.transform;
             inRange = true;
@@ -121,7 +121,7 @@ public class DialogueProximity : MonoBehaviour
         //else if the object is set to in range, but the player has now exited the circular radius
         else if(inRange && ((Mathf.Pow(player.transform.position.x - gameObject.transform.position.x, 2) + Mathf.Pow(player.transform.position.y - gameObject.transform.position.y, 2)) - offset > rangeSquare))
         {
-            Debug.Log("Out of range");
+            //Debug.Log("Out of range");
             Object.Destroy(exclamInst);
             inRange = false;
         }
