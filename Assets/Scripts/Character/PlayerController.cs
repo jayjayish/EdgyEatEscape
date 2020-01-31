@@ -53,7 +53,7 @@ public class PlayerController : CharacterController
     #endregion
 
 
-    private Rigidbody2D rb2d;
+    //private Rigidbody2D rb2d;
 
     protected override void Start()
     {
@@ -86,6 +86,8 @@ public class PlayerController : CharacterController
 
 
             StartCoroutine(DoAttack("BASIC_ATTACK_BOX"));
+
+            //animator.Play("Sonic_Slam");
         }
     }
 
@@ -348,6 +350,8 @@ public class PlayerController : CharacterController
                 Debug.Log(comboExecuted);
                 lastTriggerTime = Time.time;
                 comboExecuted = "";
+                animator.Play("Sonic_Slam");
+                Debug.Log("combooooo!!");
             }
             
         }
