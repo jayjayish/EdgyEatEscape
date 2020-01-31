@@ -23,5 +23,12 @@
     "active":4,
     "endlag":0,
     "damage":10
+	},
+  "BASIC_ATTACK_BOX":{
+    "position":[-2.36, -1.156, 0],
+    "startup":20,
+    "active":5,
+    "endlag":2,
+    "damage":10
 	}
 }

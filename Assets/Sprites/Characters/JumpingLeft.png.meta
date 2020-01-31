@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 995f672adc374a64bbfcf135dc5dfb8f
+guid: aa351240cee592d46952471631efc7e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1416429464104279805
-    second: WalkingRight_0
+      213: 8586340250329463859
+    second: JumpingLeft_0
   - first:
-      213: 5500995218121705168
-    second: WalkingRight_1
+      213: -8392171658634011866
+    second: JumpingLeft_1
   - first:
-      213: 8338177865272369549
-    second: WalkingRight_2
+      213: -2613333269588908339
+    second: JumpingLeft_2
   - first:
-      213: -3023056949740714248
-    second: WalkingRight_3
+      213: 7980057340698189006
+    second: JumpingLeft_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -84,7 +84,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -95,7 +95,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: Android
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -107,12 +107,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkingRight_0
+      name: JumpingLeft_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 12
         y: 0
-        width: 21
+        width: 20
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,19 +121,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7aa67bb13f137e74db98e907e408bf31
-      internalID: -1416429464104279805
+      spriteID: 526bfb2a1a8035c4d8d09dcd6c286255
+      internalID: 8586340250329463859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkingRight_1
+      name: JumpingLeft_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 52
         y: 0
-        width: 21
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d6176a798077647bf1b01efedd2529
+      internalID: -8392171658634011866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingLeft_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 3
+        width: 20
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,40 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb461f38b73360347b94a4cfda9b7f02
-      internalID: 5500995218121705168
+      spriteID: 8913018674250b54096e4bd663cb03fa
+      internalID: -2613333269588908339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkingRight_2
+      name: JumpingLeft_3
       rect:
         serializedVersion: 2
-        x: 68
-        y: 0
-        width: 21
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d769fcbdfed9cf4e90aedc76ccfbcab
-      internalID: 8338177865272369549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WalkingRight_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 21
+        x: 132
+        y: 1
+        width: 20
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a45522e0ecc7d2646832a448883b5477
-      internalID: -3023056949740714248
+      spriteID: 02b30b46cc580bd4badcb1b0d9d7667f
+      internalID: 7980057340698189006
       vertices: []
       indices: 
       edges: []
@@ -193,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1c3b1c427e2c7f24e828522e393d52f6
+    spriteID: 3ae6c650b78b774448bc193d019e893d
     internalID: 0
     vertices: []
     indices: 
