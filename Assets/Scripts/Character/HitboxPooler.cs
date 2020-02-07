@@ -15,14 +15,14 @@ public class HitboxPooler : MonoBehaviour {
         public GameObject prefab;
     }
 
-   // #region Singleton
+   #region Singleton
     public static HitboxPooler Instance;
 
     private void Awake()
     {
         Instance = this;
     }
-  // #endregion Singleton
+   #endregion Singleton
 
     
 
@@ -36,6 +36,7 @@ public class HitboxPooler : MonoBehaviour {
             Queue<GameObject> objectPool = new Queue<GameObject>();
 
             GameObject obj = Instantiate(pool.prefab);
+            obj.transform.parent = this.transform.parent;
             obj.SetActive(false);
             objectPool.Enqueue(obj);
             poolDictionary.Add(pool.tag,  objectPool);
@@ -52,8 +53,8 @@ public class HitboxPooler : MonoBehaviour {
        
         GameObject newObj =   poolDictionary[tag].Dequeue();
         newObj.SetActive(true);
-        newObj.transform.position = position;
-        newObj.transform.rotation = Quaternion.identity;
+        newObj.transform.localPosition = position;
+       // newObj.transform.rotation = Quaternion.identity;
 
         poolDictionary[tag].Enqueue(newObj);
 
