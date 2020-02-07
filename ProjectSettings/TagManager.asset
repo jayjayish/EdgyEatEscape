@@ -18,8 +18,8 @@ TagManager:
   - Player
   - PhysicObject
   - Hitbox
-  - 
-  - 
+  - Obstacle
+  - Ground
   - 
   - 
   - 

@@ -85,7 +85,7 @@ public class PlayerController : CharacterController
             //Animator and Data Table stuff goes here
 
 
-            StartCoroutine(DoAttack("TESTBOX"));
+            StartCoroutine(DoAttack("BASIC_ATTACK_BOX"));
         }
     }
 
