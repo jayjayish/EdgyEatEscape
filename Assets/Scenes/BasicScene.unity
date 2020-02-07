@@ -1081,22 +1081,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.51
-      objectReference: {fileID: 0}
     - target: {fileID: -4638558098295866398, guid: cba6586479c624e428eefcd799be36c1,
         type: 3}
       propertyPath: m_Offset.x
@@ -1117,15 +1101,31 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1.690412
       objectReference: {fileID: 0}
-    - target: {fileID: -662389693587289307, guid: cba6586479c624e428eefcd799be36c1,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1
+    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345652760, guid: cba6586479c624e428eefcd799be36c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 1361747101, guid: cba6586479c624e428eefcd799be36c1, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 58056cbe2e778324e8c38054945ad3f9, type: 2}
+    - target: {fileID: -662389693587289307, guid: cba6586479c624e428eefcd799be36c1,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 502535961014141224, guid: cba6586479c624e428eefcd799be36c1,
         type: 3}
       propertyPath: jumpTakeOffSpeed

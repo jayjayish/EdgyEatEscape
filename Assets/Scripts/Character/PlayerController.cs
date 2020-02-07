@@ -135,7 +135,7 @@ public class PlayerController : CharacterController
 
         BasicAttackAnimation();
         Flip(targetVelocity.x);
-
+        BasicWhipAttack();
         jumpAnimation();
     }
 
@@ -197,6 +197,13 @@ public class PlayerController : CharacterController
         }
 
 
+    }
+    private void BasicWhipAttack()
+    {
+        if (Input.GetButtonDown("Five"))
+        {
+            animator.Play("BasicWhipAttack");
+        }
     }
 
     #endregion
