@@ -14,5 +14,5 @@ public struct Tags
 // Tags for player attacks
 public struct HitboxPool
 {
-    public static readonly string TESTBOX = "Testbox";
+
 }
