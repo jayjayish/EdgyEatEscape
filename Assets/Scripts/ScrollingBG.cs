@@ -136,6 +136,7 @@ public class ScrollingBG : MonoBehaviour
 
 
     // Update is called once per frame
+    
     void Update()
     {
         newX = gameObject.transform.position.x;
@@ -144,4 +145,5 @@ public class ScrollingBG : MonoBehaviour
         checkX();
         checkY();
     }
+    
 }
