@@ -28,31 +28,17 @@ public class PlayerHitboxController : MonoBehaviour, IPooledObject
 
     protected virtual void OnTriggerEnter2D(Collider2D col) //check for collisions, aka dmg
     {
-        checkIfHitObject(col.tag);
-    }
-
-
-
-    protected virtual void checkIfHitObject(string tag) //check if object hit it part of the list of objects to be damaged
-    {
-        for (int i = 0; i < listofObstacleTags.Length; i++)
+        GameObject hitTarget = col.gameObject;
+        if (hitTarget.tag == Tags.ENEMY)
         {
-            if (tag == listofObstacleTags[i])
-            {
-                onHitObject();
-            }
-
+            hitTarget.GetComponent<EnemyController>().DecrementHealth(damage);
         }
-       
+
     }
 
 
-    protected virtual void onHitObject() {
 
-        Debug.Log("Touchy Touch");
 
-        return;
-    } //deal damage and other effects
 
 
 
