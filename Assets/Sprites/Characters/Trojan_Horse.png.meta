@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: d8fdecc66be8e1f49bab8dc9ed6f09fb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3444039327993589499
+    second: Trojan_Horse_0
+  - first:
+      213: 5669848367231063924
+    second: Trojan_Horse_1
+  - first:
+      213: 7803871101807766278
+    second: Trojan_Horse_2
+  - first:
+      213: -8568451587298557001
+    second: Trojan_Horse_3
+  - first:
+      213: -8903964593555305540
+    second: Trojan_Horse_4
+  - first:
+      213: 7993999973632979625
+    second: Trojan_Horse_5
+  - first:
+      213: 2243192847227690504
+    second: Trojan_Horse_6
+  - first:
+      213: -5277747678746342082
+    second: Trojan_Horse_7
+  - first:
+      213: 6950760419572910631
+    second: Trojan_Horse_8
+  - first:
+      213: 1773236901763538251
+    second: Trojan_Horse_9
+  - first:
+      213: 6274659076960171272
+    second: Trojan_Horse_10
+  - first:
+      213: 7876371570215157627
+    second: Trojan_Horse_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +76,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,9 +105,272 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Trojan_Horse_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 140
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.77, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a662953222162c64f92ad02b820a2f20
+      internalID: -3444039327993589499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 140
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.78, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c32e272d7d83c40bec282132fccc79
+      internalID: 5669848367231063924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_2
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 140
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.795, y: 0.2500002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3a4ccdfd643af43864c5ec894aa5b1
+      internalID: 7803871101807766278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_3
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 140
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.78, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee9a0e10ab87cc4c8a5b0fd68bfd59d
+      internalID: -8568451587298557001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_4
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 140
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.801, y: 0.2500002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e6b48e2c17de34cab6603f590946d0
+      internalID: -8903964593555305540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 70
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.75, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53acd9cc0e4766f4ea484957856ad0d0
+      internalID: 7993999973632979625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 69
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.78, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7d86f623fc73b4998afe1fe28a8e39
+      internalID: 2243192847227690504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_7
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 70
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.78, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f631f50562da84ab8862b70ab3b2b5
+      internalID: -5277747678746342082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_8
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 69
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.8, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fdded4ebf497f419686fcc5c90571f
+      internalID: 6950760419572910631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_9
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 70
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.79, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3c1b6e5412c1e49b4982537bb304e8
+      internalID: 1773236901763538251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.745, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef428d3f53472d840b5434aa82b120b6
+      internalID: 6274659076960171272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.75, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbef6bc4fb8a5f144b152ca68aff47bd
+      internalID: 7876371570215157627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
