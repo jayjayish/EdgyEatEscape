@@ -24,10 +24,13 @@ public class PlayerController : CharacterController
     private float lastMoveX;
     Vector2 move;
 
+    Queue<IEnumerator> comboQueue;
+    protected bool comboQueueLock;
 
-    //Delegate
-    protected delegate void attackDelegate();
+//Delegate
+protected delegate void attackDelegate();
     protected attackDelegate attackMovementDelegate;
+
 
 
     #region DashVariables
@@ -122,6 +125,8 @@ public class PlayerController : CharacterController
         isAttacking = false;
 
         attackMovementDelegate = null;
+
+     //   AttackQueueManager();
 
     }
 
@@ -364,13 +369,95 @@ public class PlayerController : CharacterController
 
 
 
-
-
-
-    
-    // detect combo input
-    protected virtual void DetectCombo()
+    protected void AttackQueueManager()
     {
+
+        if(comboQueue.Count != 0)
+        {
+            StartCoroutine(comboQueue.Dequeue());
+        }
+
+
+        /*
+         * If combo queue = 0
+         *   Set not attacking
+         *   Set combo time to initial value
+         *   Queue is still alive
+         * 
+         * 
+         */
+    }
+
+
+    protected void AttackQueuer(int buttonPressed)
+    {
+        //if (comboCount ==1 andao fijsaeofijasef)
+
+    }
+
+
+
+    // detect combo input
+    protected void DetectCombo()
+    {
+
+        /*
+        If Button Pressed{
+            If Queue is dead{
+                Add first attack
+                combo count ++
+                call attack queue manager
+            }
+            
+            If Queue is alive{
+                If attack is still running{
+                    Add it to end of queue
+                    comob count ++
+                }
+                If attack is done{
+                    Add it to queue
+                    combo count ++
+                    Call attack queue manager
+
+                }
+
+                
+            }
+
+
+
+        }
+        If Queue is alive and not attacking {
+            tick down combo time
+            if combo time is 0{
+                kill combo, combo now dead
+                clear the combo list
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        */
+
+
+
+
+
+
+
+
+        /*
         if (Input.GetButtonDown("TriggerR"))
         {
             float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
@@ -427,6 +514,9 @@ public class PlayerController : CharacterController
             }
             
         }
+
+        */
+
         // check initial attack key
         // set timing
         // check next key 
@@ -436,17 +526,17 @@ public class PlayerController : CharacterController
         // on end of combo, reset array
     }
 
-    
 
 
 
-     /*
-     * 
-     * THE STYLE OF HOW TO SPAWN A HITBOX
- private void SOME TYPE OF HITBOX()
+
+    /*
+    * 
+    * THE STYLE OF HOW TO SPAWN A HITBOX
+private void SOME TYPE OF HITBOX()
 {
-    GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
-    hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
+   GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
+   hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
 }
- */
+*/
 }
