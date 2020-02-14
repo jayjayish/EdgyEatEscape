@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 3416749149268472643}
   - component: {fileID: -662389693587289307}
   - component: {fileID: -4638558098295866398}
+  - component: {fileID: 502535961014141224}
   - component: {fileID: 1361747101}
   - component: {fileID: 1361747103}
   m_Layer: 8

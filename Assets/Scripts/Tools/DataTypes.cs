@@ -11,13 +11,8 @@ public struct Tags
     public static readonly string RESIDENT = "Resident";
 }
 
-public struct Pool
-{
-    public static readonly string HORIZONTAL_ENEMY_BULLET = "HorizontalEnemyBullet";
-}
-
 // Tags for player attacks
 public struct HitboxPool
 {
-    public static readonly string TESTBOX = "Testbox";
+
 }
