@@ -22,7 +22,14 @@ public class PlayerController : CharacterController
     private bool isPlayerMoving;
     private bool facingLeft = true;
     private float lastMoveX;
-    
+    Vector2 move;
+
+
+    //Delegate
+    protected delegate void attackDelegate();
+    protected attackDelegate attackMovementDelegate;
+
+
     #region DashVariables
     // constants for dash detection
     public const float DOUBLE_PRESS_TIME = .20f;
@@ -95,7 +102,9 @@ public class PlayerController : CharacterController
     IEnumerator DoAttack(string hitboxName)
     {
         //Startup
-        
+
+
+
         yield return new WaitForSeconds( comboJSON.getStartup(hitboxName.ToUpper()) * (1f/60f));
 
 
@@ -112,6 +121,55 @@ public class PlayerController : CharacterController
         hitbox.SetActive(false);
         isAttacking = false;
 
+        attackMovementDelegate = null;
+
+    }
+
+    IEnumerator DoJumpAttack(string hitboxName)
+    {
+        //Startup
+
+        attackMovementDelegate += JumpUp;
+        attackMovementDelegate += MoveForward;
+        yield return new WaitForSeconds(1f / 60f);
+        attackMovementDelegate -= JumpUp;
+        yield return new WaitForSeconds((comboJSON.getStartup(hitboxName.ToUpper()) - 1) * (1f / 60f));
+
+
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(hitboxName.ToUpper(), comboJSON.getPosition(hitboxName.ToUpper()));
+
+
+        // hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage(hitboxName.ToUpper()));
+        //Vector3 temp = hitbox.transform.localScale;
+        //temp.z = animator.GetFloat("LastMoveX");
+        //hitbox.transform.localScale = temp;
+
+        yield return new WaitForSeconds(comboJSON.getActive(hitboxName.ToUpper()) * (1f / 60f));
+
+        hitbox.SetActive(false);
+        isAttacking = false;
+
+        attackMovementDelegate = null;
+
+    }
+
+
+
+    protected void JumpUp()
+    {
+        velocity.y = jumpTakeOffSpeed;
+    }
+
+    protected void MoveForward()
+    {
+        if (facingLeft)
+        {
+            move.x = -1;
+        }
+        else
+        {
+            move.x = 1;
+        }
     }
 
 
@@ -216,73 +274,80 @@ public class PlayerController : CharacterController
 
     protected override void ComputeVelocity()
     {
-        Vector2 move = Vector2.zero;
+        move = Vector2.zero;
 
-        move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
+        if (isAttacking)
         {
-            velocity.y = jumpTakeOffSpeed;
+            attackMovementDelegate?.Invoke();
         }
-
-        else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
-        {
-            if (velocity.y > 0)
-                velocity.y = velocity.y * 0.5f;
-        }
-
-        // detect dash
-
-        if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
+        else
         {
 
-            float timesinceLastLeft = Time.time - lastLeftTime;
+            move.x = Input.GetAxis("Horizontal");
 
-            if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
+            if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
             {
-                dashDirection = -1;
-                dashTime = startDashTime;//timer for dash
-                Debug.Log("dashTime:" + dashTime);
-                Debug.Log("double left");//delta tiime
-            }
-            //Double click
-            else
-            {
-                //Normal Click
-                lastLeftTime = Time.time;
+                velocity.y = jumpTakeOffSpeed;
             }
 
-
-        }
-
-        if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
-        {
-
-            float timesinceLastRight = Time.time - lastRightTime;
-
-            if (timesinceLastRight <= DOUBLE_PRESS_TIME)
+            else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
             {
-                dashDirection = 1;
-                dashTime = startDashTime;//timer for dash
-                Debug.Log("dashTime:" + dashTime);
-
-                Debug.Log("double right");//debug delta time
+                if (velocity.y > 0)
+                    velocity.y = velocity.y * 0.5f;
             }
-            //double click
-            else
+
+            // detect dash
+
+            if (Input.GetButtonDown("DashLeft")) //checks if "a" or left arrow button was pressed
             {
-                //Normal Click
-                lastRightTime = Time.time;
+
+                float timesinceLastLeft = Time.time - lastLeftTime;
+
+                if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
+                {
+                    dashDirection = -1;
+                    dashTime = startDashTime;//timer for dash
+                    Debug.Log("dashTime:" + dashTime);
+                    Debug.Log("double left");//delta tiime
+                }
+                //Double click
+                else
+                {
+                    //Normal Click
+                    lastLeftTime = Time.time;
+                }
+
+
+            }
+
+            if (Input.GetButtonDown("DashRight")) //checks if "d" or right arrow button was pressed
+            {
+
+                float timesinceLastRight = Time.time - lastRightTime;
+
+                if (timesinceLastRight <= DOUBLE_PRESS_TIME)
+                {
+                    dashDirection = 1;
+                    dashTime = startDashTime;//timer for dash
+                    Debug.Log("dashTime:" + dashTime);
+
+                    Debug.Log("double right");//debug delta time
+                }
+                //double click
+                else
+                {
+                    //Normal Click
+                    lastRightTime = Time.time;
+                }
+            }
+
+            if (dashTime > 0)
+            {
+                move.x = dashDirection * dashMultiplier;
+                dashTime -= Time.deltaTime; //Decrease time counter
             }
         }
-
-        if (dashTime > 0)
-        {
-            move.x = dashDirection * dashMultiplier;
-            dashTime -= Time.deltaTime; //Decrease time counter
-        }
-
-
 
 
         targetVelocity = move * maxSpeed;
