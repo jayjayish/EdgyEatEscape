@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 4e86879682e71514781276914a802f6d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7928983949192116740
+    second: Spin_Dab_0
+  - first:
+      213: -7963252735281174282
+    second: Spin_Dab_1
+  - first:
+      213: -7337311797512261296
+    second: Spin_Dab_2
+  - first:
+      213: 989581855572753936
+    second: Spin_Dab_3
+  - first:
+      213: -8146419639459573148
+    second: Spin_Dab_4
+  - first:
+      213: 9184379006733420495
+    second: Spin_Dab_5
+  - first:
+      213: 6833741054990430530
+    second: Spin_Dab_6
+  - first:
+      213: -7567875966852088885
+    second: Spin_Dab_7
+  - first:
+      213: 307724861977983367
+    second: Spin_Dab_8
+  - first:
+      213: -5709154253317151691
+    second: Spin_Dab_9
+  - first:
+      213: 4562319069625863753
+    second: Spin_Dab_10
+  - first:
+      213: 3712265582679610648
+    second: Spin_Dab_11
+  - first:
+      213: 4561333776718490841
+    second: Spin_Dab_12
+  - first:
+      213: -983523551280803090
+    second: Spin_Dab_13
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +82,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,9 +111,314 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spin_Dab_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4d6019a6b37fa40952cc5728ecc9ee
+      internalID: 7928983949192116740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 68
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f1cab40f10d9a458e7a4b2e5f31899
+      internalID: -7963252735281174282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 68
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46353d40d723d0c4993b7b0e7563eba8
+      internalID: -7337311797512261296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 68
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c26ee1a4cf6244f92c288702168bce
+      internalID: 989581855572753936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_4
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 68
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be207bf2cdb9e5c4f92f6522488d3acf
+      internalID: -8146419639459573148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 68
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1999537a05011854ea94a28d644bc8b9
+      internalID: 9184379006733420495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_6
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 68
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ecd0a4927644d4bbe44b18a53d4bdd
+      internalID: 6833741054990430530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 12
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f65aad8188a6d84cae2c40be0c726f9
+      internalID: -7567875966852088885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 12
+        width: 62
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d3df5c7a0d4ec46b82638f369dfa1d
+      internalID: 307724861977983367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_9
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 12
+        width: 62
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b841bd7e63e7540a393405d522d09d
+      internalID: -5709154253317151691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 12
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03db3bd78e94c554a8bd40107706812f
+      internalID: 4562319069625863753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_11
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 12
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9408dbd14f90ac54da9e28d8fe257da7
+      internalID: 3712265582679610648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_12
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 12
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d32826b39da9e4e9912925c93b7584
+      internalID: 4561333776718490841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_13
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 12
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a518cc31e766052438c2aefca08398e4
+      internalID: -983523551280803090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
