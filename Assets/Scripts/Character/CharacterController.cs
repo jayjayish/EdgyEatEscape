@@ -73,12 +73,8 @@ public class CharacterController : PhysicsObject
 	
 	public virtual void DecrementHealthMagic(float damage)
     {
-		
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
-        if (IsHealthZero())
-        {
-            OnDeath();
-        }
+
+        DecrementHealth(damage);
        // updateHealthBar();
     }
 	
@@ -86,13 +82,9 @@ public class CharacterController : PhysicsObject
 	
 	public virtual void DecrementHealthPhysical(float damage)
     {
-		
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
-        if (IsHealthZero())
-        {
-            OnDeath();
-        }
-       // updateHealthBar();
+
+        DecrementHealth(damage);
+        // updateHealthBar();
     }
 	
 	
