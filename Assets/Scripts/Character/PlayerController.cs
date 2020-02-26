@@ -24,11 +24,10 @@ public class PlayerController : CharacterController
     private float lastMoveX;
     Vector2 move;
 
-    Queue<IEnumerator> comboQueue;
-    protected bool comboQueueLock;
 
-//Delegate
-protected delegate void attackDelegate();
+
+    //Delegate
+    protected delegate void attackDelegate();
     protected attackDelegate attackMovementDelegate;
 
 
@@ -54,16 +53,20 @@ protected delegate void attackDelegate();
     //combo array
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
-    private string comboExecuted;
-    private float lastTriggerTime = 0f;
+
+    // private float lastTriggerTime = 0f;
     private float COMBO_TIME = 1f;
     private float TriggeredTime;
-    public const float startTriggerTime = 0f;
+    //public const float startTriggerTime = 0f;
+
+    private float timeOfLastAttack = 0;
+    private string currentCombo;
     private int comboCount = 0;
+    Queue<IEnumerator> comboQueue;
+    protected bool comboQueueAlive = false;
+    protected string lastButtonPressed;
     #endregion
 
-
-    //private Rigidbody2D rb2d;
 
     protected override void Start()
     {
@@ -71,6 +74,8 @@ protected delegate void attackDelegate();
         animator = GetComponent<Animator>();
         comboJSON = GetComponent<PlayerComboJSON>();
         rb2d = GetComponent<Rigidbody2D>();
+        currentCombo = "";
+        lastButtonPressed = "";
     }
 
     protected override void Update()
@@ -182,10 +187,6 @@ protected delegate void attackDelegate();
 
 
 
-
-
-
-
     #region Animations
     protected void UpdateAnimator()
     {
@@ -270,8 +271,6 @@ protected delegate void attackDelegate();
     }
 
     #endregion
-
-
 
 
 
@@ -371,35 +370,60 @@ protected delegate void attackDelegate();
 
     protected void AttackQueueManager()
     {
-
-        if(comboQueue.Count != 0)
-        {
-            StartCoroutine(comboQueue.Dequeue());
-        }
-
-
-        /*
-         * If combo queue = 0
-         *   Set not attacking
-         *   Set combo time to initial value
-         *   Queue is still alive
-         * 
-         * 
-         */
+        StartCoroutine(comboQueue.Dequeue());
     }
 
 
-    protected void AttackQueuer(int buttonPressed)
+    protected void AttackQueuer()
     {
+        currentCombo = string.Concat(currentCombo, lastButtonPressed);
+        Debug.Log(comboCount + "  " + currentCombo);
         //if (comboCount ==1 andao fijsaeofijasef)
 
     }
 
 
+    //  Queue<IEnumerator> comboQueue;
+    //  protected bool comboQueueLock;
 
     // detect combo input
     protected void DetectCombo()
     {
+
+        if (AttackPressed())
+        {
+            if (!comboQueueAlive)
+            {
+                comboQueueAlive = true;
+                comboCount = 1;
+                AttackQueuer();
+                AttackQueueManager();
+            }
+            else if (comboQueueAlive)
+            {
+                comboCount++;
+                AttackQueuer();
+                if (!isAttacking)
+                {
+                    AttackQueueManager();
+                }
+            }
+
+        }
+
+        if (comboQueueAlive && isAttacking)
+        {
+            timeOfLastAttack = Time.time;
+        }
+        else if (comboQueueAlive && !isAttacking && Time.time - timeOfLastAttack > COMBO_TIME)
+        {
+            comboQueueAlive = false;
+            currentCombo = "";
+        }
+
+
+
+
 
         /*
         If Button Pressed{
@@ -457,86 +481,96 @@ protected delegate void attackDelegate();
 
 
 
-        /*
-        if (Input.GetButtonDown("TriggerR"))
-        {
-            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
-                       
-            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+            /*
+            if (Input.GetButtonDown("TriggerR"))
             {
-            comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
-                TriggeredTime = startTriggerTime;//timer for combo
-                comboCount++;
-                lastTriggerTime = Time.time;
+                float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+
+                if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+                {
+                comboExecuted = comboExecuted + "h"; //combo is executed and inputs h
+                    TriggeredTime = startTriggerTime;//timer for combo
+                    comboCount++;
+                    lastTriggerTime = Time.time;
+                }
+                else
+                {
+                    comboCount = 1; //otherwise combo is not executed
+                    Debug.Log(comboExecuted);
+                    lastTriggerTime = Time.time;
+                    comboExecuted = "h";
+                }
+            }
+            else if (Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
+            {
+
+                float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+
+                if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
+                {
+                    comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
+                    TriggeredTime = startTriggerTime;//timer for combo
+                    comboCount++;
+                    lastTriggerTime = Time.time;
+
+
+                }
+                else
+                {
+                    comboCount = 1; //otherwise, combo is not executed
+                    Debug.Log(comboExecuted);
+                    lastTriggerTime = Time.time;
+                    comboExecuted = "s";
+                }
             }
             else
             {
-                comboCount = 1; //otherwise combo is not executed
-                Debug.Log(comboExecuted);
-                lastTriggerTime = Time.time;
-                comboExecuted = "h";
-            }
-        }
-        else if (Input.GetButtonDown("TriggerL")) //checks if attack buttons were triggered
-        {
+                float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
+                if (timesinceLastTrigger > COMBO_TIME && comboCount > 0) // if the combo isn't within the timee frame and >0
+                {
 
-            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
-              
-            if ((timesinceLastTrigger <= COMBO_TIME && comboCount < 6) || comboCount == 0) //if the combo is within the time limit and less than six, or the combo = 0, then
-            {
-                comboExecuted = comboExecuted + "s"; //combo is executed and inputs s
-                TriggeredTime = startTriggerTime;//timer for combo
-                comboCount++;
-                lastTriggerTime = Time.time;
-
+                    comboCount = 0;
+                    Debug.Log(comboExecuted);
+                    lastTriggerTime = Time.time;
+                    comboExecuted = "";
+                    animator.Play("Sonic_Slam");
+                    Debug.Log("combooooo!!");
+                }
 
             }
-            else
-            {
-                comboCount = 1; //otherwise, combo is not executed
-                Debug.Log(comboExecuted);
-                lastTriggerTime = Time.time;
-                comboExecuted = "s";
-            }
-        }
-        else
-        {
-            float timesinceLastTrigger = Time.time - lastTriggerTime; //defining timesinceLastTrigger
-            if (timesinceLastTrigger > COMBO_TIME && comboCount > 0) // if the combo isn't within the timee frame and >0
-            {
 
-                comboCount = 0;
-                Debug.Log(comboExecuted);
-                lastTriggerTime = Time.time;
-                comboExecuted = "";
-                animator.Play("Sonic_Slam");
-                Debug.Log("combooooo!!");
-            }
-            
-        }
+            */
 
-        */
+            // check initial attack key
+            // set timing
+            // check next key 
+            // repeat for up to 6 keys
 
-        // check initial attack key
-        // set timing
-        // check next key 
-        // repeat for up to 6 keys
-
-        // for each input, set array element to inputted key
-        // on end of combo, reset array
+            // for each input, set array element to inputted key
+            // on end of combo, reset array
     }
 
 
 
 
 
-    /*
-    * 
-    * THE STYLE OF HOW TO SPAWN A HITBOX
-private void SOME TYPE OF HITBOX()
-{
-   GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(Pool.HITBOXNAME, transform.position); Transform.position may have offsets for staring position of hitbox
-   hitbox.GetComponent<Filename of Hitbox>().OnObjectSpawn();
-}
-*/
+
+
+    private bool AttackPressed()
+    {
+        if (Input.GetButtonDown("TriggerR"))
+        {
+            lastButtonPressed = "s";
+            return true;
+        }
+        else if (Input.GetButtonDown("TriggerL"))
+        {
+            lastButtonPressed = "h";
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
