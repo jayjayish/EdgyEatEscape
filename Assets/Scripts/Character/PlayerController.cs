@@ -76,6 +76,7 @@ public class PlayerController : CharacterController
         rb2d = GetComponent<Rigidbody2D>();
         currentCombo = "";
         lastButtonPressed = "";
+        comboQueue = new Queue<IEnumerator>();
     }
 
     protected override void Update()
@@ -370,14 +371,27 @@ public class PlayerController : CharacterController
 
     protected void AttackQueueManager()
     {
-        StartCoroutine(comboQueue.Dequeue());
+        if (comboQueue.Count != 0){
+            
+            StartCoroutine(comboQueue.Dequeue());
+        }
     }
 
+    IEnumerator TestRoutine()
+    {
+        isAttacking = true;
+        yield return new WaitForSeconds(1f);
+        isAttacking = false;
+        timeOfLastAttack = Time.time;
+        AttackQueueManager();
+    }
 
     protected void AttackQueuer()
     {
         currentCombo = string.Concat(currentCombo, lastButtonPressed);
         Debug.Log(comboCount + "  " + currentCombo);
+
+        comboQueue.Enqueue(TestRoutine());
         //if (comboCount ==1 andao fijsaeofijasef)
 
     }
