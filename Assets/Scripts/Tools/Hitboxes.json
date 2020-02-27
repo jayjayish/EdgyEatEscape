@@ -30,5 +30,12 @@
     "active":5,
     "endlag":2,
     "damage":10
-	}
+	},
+  "HEADDRILL":{
+    "position":[-1.9, -1.44, 0],
+    "startup":27,
+    "active":24,
+    "endlag":6,
+    "damage":10
+  }
 }

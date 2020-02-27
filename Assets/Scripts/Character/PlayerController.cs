@@ -83,7 +83,7 @@ public class PlayerController : CharacterController
     {
         base.Update();
         UpdateAnimator();
-        DetectAttack();
+       // DetectAttack();
         DetectCombo();
 
     }
@@ -112,7 +112,7 @@ public class PlayerController : CharacterController
     {
         //Startup
 
-
+        animator.SetTrigger(hitboxName);
 
         yield return new WaitForSeconds( comboJSON.getStartup(hitboxName.ToUpper()) * (1f/60f));
 
@@ -132,7 +132,8 @@ public class PlayerController : CharacterController
 
         attackMovementDelegate = null;
 
-     //   AttackQueueManager();
+        timeOfLastAttack = Time.time;
+        AttackQueueManager();
 
     }
 
@@ -198,9 +199,8 @@ public class PlayerController : CharacterController
 
         animator.SetFloat("speed", Mathf.Abs(targetVelocity.x));
 
-        BasicAttackAnimation();
+       // BasicAttackAnimation();
         Flip(targetVelocity.x);
-        BasicWhipAttack();
         jumpAnimation();
     }
 
@@ -262,13 +262,6 @@ public class PlayerController : CharacterController
         }
 
 
-    }
-    private void BasicWhipAttack()
-    {
-        if (Input.GetButtonDown("Five"))
-        {
-            animator.Play("BasicWhipAttack");
-        }
     }
 
     #endregion
@@ -391,7 +384,7 @@ public class PlayerController : CharacterController
         currentCombo = string.Concat(currentCombo, lastButtonPressed);
         Debug.Log(comboCount + "  " + currentCombo);
 
-        comboQueue.Enqueue(TestRoutine());
+        comboQueue.Enqueue(DoAttack("HEADDRILL"));
         //if (comboCount ==1 andao fijsaeofijasef)
 
     }

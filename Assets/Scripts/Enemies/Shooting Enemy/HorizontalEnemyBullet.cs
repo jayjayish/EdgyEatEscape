@@ -33,7 +33,7 @@ public class HorizontalEnemyBullet : ProjectileController, IPooledObject
         GameObject hitTarget = col.gameObject;
         if (hitTarget.tag == Tags.PLAYER)
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
         }
 
         base.OnTriggerEnter2D(col);
