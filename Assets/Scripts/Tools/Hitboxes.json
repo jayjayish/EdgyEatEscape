@@ -66,4 +66,18 @@
    "endlag":10,
    "damage":10
   },
+  "BIND":{
+   "position":[-3.37, 0.271, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
+  "FLYING_SHOCKWAVE":{
+   "position":[-9.328777, -5.024, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
 }

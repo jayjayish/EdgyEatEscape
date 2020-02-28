@@ -386,7 +386,52 @@ public class PlayerController : CharacterController
         Debug.Log(comboCount + "  " + currentCombo);
 
         comboQueue.Enqueue(DoAttack("HEADDRILL"));
-        //if (comboCount ==1 andao fijsaeofijasef)
+        if (comboCount ==1 && lastButtonPressed == "s")
+        {
+
+        }
+        else if (comboCount == 2  && lastButtonPressed == "s")
+        {
+
+        }
+        else if (comboCount == 3 && lastButtonPressed == "s")
+        {
+
+        }
+        else if (comboCount == 4 && lastButtonPressed == "s")
+        {
+
+        }
+        else if (comboCount == 5 && lastButtonPressed == "s")
+        {
+
+        }
+        else if (comboCount == 1 && lastButtonPressed == "h")
+        {
+
+        }
+        else if (comboCount == 2 && lastButtonPressed == "h")
+        {
+
+        }
+        else if (comboCount == 3 && lastButtonPressed == "h")
+        {
+
+        }
+        else if (comboCount == 4 && lastButtonPressed == "h")
+        {
+
+        }
+        else if (comboCount == 5 && lastButtonPressed == "h")
+        {
+
+        }
+        else if (comboCount == 6 && currentCombo == "ssssss")
+        {
+            //Do fancy beam finish or smth
+        }
+
+
 
     }
 
