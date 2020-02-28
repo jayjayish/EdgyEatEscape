@@ -24,7 +24,7 @@
     "endlag":0,
     "damage":10
 	},
-  "BASIC_ATTACK_BOX":{
+  "BASIC_ATTACK":{
     "position":[-2.36, -1.156, 0],
     "startup":20,
     "active":5,
@@ -37,5 +37,33 @@
     "active":24,
     "endlag":6,
     "damage":10
-  }
+  },
+  "PUNCH":{
+  "position":[-1, -0.32, 0],
+  "startup":10,
+  "active":10,
+  "endlag":10,
+  "damage":10
+  },
+  "SHOCKWAVE":{
+   "position":[-4.75, -0.9, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
+  "SPINDAB":{
+   "position":[-3.057, -1, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
+  "SONIC_SLAM":{
+   "position":[-3.18, -1.359, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
 }
