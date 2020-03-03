@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// All Enemies that can damage the player from contact.
+// Interactions with the prefab, spawning, and prefab cleanup will be here
 
 
-//A Character is any entity that has health, physics and can be interacted with.
-
-
-
-public class CharacterController : PhysicsObject
+public class EnemyController : CharacterController
 {
-    // Add stuff here as needed asssssssssss
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -25,6 +22,8 @@ public class CharacterController : PhysicsObject
     protected override void Awake()
     {
         base.Awake();
+
+        currentHealth = maxHealth;
     }
 
     protected override void Update()
@@ -49,5 +48,9 @@ public class CharacterController : PhysicsObject
         base.ComputeVelocity();
     }
 
+    protected override void OnDeath()
+    {
+        //onCharacterDeath();
+    }
 
 }

@@ -118,7 +118,7 @@ public class PlayerController : CharacterController
 
 
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool(hitboxName.ToUpper(), comboJSON.getPosition(hitboxName.ToUpper()));
-
+        hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage(hitboxName.ToUpper()));
 
        // hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage(hitboxName.ToUpper()));
         //Vector3 temp = hitbox.transform.localScale;
@@ -385,7 +385,7 @@ public class PlayerController : CharacterController
         currentCombo = string.Concat(currentCombo, lastButtonPressed);
         Debug.Log(comboCount + "  " + currentCombo);
 
-        comboQueue.Enqueue(DoAttack("HEADDRILL"));
+        comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
         if (comboCount ==1 && lastButtonPressed == "s")
         {
 
@@ -395,14 +395,6 @@ public class PlayerController : CharacterController
 
         }
         else if (comboCount == 3 && lastButtonPressed == "s")
-        {
-
-        }
-        else if (comboCount == 4 && lastButtonPressed == "s")
-        {
-
-        }
-        else if (comboCount == 5 && lastButtonPressed == "s")
         {
 
         }
@@ -418,21 +410,41 @@ public class PlayerController : CharacterController
         {
 
         }
-        else if (comboCount == 4 && lastButtonPressed == "h")
+        else if (comboCount == 4)
         {
+            if(string.Compare(currentCombo.Substring(0,3), "sss") == 0)
+            {
+                //TROJAN_HORSE
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "ssh") == 0)
+            {
+                //SHOCKWAVE
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
+            {
+                //FORK_BOMB
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "shh") == 0)
+            {
+                //BOMB_DASH
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
+            {
+                //LASER_GEYSER
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
+            {
+                //RAIN_DROP
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "hhs") == 0)
+            {
+                //SLIDE_DASH
+            }
+            else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
+            {
 
+            }
         }
-        else if (comboCount == 5 && lastButtonPressed == "h")
-        {
-
-        }
-        else if (comboCount == 6 && currentCombo == "ssssss")
-        {
-            //Do fancy beam finish or smth
-        }
-
-
-
     }
 
 

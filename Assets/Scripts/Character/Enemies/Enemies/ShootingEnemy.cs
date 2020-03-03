@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shootingEnemy : MonoBehaviour
+public class ShootingEnemy : EnemyController
 {
 
 
@@ -13,14 +13,14 @@ public class shootingEnemy : MonoBehaviour
 
 
     
-    void Start()
+    protected override void Start()
     {
         fireRate = 1f;
         nextFire = 0;
     }
 
-    
-    void Update()
+
+    protected override void Update()
     {
         CheckIfTimeToFire();
     }
