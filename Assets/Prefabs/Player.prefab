@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -662389693587289307}
   - component: {fileID: -4638558098295866398}
   - component: {fileID: 1361747101}
-  - component: {fileID: 1361747103}
   - component: {fileID: 502535961014141224}
   m_Layer: 8
   m_Name: Player
@@ -93,7 +92,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3180974854786362218}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -123,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.1, y: 2.3}
+    oldSize: {x: 2.2, y: 2.3}
     newSize: {x: 0.21, y: 0.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,19 +150,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1361747103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3180974854786362218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f84099785b6a642a1102af3d51d571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 50
 --- !u!114 &502535961014141224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 1
+  maxHealth: 1
   maxSpeed: 7
   jumpTakeOffSpeed: 7
   dashSpeed: 0
