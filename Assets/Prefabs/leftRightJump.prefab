@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5401993703840987684}
   m_Layer: 0
-  m_Name: goundDetector
+  m_Name: groundDetector
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 5401993704553126949}
   - component: {fileID: 5401993704553126958}
   - component: {fileID: 5401993704553126945}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: leftRightJump
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 1
+  maxHealth: 0
   speed: 5
   distance: 4
   nextJump: 4

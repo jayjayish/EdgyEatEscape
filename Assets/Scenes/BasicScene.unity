@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 2115364867}
   - component: {fileID: 2115364872}
   - component: {fileID: 2115364871}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: leftRightJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
