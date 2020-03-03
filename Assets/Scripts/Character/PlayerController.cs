@@ -16,6 +16,8 @@ public class PlayerController : CharacterController
     public float jumpTakeOffSpeed = 7;
     private bool isAttacking = false;
     private float attackFrames = 0;
+    private int playerLayer;
+    private int enemyLayer;
 
     // animation variables
     Animator animator;
@@ -37,16 +39,19 @@ public class PlayerController : CharacterController
     public const float DOUBLE_PRESS_TIME = .20f;
     private float lastLeftTime = 0f;
     private float lastRightTime = 0f;
+    private bool ignoreEnemyCollisions = true;
     #endregion
     
     #region DashConstants
     //dash time constants
     private int dashDirection;
-    private const float dashMultiplier = 10f;
+    private float dashMultiplier = 5f;
+    [SerializeField]
+    private const float initialDashMultiplier = 5f;
     private int dashingRight;
     private float dashTime;
     public float dashSpeed;
-    public const float startDashTime = .1f;
+    public const float startDashTime = .2f;
     #endregion
 
     #region ComboVariables
@@ -77,6 +82,8 @@ public class PlayerController : CharacterController
         currentCombo = "";
         lastButtonPressed = "";
         comboQueue = new Queue<IEnumerator>();
+        playerLayer = LayerMask.NameToLayer("Player");
+        enemyLayer = LayerMask.NameToLayer("Enemy");
     }
 
     protected override void Update()
@@ -274,6 +281,7 @@ public class PlayerController : CharacterController
     protected override void ComputeVelocity()
     {
         move = Vector2.zero;
+       
 
 
         if (isAttacking)
@@ -306,7 +314,7 @@ public class PlayerController : CharacterController
                 if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
                 {
                     dashDirection = -1;
-                    dashTime = startDashTime;//timer for dash
+                    dashTime = 0;//timer for dash
                     Debug.Log("dashTime:" + dashTime);
                     Debug.Log("double left");//delta tiime
                 }
@@ -328,7 +336,7 @@ public class PlayerController : CharacterController
                 if (timesinceLastRight <= DOUBLE_PRESS_TIME)
                 {
                     dashDirection = 1;
-                    dashTime = startDashTime;//timer for dash
+                    dashTime = 0;//timer for dash
                     Debug.Log("dashTime:" + dashTime);
 
                     Debug.Log("double right");//debug delta time
@@ -341,10 +349,16 @@ public class PlayerController : CharacterController
                 }
             }
 
-            if (dashTime > 0)
+            if (dashTime < startDashTime)
             {
+                dashMultiplier = (1 - initialDashMultiplier) / startDashTime * dashTime + initialDashMultiplier;
                 move.x = dashDirection * dashMultiplier;
-                dashTime -= Time.deltaTime; //Decrease time counter
+                dashTime += Time.deltaTime; //Decrease time counter
+                IgnoreEnemyCollision(true);
+            }
+            else
+            {
+                IgnoreEnemyCollision(false);
             }
         }
 
@@ -353,8 +367,11 @@ public class PlayerController : CharacterController
 
     }
 
-
-
+    private void IgnoreEnemyCollision(bool value)
+    {
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, value);
+        contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+    }
 
 
     #endregion
@@ -414,19 +431,19 @@ public class PlayerController : CharacterController
         {
             if(string.Compare(currentCombo.Substring(0,3), "sss") == 0)
             {
-                //TROJAN_HORSE
+                //TROJAN_HORSE asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "ssh") == 0)
             {
-                //SHOCKWAVE
+                //SHOCKWAVE asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
             {
-                //FORK_BOMB
+                //FORK_BOMB asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shh") == 0)
             {
-                //BOMB_DASH
+                //BOMB_DASH 
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
             {
@@ -434,7 +451,7 @@ public class PlayerController : CharacterController
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
             {
-                //RAIN_DROP
+                //RAIN_DROP asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhs") == 0)
             {
@@ -442,7 +459,7 @@ public class PlayerController : CharacterController
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
             {
-
+                //HEAD_DRILL asdf
             }
         }
     }

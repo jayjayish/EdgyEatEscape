@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 2577356373656637530}
   - component: {fileID: 2577356373656637529}
   - component: {fileID: 2577356373656637528}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: leftRightEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd51712a264f4bf4c9454658cb1e09cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  maxHealth: 0
   speed: 5
   distance: 2
   groundDetection: {fileID: 2577356372420109287}

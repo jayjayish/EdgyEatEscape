@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 2115364867}
   - component: {fileID: 2115364872}
   - component: {fileID: 2115364871}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: leftRightJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,12 +1321,12 @@ PrefabInstance:
     - target: {fileID: 3183080777251619504, guid: cba6586479c624e428eefcd799be36c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.82
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 3183080777251619504, guid: cba6586479c624e428eefcd799be36c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: -0.62
       objectReference: {fileID: 0}
     - target: {fileID: 3183080777251619504, guid: cba6586479c624e428eefcd799be36c1,
         type: 3}
