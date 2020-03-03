@@ -386,10 +386,6 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-<<<<<<< HEAD
-    m_Controller: {fileID: 9100000}
-  - m_Name: HEADDRILL
-=======
     m_Controller: {fileID: 0}
   - m_Name: HEAD_DRILL
     m_Type: 9
@@ -434,7 +430,6 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: SLIDE_DASH
->>>>>>> c9c38ee368ddf9503650176a7a8357a26530e8b0
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
