@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrollingEnemy : CharacterController
+public class PatrollingEnemy : EnemyController
 {
     public float speed;
 
@@ -15,6 +15,7 @@ public class PatrollingEnemy : CharacterController
     // Update is called once per frame
     protected override void Update()
     {
+        base.Update();
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);

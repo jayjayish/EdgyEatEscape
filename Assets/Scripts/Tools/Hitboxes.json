@@ -31,7 +31,7 @@
     "endlag":2,
     "damage":10
 	},
-  "HEADDRILL":{
+  "HEAD_DRILL":{
     "position":[-1.9, -1.44, 0],
     "startup":27,
     "active":24,

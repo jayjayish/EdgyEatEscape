@@ -12,7 +12,7 @@ public class CharacterController : PhysicsObject
 {
 
     [SerializeField]
-    protected float maxHealth;
+    protected float maxHealth = 1;
 
     protected float currentHealth;
 
@@ -60,6 +60,7 @@ public class CharacterController : PhysicsObject
     #region Health
     public virtual void DecrementHealth(float damage)
     {
+        Debug.Log(damage);
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
         if (IsHealthZero())
         {
