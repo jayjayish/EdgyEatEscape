@@ -45,7 +45,9 @@ public class PlayerController : CharacterController
     #region DashConstants
     //dash time constants
     private int dashDirection;
-    private const float dashMultiplier = 5f;
+    private float dashMultiplier = 5f;
+    [SerializeField]
+    private const float initialDashMultiplier = 5f;
     private int dashingRight;
     private float dashTime;
     public float dashSpeed;
@@ -312,7 +314,7 @@ public class PlayerController : CharacterController
                 if (timesinceLastLeft <= DOUBLE_PRESS_TIME)
                 {
                     dashDirection = -1;
-                    dashTime = startDashTime;//timer for dash
+                    dashTime = 0;//timer for dash
                     Debug.Log("dashTime:" + dashTime);
                     Debug.Log("double left");//delta tiime
                 }
@@ -334,7 +336,7 @@ public class PlayerController : CharacterController
                 if (timesinceLastRight <= DOUBLE_PRESS_TIME)
                 {
                     dashDirection = 1;
-                    dashTime = startDashTime;//timer for dash
+                    dashTime = 0;//timer for dash
                     Debug.Log("dashTime:" + dashTime);
 
                     Debug.Log("double right");//debug delta time
@@ -347,10 +349,11 @@ public class PlayerController : CharacterController
                 }
             }
 
-            if (dashTime > 0)
+            if (dashTime < startDashTime)
             {
+                dashMultiplier = (1 - initialDashMultiplier) / startDashTime * dashTime + initialDashMultiplier;
                 move.x = dashDirection * dashMultiplier;
-                dashTime -= Time.deltaTime; //Decrease time counter
+                dashTime += Time.deltaTime; //Decrease time counter
                 IgnoreEnemyCollision(true);
             }
             else
@@ -366,7 +369,7 @@ public class PlayerController : CharacterController
 
     private void IgnoreEnemyCollision(bool value)
     {
-        Physics2D.IgnoreLayerCollision(playerLayer, playerLayer, value);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, value);
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
     }
 
