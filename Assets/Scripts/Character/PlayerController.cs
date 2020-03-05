@@ -79,6 +79,18 @@ public class PlayerController : CharacterController
         DetectCombo();
     }
 
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        /*
+        if (isControllingLaser)
+        {
+            ControlLaser();
+        }
+        */
+    }
+
 
     #region Attacks
 
@@ -86,7 +98,6 @@ public class PlayerController : CharacterController
     {
         if (comboQueue.Count != 0)
         {
-
             StartCoroutine(comboQueue.Dequeue());
         }
     }
@@ -94,7 +105,7 @@ public class PlayerController : CharacterController
     IEnumerator TestRoutine()
     {
         isAttacking = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
         EndAttack();
     }
@@ -104,17 +115,12 @@ public class PlayerController : CharacterController
         currentCombo = string.Concat(currentCombo, lastButtonPressed);
         Debug.Log(comboCount + "  " + currentCombo);
         //comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
-        //
 
         if (comboCount == 1 && lastButtonPressed == "s")
         {
             comboQueue.Enqueue(TestRoutine());
         }
         else if (comboCount == 2 && lastButtonPressed == "s")
-        {
-            comboQueue.Enqueue(TestRoutine());
-        }
-        else if (comboCount == 3 && lastButtonPressed == "s")
         {
             comboQueue.Enqueue(TestRoutine());
         }
@@ -129,30 +135,31 @@ public class PlayerController : CharacterController
         }
         else if (comboCount == 3)
         {
-            if (string.Compare(currentCombo, "sss") == 0)
+            if (string.Equals(currentCombo, "sss"))
             {
                 //TROJAN_HORSE asdf
                 //comboQueue.Enqueue(DoTrojanHorse());
             }
-            else if (string.Compare(currentCombo, "ssh") == 0)
+            else if (string.Equals(currentCombo, "ssh"))
             {
                 //SHOCKWAVE asdf
                 comboQueue.Enqueue(DoShockwave());
             }
-            else if (string.Compare(currentCombo, "shs") == 0)
+            else if (string.Equals(currentCombo, "shs"))
             {
-                //FORK_BOMB asdf
+                //FORK_BOMB
+                comboQueue.Enqueue(DoAttack("FORK_BOMB"));
             }
-            else if (string.Compare(currentCombo, "shh") == 0)
+            else if (string.Equals(currentCombo, "shh"))
             {
                 //BOMB_DASH 
             }
-            else if (string.Compare(currentCombo, "hss") == 0)
+            else if (string.Equals(currentCombo, "hss"))
             {
                 //LASER_GEYSER
                 //comboQueue.Enqueue(DoLaserGeyser());
             }
-            else if (string.Compare(currentCombo, "hsh") == 0)
+            else if (string.Equals(currentCombo, "hsh"))
             {
                 //RAIN_DROP asdf
                 comboQueue.Enqueue(DoRainDrop());
@@ -160,39 +167,31 @@ public class PlayerController : CharacterController
             else if (string.Equals(currentCombo, "hhs"))
             {
                 //SLIDE_DASH
-                Debug.Log("Ram1");
                 comboQueue.Enqueue(DoDynamicRam());
             }
-            else if (string.Compare(currentCombo, "hhh") == 0)
+            else if (string.Equals(currentCombo, "hhh"))
             {
                 //HEAD_DRILL asdf
                 //TODO Split the animation into two
-                Debug.Log("Drill");
                 comboQueue.Enqueue(DoHeadDrill());
 
             }
         }
-        else if (comboCount > 3)
-        {
-            comboCount = 0;
-        }
     }
-
-
-    //  Queue<IEnumerator> comboQueue;
-    //  protected bool comboQueueLock;
 
     // detect combo input
     protected void DetectCombo()
     {
-
+        //If an attack button is pressed
         if (AttackPressed())
         {
-            if (comboCount == 0)
+            //Do nothing if reached max combo
+            if (comboCount == 3)
             {
 
             }
-            if (!comboQueueAlive)
+            //If fresh combo
+            else if (!comboQueueAlive)
             {
                 currentCombo = "";
                 comboQueueAlive = true;
@@ -211,14 +210,17 @@ public class PlayerController : CharacterController
             }
         }
 
+        //If combo is ongoinging
         if (comboQueueAlive && isAttacking)
         {
             timeOfLastAttack = Time.time;
         }
+        //If combo is ongoing and the follow up window is closed
         else if (comboQueueAlive && !isAttacking && Time.time - timeOfLastAttack > COMBO_TIME)
         {
             comboQueueAlive = false;
             currentCombo = "";
+            comboCount = 0;
         }
     }
 
@@ -268,7 +270,6 @@ public class PlayerController : CharacterController
 
     }
 
-
     IEnumerator DoLaserGeyser()
     {
         isAttacking = true;
@@ -286,7 +287,6 @@ public class PlayerController : CharacterController
         EndAttack();
         
     }
-
 
     IEnumerator DoTrojanHorse()
     {
@@ -328,7 +328,6 @@ public class PlayerController : CharacterController
 
         EndAttack();
     }
-
 
     IEnumerator DoHeadDrill()
     {
@@ -388,7 +387,6 @@ public class PlayerController : CharacterController
         EndAttack();
     }
 
-
     IEnumerator DoDynamicRam()
     {
         //Startup
@@ -414,8 +412,15 @@ public class PlayerController : CharacterController
         EndAttack();
     }
 
+    /*
+    private void ControlLaser()
+    {
+
+    }
+    */
+
     //Example Delegate to add to delegate?
-    protected void JumpUp()
+    private void JumpUp()
     {
         velocity.y = jumpTakeOffSpeed;
     }
@@ -432,8 +437,7 @@ public class PlayerController : CharacterController
         }
     }
 
-
-private void EndAttack()
+    private void EndAttack()
     {       
         isAttacking = false;
         attackMovementDelegate = null;
@@ -454,7 +458,7 @@ private void EndAttack()
 
         if (isControllingLaser)
         {
-
+            //Special stuff for lasering
         }
         else if (isAttacking && !canMoveWhileAttacking)
         {
@@ -462,13 +466,11 @@ private void EndAttack()
         }
         else if (isAttacking && canMoveWhileAttacking)
         {
-
             DetectBasicHorizontalMovement();
             attackMovementDelegate?.Invoke();
         }
         else
         {
-
             DetectBasicHorizontalMovement();
             DetectJump();
 
