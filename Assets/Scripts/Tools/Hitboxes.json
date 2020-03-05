@@ -15,9 +15,9 @@
 	},
   "HEAD_DRILL":{
     "position":[-2.2, 0, 0],
-    "startup":27,
+    "startup":0,
     "active":24,
-    "endlag":6,
+    "endlag":0,
     "damage":10
   },
   "PUNCH":{
@@ -29,7 +29,7 @@
   },
   "SHOCKWAVE":{
    "position":[-4.75, -2.14, 0],
-   "startup":10,
+   "startup":30,
    "active":10,
    "endlag":10,
    "damage":10
@@ -41,7 +41,7 @@
    "endlag":10,
    "damage":10
   },
-  "SONIC_SLAM":{
+  "RAIN_DROP":{
    "position":[-3.07, 0, 0],
    "startup":10,
    "active":10,

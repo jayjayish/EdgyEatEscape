@@ -44,11 +44,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: BASIC_ATTACK_BOX
-    prefab: {fileID: 8346580727308664543, guid: b3d8fa06c8d8bb942a413924cd946e6d,
+  - tag: RAIN_DROP
+    prefab: {fileID: 5892369744804449562, guid: 847923dc4656734488c8d892a2b29687,
       type: 3}
   - tag: HEAD_DRILL
     prefab: {fileID: 5339765393515789685, guid: aefaf15c23df4db4c9a5385c4cb735ee,
+      type: 3}
+  - tag: SHOCKWAVE
+    prefab: {fileID: 76449018651535954, guid: 553710aac556f8a48bd19a67e2482215, type: 3}
+  - tag: DYNAMIC_RAM
+    prefab: {fileID: 9181604548428496511, guid: 4f19f12160decb345989b149f0f56ff4,
+      type: 3}
+  - tag: FORK_BOMB
+    prefab: {fileID: 2971817232440949315, guid: 0dd5f32b9fca6604792c31f513679475,
       type: 3}
 --- !u!1 &3180974854786362218
 GameObject:
@@ -218,8 +226,6 @@ MonoBehaviour:
   gravityModifier: 1
   maxHealth: 1
   maxSpeed: 7
-  jumpTakeOffSpeed: 15
-  dashSpeed: 0
 --- !u!114 &599369708
 MonoBehaviour:
   m_ObjectHideFlags: 0

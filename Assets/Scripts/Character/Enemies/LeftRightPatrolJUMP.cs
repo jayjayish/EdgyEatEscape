@@ -42,8 +42,6 @@ public class LeftRightPatrolJUMP : EnemyController
         {
             velocity.y = jumpSpeed;
 
-            Debug.Log("Jump!!!!!");
-
             nextJump = Time.time + jumpRate;
 
         }
