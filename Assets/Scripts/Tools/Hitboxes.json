@@ -29,7 +29,7 @@
   },
   "SHOCKWAVE":{
    "position":[-4.75, -2.14, 0],
-   "startup":10,
+   "startup":30,
    "active":10,
    "endlag":10,
    "damage":10

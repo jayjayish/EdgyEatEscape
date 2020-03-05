@@ -12,6 +12,7 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
 
+    public float initialGravityModifier = 1f;
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     private bool isAttacking = false;
@@ -215,18 +216,26 @@ public class PlayerController : CharacterController
 
     IEnumerator DoShockwave()
     {
+        animator.SetTrigger("SHOCKWAVE");
         isAttacking = true;
+        velocity.y = jumpTakeOffSpeed;
+        gravityModifier = 0f;
+        yield return new WaitForSeconds(20f / 60f);
+        velocity.y = 0;
+
+        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 20f) * (1f / 60f));
 
 
-        //Spawn stuff asofijaseofijaesofj
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("SHOCKWAVE", comboJSON.getPosition("SHOCKWAVE"));
 
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(comboJSON.getActive("SHOCKWAVE") * (1f / 60f));
 
+        gravityModifier = initialGravityModifier;
 
-        //
+        hitbox.SetActive(false);
 
-        isAttacking = false;
+        endAttack();
 
     }
 
@@ -245,6 +254,17 @@ public class PlayerController : CharacterController
         {
             move.x = 1;
         }
+    }
+    
+    private void endAttack()
+    {
+        
+        isAttacking = false;
+
+        attackMovementDelegate = null;
+
+        timeOfLastAttack = Time.time;
+        AttackQueueManager();
     }
 
 
@@ -485,6 +505,7 @@ public class PlayerController : CharacterController
         Debug.Log(comboCount + "  " + currentCombo);
 
         //comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
+        comboQueue.Enqueue(DoShockwave());
         if (comboCount ==1 && lastButtonPressed == "s")
         {
 
@@ -515,30 +536,24 @@ public class PlayerController : CharacterController
             {
                 //TROJAN_HORSE asdf
                 //comboQueue.Enqueue(DoTrojanHorse());
-                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "ssh") == 0)
             {
                 //SHOCKWAVE asdf
-                canMoveWhileAttacking = false;
+                
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
             {
                 //FORK_BOMB asdf
-                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shh") == 0)
             {
-                //BOMB_DASH asdf
-                canMoveWhileAttacking = false;
+                //BOMB_DASH 
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
             {
                 //LASER_GEYSER
                 //comboQueue.Enqueue(DoLaserGeyser());
-
-                //LASER_GEYSER asdf
-                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
             {
@@ -546,13 +561,11 @@ public class PlayerController : CharacterController
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhs") == 0)
             {
-                //DYNAMIC_RAM asdf
-                canMoveWhileAttacking = false;
+                //SLIDE_DASH
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
             {
                 //HEAD_DRILL asdf
-                
             }
         }
     }
