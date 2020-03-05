@@ -54,5 +54,19 @@
    "active":10,
    "endlag":10,
    "damage":10
-  }
+  },
+   "DYNAMIC_RAM":{
+   "position":[-2.94, 0.472, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
+   "FORK_BOMB":{
+   "position":[-6.91,0.04, 0],
+   "startup":10,
+   "active":10,
+   "endlag":10,
+   "damage":10
+  },
 }
