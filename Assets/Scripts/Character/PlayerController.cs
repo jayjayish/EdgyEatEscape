@@ -458,23 +458,27 @@ public class PlayerController : CharacterController
             if(string.Compare(currentCombo.Substring(0,3), "sss") == 0)
             {
                 //TROJAN_HORSE asdf
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "ssh") == 0)
             {
                 //SHOCKWAVE asdf
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
             {
                 //FORK_BOMB asdf
-                
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shh") == 0)
             {
                 //BOMB_DASH asdf
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
             {
                 //LASER_GEYSER asdf
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
             {
@@ -483,10 +487,12 @@ public class PlayerController : CharacterController
             else if (string.Compare(currentCombo.Substring(0, 3), "hhs") == 0)
             {
                 //DYNAMIC_RAM asdf
+                canMoveWhileAttacking = false;
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
             {
                 //HEAD_DRILL asdf
+                
             }
         }
     }
