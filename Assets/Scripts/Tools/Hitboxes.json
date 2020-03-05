@@ -15,9 +15,9 @@
 	},
   "HEAD_DRILL":{
     "position":[-2.2, 0, 0],
-    "startup":27,
+    "startup":0,
     "active":24,
-    "endlag":6,
+    "endlag":0,
     "damage":10
   },
   "PUNCH":{
