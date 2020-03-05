@@ -50,6 +50,8 @@ MonoBehaviour:
   - tag: HEAD_DRILL
     prefab: {fileID: 5339765393515789685, guid: aefaf15c23df4db4c9a5385c4cb735ee,
       type: 3}
+  - tag: SHOCKWAVE
+    prefab: {fileID: 76449018651535954, guid: 553710aac556f8a48bd19a67e2482215, type: 3}
 --- !u!1 &3180974854786362218
 GameObject:
   m_ObjectHideFlags: 0

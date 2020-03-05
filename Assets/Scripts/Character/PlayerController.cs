@@ -12,10 +12,12 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
 
+    public float initialGravityModifier = 1f;
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     private bool isAttacking = false;
-    private bool canMoveWhileAttacking = true;
+    private bool canMoveWhileAttacking = false;
+    private bool isControllingLaser = false;
     private float attackFrames = 0;
     private int playerLayer;
     private int enemyLayer;
@@ -149,7 +151,7 @@ public class PlayerController : CharacterController
     IEnumerator DoJumpAttack(string hitboxName)
     {
         //Startup
-
+        isAttacking = true;
         attackMovementDelegate += JumpUp;
         attackMovementDelegate += MoveForward;
         yield return new WaitForSeconds(1f / 60f);
@@ -173,6 +175,68 @@ public class PlayerController : CharacterController
         attackMovementDelegate = null;
 
     }
+   
+
+
+    IEnumerator DoLaserGeyser()
+    {
+        isAttacking = true;
+        isControllingLaser = true;
+
+
+        //Spawn stuff asofijaseofijaesofj
+
+
+        yield return new WaitForSeconds(1f);
+
+
+        //Explode laser if it hasnt been
+
+        isAttacking = false;
+        isControllingLaser = false;
+    }
+
+
+    IEnumerator DoTrojanHorse()
+    {
+        isAttacking = true;
+
+
+        //Spawn stuff asofijaseofijaesofj
+
+
+        yield return new WaitForSeconds(1f);
+
+
+        //
+
+        isAttacking = false;
+
+    }
+
+    IEnumerator DoShockwave()
+    {
+        animator.SetTrigger("SHOCKWAVE");
+        isAttacking = true;
+        velocity.y = jumpTakeOffSpeed;
+        gravityModifier = 0f;
+        yield return new WaitForSeconds(20f / 60f);
+        velocity.y = 0;
+
+        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 20f) * (1f / 60f));
+
+
+        GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("SHOCKWAVE", comboJSON.getPosition("SHOCKWAVE"));
+
+
+        yield return new WaitForSeconds(comboJSON.getActive("SHOCKWAVE") * (1f / 60f));
+
+        gravityModifier = initialGravityModifier;
+
+        hitbox.SetActive(false);
+        endAttack();
+    }
+
 
     IEnumerator DoHeadDrill()
     {
@@ -193,6 +257,7 @@ public class PlayerController : CharacterController
     }
 
 
+    
 
     protected void JumpUp()
     {
@@ -209,6 +274,17 @@ public class PlayerController : CharacterController
         {
             move.x = 1;
         }
+    }
+    
+    private void endAttack()
+    {
+        
+        isAttacking = false;
+
+        attackMovementDelegate = null;
+
+        timeOfLastAttack = Time.time;
+        AttackQueueManager();
     }
 
 
@@ -299,10 +375,12 @@ public class PlayerController : CharacterController
     protected override void ComputeVelocity()
     {
         move = Vector2.zero;
-       
 
+        if (isControllingLaser)
+        {
 
-        if (isAttacking && !canMoveWhileAttacking)
+        }
+        else if (isAttacking && !canMoveWhileAttacking)
         {
             attackMovementDelegate?.Invoke();
         }
@@ -446,6 +524,8 @@ public class PlayerController : CharacterController
         Debug.Log(comboCount + "  " + currentCombo);
 
         //comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
+        //comboQueue.Enqueue(DoShockwave());
+
         if (comboCount ==1 && lastButtonPressed == "s")
         {
             comboQueue.Enqueue(TestRoutine());
@@ -475,10 +555,12 @@ public class PlayerController : CharacterController
             if(string.Compare(currentCombo.Substring(0,3), "sss") == 0)
             {
                 //TROJAN_HORSE asdf
+                //comboQueue.Enqueue(DoTrojanHorse());
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "ssh") == 0)
             {
                 //SHOCKWAVE asdf
+                
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
             {
@@ -491,6 +573,7 @@ public class PlayerController : CharacterController
             else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
             {
                 //LASER_GEYSER
+                //comboQueue.Enqueue(DoLaserGeyser());
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
             {
