@@ -240,6 +240,7 @@ public class PlayerController : CharacterController
 
     IEnumerator DoHeadDrill()
     {
+        animator.SetTrigger("HEAD_DRILL");
         yield return new WaitForSeconds(comboJSON.getStartup("HEAD_DRILL") * (1f / 60f));
 
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("HEAD_DRILL", comboJSON.getPosition("HEAD_DRILL"));
@@ -545,12 +546,9 @@ public class PlayerController : CharacterController
         else if (comboCount == 2 && lastButtonPressed == "h")
         {
             comboQueue.Enqueue(TestRoutine());
+      
         }
-        else if (comboCount == 3 && lastButtonPressed == "h")
-        {
-            comboQueue.Enqueue(TestRoutine());
-        }
-        else if (comboCount == 4)
+        else if (comboCount == 3)
         {
             if(string.Compare(currentCombo.Substring(0,3), "sss") == 0)
             {
@@ -586,8 +584,8 @@ public class PlayerController : CharacterController
             else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
             {
                 //HEAD_DRILL asdf
-                //comboQueue.Enqueue(DoHeadDrill());
-                comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
+                comboQueue.Enqueue(DoHeadDrill());
+                //comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
                 //Debug.Log("Headrill on");
 
             }
