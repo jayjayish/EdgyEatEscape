@@ -85,11 +85,11 @@ public class PlayerComboJSON : MonoBehaviour
         string path = Application.dataPath + "/Scripts/Tools/PlayerCombos.json";
         string jsonString = File.ReadAllText(path);
         comboTable = (JSONObject)JSON.Parse(jsonString);
-        Debug.Log(comboTable);
+        //Debug.Log(comboTable);
         path = Application.dataPath + "/Scripts/Tools/Hitboxes.json";
         jsonString = File.ReadAllText(path);
         hitboxTable = (JSONObject)JSON.Parse(jsonString);
-        Debug.Log(hitboxTable);
+        //Debug.Log(hitboxTable);
     }
 
     public JSONArray getHitboxes(string comboInput) {

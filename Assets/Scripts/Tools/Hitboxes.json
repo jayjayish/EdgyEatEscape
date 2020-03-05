@@ -41,7 +41,7 @@
    "endlag":10,
    "damage":10
   },
-  "SONIC_SLAM":{
+  "RAIN_DROP":{
    "position":[-3.07, 0, 0],
    "startup":10,
    "active":10,
