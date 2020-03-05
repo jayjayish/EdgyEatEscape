@@ -80,6 +80,15 @@ TextureImporter:
   - first:
       213: -4499727996474661638
     second: channel_25
+  - first:
+      213: 3907809102265674586
+    second: geyser_1
+  - first:
+      213: -4955072980518455910
+    second: geyser_2
+  - first:
+      213: 2524434941995717630
+    second: geyser_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -643,7 +652,7 @@ TextureImporter:
         width: 92
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,7 +673,7 @@ TextureImporter:
         width: 92
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -685,7 +694,7 @@ TextureImporter:
         width: 92
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -706,7 +715,7 @@ TextureImporter:
         width: 92
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,6 +723,69 @@ TextureImporter:
       bones: []
       spriteID: 40108bfe2e06b5d44a025992d360baac
       internalID: -4499727996474661638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f94bb06c74aab458abf79fece83efd
+      internalID: 3907809102265674586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc345808e4ad314b9ed3a23fc6fd836
+      internalID: -4955072980518455910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: geyser_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 140
+        width: 23
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500228bd0b81cdb448b95d662b04f60b
+      internalID: 2524434941995717630
       vertices: []
       indices: 
       edges: []
