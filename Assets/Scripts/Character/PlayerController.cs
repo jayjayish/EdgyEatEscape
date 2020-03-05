@@ -440,14 +440,15 @@ public class PlayerController : CharacterController
             else if (string.Compare(currentCombo.Substring(0, 3), "shs") == 0)
             {
                 //FORK_BOMB asdf
+                
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "shh") == 0)
             {
-                //BOMB_DASH 
+                //BOMB_DASH asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hss") == 0)
             {
-                //LASER_GEYSER
+                //LASER_GEYSER asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hsh") == 0)
             {
@@ -455,7 +456,7 @@ public class PlayerController : CharacterController
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhs") == 0)
             {
-                //SLIDE_DASH
+                //DYNAMIC_RAM asdf
             }
             else if (string.Compare(currentCombo.Substring(0, 3), "hhh") == 0)
             {
