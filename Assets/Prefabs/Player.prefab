@@ -47,7 +47,7 @@ MonoBehaviour:
   - tag: BASIC_ATTACK_BOX
     prefab: {fileID: 8346580727308664543, guid: b3d8fa06c8d8bb942a413924cd946e6d,
       type: 3}
-  - tag: HEADDRILL
+  - tag: HEAD_DRILL
     prefab: {fileID: 5339765393515789685, guid: aefaf15c23df4db4c9a5385c4cb735ee,
       type: 3}
 --- !u!1 &3180974854786362218
@@ -175,7 +175,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.2, y: 2.3}
-    newSize: {x: 0.21, y: 0.23}
+    newSize: {x: 7, y: 5.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
