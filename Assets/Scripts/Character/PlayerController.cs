@@ -81,7 +81,7 @@ public class PlayerController : CharacterController
                 
         if (isControllingLaser)
         {
-            ControlLaser();
+            // ControlLaser();
         }
         
     }
@@ -422,18 +422,6 @@ public class PlayerController : CharacterController
     {
         if (isControllingLaser){
             
-            float x = Input.GetAxis("Horizontal");
-
-            laserHolder.transform.position = laserHolder.transform.position + new Vector2(x * Time.deltaTime, 0);
-
-
-
-
-
-
-
-
-
         }
     }
     
@@ -464,6 +452,10 @@ public class PlayerController : CharacterController
         AttackQueueManager();
     }
 
+    public void StopLaserControl(){
+        isControllingLaser = false;
+    }
+
     #endregion
 
     #endregion
@@ -478,8 +470,8 @@ public class PlayerController : CharacterController
         if (isControllingLaser)
         {
             //Special stuff for lasering
-
-           // Input.GetAxis("Horizontal");
+            // player control switches to geyser
+           // do nothing?
             
         }
         else if (isAttacking && !canMoveWhileAttacking)
