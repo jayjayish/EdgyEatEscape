@@ -292,9 +292,9 @@ public class PlayerController : CharacterController
     IEnumerator DoTrojanHorse()
     {
         isAttacking = true;
-        GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position, Quaternion.identity);
+        GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
         TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
-
+        horseController.OnObjectSpawn();
         if (facingLeft)
         {
             horseController.ChangeDirection(-1);

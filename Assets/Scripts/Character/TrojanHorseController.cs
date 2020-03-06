@@ -6,7 +6,7 @@ public class TrojanHorseController : MonoBehaviour, IPooledObject
 {
 
     private float direction = 0;
-    [SerializeField] private float speed = 4f;
+    [SerializeField] private float speed = 20f;
     private float spawnTime = 0f;
     [SerializeField] private float liveTime = 3f;
 
@@ -36,7 +36,7 @@ public class TrojanHorseController : MonoBehaviour, IPooledObject
 
     public void OnObjectSpawn()
     {
-        
+        spawnTime = Time.time;
     }
 
     public void ChangeDirection(float dir)
