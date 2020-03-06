@@ -140,7 +140,7 @@ public class PlayerController : CharacterController
             if (string.Equals(currentCombo, "sss"))
             {
                 //TROJAN_HORSE asdf
-                //comboQueue.Enqueue(DoTrojanHorse());
+                comboQueue.Enqueue(DoTrojanHorse());
             }
             else if (string.Equals(currentCombo, "ssh"))
             {
@@ -296,8 +296,17 @@ public class PlayerController : CharacterController
     IEnumerator DoTrojanHorse()
     {
         isAttacking = true;
-
-
+        GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
+        horseController.OnObjectSpawn();
+        if (facingLeft)
+        {
+            horseController.ChangeDirection(-1);
+        }
+        else
+        {
+            horseController.ChangeDirection(1);
+        }
         //Spawn stuff asofijaseofijaesofj
 
 
