@@ -36,6 +36,7 @@ public class PlayerController : CharacterController
     private int dashDirection;
     private float dashMultiplier;
     private float dashTime;
+    private GameObject laserHolder;
 
     #endregion
 
@@ -276,11 +277,14 @@ public class PlayerController : CharacterController
         isAttacking = true;
         isControllingLaser = true;
 
+        ObjectPooler.Instance.SpawnFromPool("LASER_GEYER", transform.position, Quaternion.identity);
 
         //Spawn stuff asofijaseofijaesofj
 
+        while(isControllingLaser){
+            yield return new WaitForSeconds(1f / 60f);
+        }
 
-        yield return new WaitForSeconds(1f);
 
 
         //Explode laser if it hasnt been
@@ -420,6 +424,7 @@ public class PlayerController : CharacterController
             
             float x = Input.GetAxis("Horizontal");
 
+            laserHolder.transform.position = laserHolder.transform.position + new Vector2(x * Time.deltaTime, 0);
 
 
 
