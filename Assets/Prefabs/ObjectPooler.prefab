@@ -48,3 +48,6 @@ MonoBehaviour:
     prefab: {fileID: 3698597588525878704, guid: 757436c9390f05b45a286b6e133ed010,
       type: 3}
     size: 5
+  - tag: TROJAN_HORSE
+    prefab: {fileID: 647619245416045865, guid: 5bf966939947a4f429e06a8fcbbf6183, type: 3}
+    size: 5

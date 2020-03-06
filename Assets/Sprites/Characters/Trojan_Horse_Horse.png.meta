@@ -134,7 +134,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.8, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 116, y: 29, z: 23, w: 28}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -155,7 +155,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.7, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 102, y: 7, z: 25, w: 23}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -176,7 +176,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.6466667, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 94, y: 7, z: 27, w: 25}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -197,7 +197,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.5866667, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 85, y: 6, z: 25, w: 28}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -218,7 +218,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.48666668, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 69, y: 6, z: 26, w: 26}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -239,7 +239,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.34, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 47, y: 6, z: 48, w: 26}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -260,7 +260,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.16666667, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 21, y: 6, z: 74, w: 26}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -281,7 +281,7 @@ TextureImporter:
         height: 70
       alignment: 9
       pivot: {x: 0.04, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 6, z: 98, w: 26}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -298,11 +298,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 150
+        width: 125
         height: 70
       alignment: 9
       pivot: {x: -0.16666667, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 17, y: 9, z: 97, w: 20}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -317,13 +317,13 @@ TextureImporter:
       name: Trojan_Horse_Horse_9
       rect:
         serializedVersion: 2
-        x: 150
+        x: 125
         y: 0
-        width: 150
+        width: 175
         height: 70
       alignment: 9
       pivot: {x: -0.26000002, y: 0.44285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 42, y: 16, z: 126, w: 28}
       outline: []
       physicsShape: []
       tessellationDetail: 0
