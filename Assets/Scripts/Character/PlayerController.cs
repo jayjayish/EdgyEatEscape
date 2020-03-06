@@ -77,18 +77,19 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectCombo();
+                
+        if (isControllingLaser)
+        {
+            ControlLaser();
+        }
+        
     }
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
 
-        /*
-        if (isControllingLaser)
-        {
-            ControlLaser();
-        }
-        */
+
     }
 
 
@@ -412,12 +413,25 @@ public class PlayerController : CharacterController
         EndAttack();
     }
 
-    /*
+    
     private void ControlLaser()
     {
+        if (isControllingLaser){
+            
+            float x = Input.GetAxis("Horizontal");
 
+
+
+
+
+
+
+
+
+
+        }
     }
-    */
+    
 
     //Example Delegate to add to delegate?
     private void JumpUp()
@@ -459,6 +473,9 @@ public class PlayerController : CharacterController
         if (isControllingLaser)
         {
             //Special stuff for lasering
+
+           // Input.GetAxis("Horizontal");
+            
         }
         else if (isAttacking && !canMoveWhileAttacking)
         {
