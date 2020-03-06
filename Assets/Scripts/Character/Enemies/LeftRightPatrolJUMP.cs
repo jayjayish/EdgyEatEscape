@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftRightPatrolJUMP : PhysicsObject
+public class LeftRightPatrolJUMP : CharacterController
 {
 
     [SerializeField]

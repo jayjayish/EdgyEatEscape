@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftRightPatrol : PhysicsObject
+public class LeftRightPatrol : CharacterController
 {
     public float speed;
 
