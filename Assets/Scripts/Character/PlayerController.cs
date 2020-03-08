@@ -47,6 +47,7 @@ public class PlayerController : CharacterController
     private bool isAttacking = false;
     private string lastButtonPressed = "";
 
+
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
     private readonly float COMBO_TIME = 1f;
@@ -79,11 +80,7 @@ public class PlayerController : CharacterController
         UpdateAnimator();
         DetectCombo();
                 
-        if (isControllingLaser)
-        {
-            // ControlLaser();
-        }
-        
+        ControlLaser();
     }
 
     protected override void FixedUpdate()
@@ -159,7 +156,7 @@ public class PlayerController : CharacterController
             else if (string.Equals(currentCombo, "hss"))
             {
                 //LASER_GEYSER
-                //comboQueue.Enqueue(DoLaserGeyser());
+                comboQueue.Enqueue(DoLaserGeyser());
             }
             else if (string.Equals(currentCombo, "hsh"))
             {
@@ -277,14 +274,21 @@ public class PlayerController : CharacterController
         isAttacking = true;
         isControllingLaser = true;
 
-        ObjectPooler.Instance.SpawnFromPool("LASER_GEYER", transform.position, Quaternion.identity);
+        GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position, Quaternion.identity);
+        GeyserController geyser = laser.GetComponent<GeyserController>();
+        geyser.PassPlayerObject(gameObject);
+        geyser.OnObjectSpawn();
+
+
 
         //Spawn stuff asofijaseofijaesofj
 
-        while(isControllingLaser){
+        while ((Input.GetButton("TriggerL") || Input.GetButton("TriggerR")))
+        {
             yield return new WaitForSeconds(1f / 60f);
         }
 
+        geyser.playerInitiateExplode = true;
 
 
         //Explode laser if it hasnt been

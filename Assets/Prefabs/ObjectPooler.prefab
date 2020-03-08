@@ -50,4 +50,8 @@ MonoBehaviour:
     size: 5
   - tag: TROJAN_HORSE
     prefab: {fileID: 647619245416045865, guid: 5bf966939947a4f429e06a8fcbbf6183, type: 3}
-    size: 5
+    size: 2
+  - tag: LASER_GEYSER
+    prefab: {fileID: 3533804759657173343, guid: 6a3a86b9796300c4d822eb11bbfa581f,
+      type: 3}
+    size: 2
