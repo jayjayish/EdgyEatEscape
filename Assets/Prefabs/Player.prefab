@@ -224,8 +224,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 1
-  maxHealth: 1
-  maxSpeed: 7
+  maxHealth: 100
+  initialGravityModifier: 2
+  maxSpeed: 8
+  jumpTakeOffSpeed: 13
+  initialJumpTimer: 0.8
+  jumpFloatMultiplier: 0.8
+  jumpFallMultiplier: 1.75
 --- !u!114 &599369708
 MonoBehaviour:
   m_ObjectHideFlags: 0

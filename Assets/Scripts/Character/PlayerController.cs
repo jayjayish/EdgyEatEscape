@@ -12,9 +12,9 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
 
-    [SerializeField] private readonly float initialGravityModifier = 1f;
+    [SerializeField] private float initialGravityModifier = 1f;
     [SerializeField] private float maxSpeed = 7;
-    [SerializeField] private readonly float jumpTakeOffSpeed = 7;
+    [SerializeField] private float jumpTakeOffSpeed = 7;
     private Vector2 move;
 
     // animation variables
@@ -24,6 +24,13 @@ public class PlayerController : CharacterController
 
     private int playerLayer;
     private int enemyLayer;
+
+    [SerializeField] private float initialJumpTimer = 1f;
+    [SerializeField] private float jumpFloatMultiplier = 0.8f;
+    [SerializeField] private float jumpFallMultiplier = 0.8f;
+
+    private float jumpTimer = 0f;
+    private bool isJumping = false;
 
 
     #region DashVariables
@@ -519,12 +526,28 @@ public class PlayerController : CharacterController
         if (Input.GetButtonDown("Jump") && isGrounded) //checks if jump button is pressed while grounded
         {
             velocity.y = jumpTakeOffSpeed;
+            isJumping = true;
+            jumpTimer = Time.time;
         }
 
-        else if (Input.GetButtonUp("Jump")) // reduces velocity when user lets go of jump button
+        else if (Input.GetButton("Jump") && isJumping &&  initialJumpTimer + jumpTimer > Time.time) // reduces velocity when user lets go of jump button
         {
-            if (velocity.y > 0)
-                velocity.y = velocity.y * 0.5f;
+            gravityModifier = initialGravityModifier * jumpFloatMultiplier;
+        }
+        else if (!Input.GetButton("Jump") && initialJumpTimer + jumpTimer > Time.time && velocity.y > 0)
+        {
+            gravityModifier = initialGravityModifier * jumpFallMultiplier;
+        }
+        else if (!Input.GetButton("Jump") || initialJumpTimer + jumpTimer <= Time.time)
+        {
+            isJumping = false;
+            jumpTimer = 0f;
+            gravityModifier = initialGravityModifier;
+        }
+        else
+        {
+            gravityModifier = initialGravityModifier;
+            isJumping = false;
         }
     }
 
