@@ -418,9 +418,11 @@ public class PlayerController : CharacterController
 
         isAttacking = true;
         animator.SetTrigger("DYNAMIC_RAM");
+        yield return new WaitForSeconds(15 * (1f / 60f));
+
         attackMovementDelegate += MoveForward;
         Debug.Log("Ram2");
-        yield return new WaitForSeconds(comboJSON.getStartup("DYNAMIC_RAM") * (1f / 60f));
+        yield return new WaitForSeconds((comboJSON.getStartup("DYNAMIC_RAM") - 15) * (1f / 60f));
 
         //Active
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("DYNAMIC_RAM", comboJSON.getPosition("DYNAMIC_RAM"));
@@ -431,7 +433,7 @@ public class PlayerController : CharacterController
 
         //Endlag
         hitbox.SetActive(false);
-        canMoveWhileAttacking = false;
+        //canMoveWhileAttacking = false;
         yield return new WaitForSeconds(comboJSON.getEndlag("DYNAMIC_RAM") * (1f / 60f));
 
         EndAttack();
