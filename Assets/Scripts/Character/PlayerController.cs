@@ -53,7 +53,7 @@ public class PlayerController : CharacterController
     #endregion
 
 
-    private Rigidbody2D rb2d;
+    //private Rigidbody2D rb2d;
 
     protected override void Start()
     {
