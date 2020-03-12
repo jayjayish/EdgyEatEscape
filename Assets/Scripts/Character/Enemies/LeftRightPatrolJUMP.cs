@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftRightPatrolJUMP : CharacterController
+public class LeftRightPatrolJUMP : EnemyController
 {
 
     [SerializeField]
@@ -41,8 +41,6 @@ public class LeftRightPatrolJUMP : CharacterController
         if (Time.time > nextJump)
         {
             velocity.y = jumpSpeed;
-
-            Debug.Log("Jump!!!!!");
 
             nextJump = Time.time + jumpRate;
 

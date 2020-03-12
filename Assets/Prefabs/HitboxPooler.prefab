@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1827751332065600409
+--- !u!1 &2383302665131981766
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1827751332065600408}
-  - component: {fileID: 1827751332065600411}
+  - component: {fileID: 2383302665131981767}
+  - component: {fileID: 2383302665131981764}
   m_Layer: 8
   m_Name: HitboxPooler
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1827751332065600408
+--- !u!4 &2383302665131981767
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827751332065600409}
+  m_GameObject: {fileID: 2383302665131981766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,19 +31,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1827751332065600411
+--- !u!114 &2383302665131981764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827751332065600409}
+  m_GameObject: {fileID: 2383302665131981766}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 868233075a58042428be52402007046b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: BASIC_ATTACK_BOX
+  - tag: BASIC_ATTACK
     prefab: {fileID: 8346580727308664543, guid: b3d8fa06c8d8bb942a413924cd946e6d,
       type: 3}
+  - tag: HEADDRILL
+    prefab: {fileID: 5339765393515789685, guid: aefaf15c23df4db4c9a5385c4cb735ee,
+      type: 3}
+

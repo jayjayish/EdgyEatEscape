@@ -1,0 +1,640 @@
+fileFormatVersion: 2
+guid: d81960aa0ce289c4aacff3d42ed7c642
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4134203703108654160
+    second: Dynamic_RAM_0
+  - first:
+      213: -8421098613649361784
+    second: Dynamic_RAM_1
+  - first:
+      213: -8982709659769700715
+    second: Dynamic_RAM_2
+  - first:
+      213: 2689194026146503549
+    second: Dynamic_RAM_3
+  - first:
+      213: -6384292220025147422
+    second: Dynamic_RAM_4
+  - first:
+      213: 2319389936558332820
+    second: Dynamic_RAM_5
+  - first:
+      213: 5522581930027864087
+    second: Dynamic_RAM_6
+  - first:
+      213: 1461942321202226951
+    second: Dynamic_RAM_7
+  - first:
+      213: 4845977938442999472
+    second: Dynamic_RAM_8
+  - first:
+      213: -2996521117984183402
+    second: Dynamic_RAM_9
+  - first:
+      213: -8211031374942933019
+    second: Dynamic_RAM_10
+  - first:
+      213: 3619729261520405274
+    second: Dynamic_RAM_11
+  - first:
+      213: 7361516955394008323
+    second: Dynamic_RAM_12
+  - first:
+      213: -2868920017288038003
+    second: Dynamic_RAM_13
+  - first:
+      213: 5374730070614176064
+    second: Dynamic_RAM_14
+  - first:
+      213: 5496101543341780553
+    second: Dynamic_RAM_15
+  - first:
+      213: -7394394273962812554
+    second: Dynamic_RAM_16
+  - first:
+      213: 6053412658694949584
+    second: Dynamic_RAM_17
+  - first:
+      213: -7176346688185542661
+    second: Dynamic_RAM_18
+  - first:
+      213: 7442760600433770868
+    second: Dynamic_RAM_19
+  - first:
+      213: -8501618480214458463
+    second: Dynamic_RAM_20
+  - first:
+      213: -4678192127204330413
+    second: Dynamic_RAM_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dynamic_RAM_0
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 286
+        width: 24
+        height: 64
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abba6eeda96d922408b1523463762c20
+      internalID: 4134203703108654160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 280
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.60714287, y: 0.16216217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aafe076b0c594c40b3c18049cfa6fd1
+      internalID: -8421098613649361784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_2
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 286
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5909091, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be5b41f028b14545b01f37d0298af4b
+      internalID: -8982709659769700715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 286
+        width: 33
+        height: 28
+      alignment: 9
+      pivot: {x: 0.72727275, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4824d4b0a9fa3c4a8d11add15db788f
+      internalID: 2689194026146503549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_4
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 284
+        width: 48
+        height: 30
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0.06666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7d1f4372814ae4d8fd564f37c83a85
+      internalID: -6384292220025147422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 211
+        width: 65
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5846154, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6b28bfb1f762b49bebe7aaefd26205
+      internalID: 2319389936558332820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 216
+        width: 40
+        height: 32
+      alignment: 9
+      pivot: {x: 0.825, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ae9c2103fe1ba499de44802d075871
+      internalID: 5522581930027864087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_7
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 216
+        width: 40
+        height: 37
+      alignment: 9
+      pivot: {x: 0.825, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ded1cae2dc4c304bbf8b022c3d04aa8
+      internalID: 1461942321202226951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_8
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 216
+        width: 46
+        height: 63
+      alignment: 9
+      pivot: {x: 0.76086956, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663f8de63f175104ca72f7f32ddcb2ec
+      internalID: 4845977938442999472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_9
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 216
+        width: 43
+        height: 42
+      alignment: 9
+      pivot: {x: 0.76744187, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e7f931f85a5ac4f84d59806e40583d
+      internalID: -2996521117984183402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 146
+        width: 43
+        height: 40
+      alignment: 9
+      pivot: {x: 0.81395346, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dfaefc3534bb54ca1456d0e48dcd32
+      internalID: -8211031374942933019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 146
+        width: 36
+        height: 36
+      alignment: 9
+      pivot: {x: 0.8611111, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f8705eb5725f646b08ee9bfcb085db
+      internalID: 3619729261520405274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_12
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 146
+        width: 45
+        height: 39
+      alignment: 9
+      pivot: {x: 0.8666667, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb88f9242f602f947b1d8e528c16b7e3
+      internalID: 7361516955394008323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_13
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 146
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.8857143, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb6a04361d2bba4481058f147d16be4
+      internalID: -2868920017288038003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_14
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 146
+        width: 37
+        height: 33
+      alignment: 9
+      pivot: {x: 0.945946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ffb293f23b7034ebc24af3b5d38c75
+      internalID: 5374730070614176064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_15
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 76
+        width: 41
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9268292, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9498eef00ab26f04dae86f6dfb5b0211
+      internalID: 5496101543341780553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_16
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 76
+        width: 29
+        height: 64
+      alignment: 9
+      pivot: {x: 0.8275862, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6562ef3a5175d24d8484e5d772e7a46
+      internalID: -7394394273962812554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_17
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 76
+        width: 27
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96897121991a7a44bb30e7a727ff2520
+      internalID: 6053412658694949584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 77
+        width: 32
+        height: 63
+      alignment: 9
+      pivot: {x: 0.53125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3919be7e5ba84114196832e54b15a47c
+      internalID: -7176346688185542661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 76
+        width: 29
+        height: 64
+      alignment: 9
+      pivot: {x: 0.2413793, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3cbdf2f49104646ba193c38c404dc7
+      internalID: 7442760600433770868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 26
+        height: 64
+      alignment: 9
+      pivot: {x: 0.30769232, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7aff65ec672c3419b61bf8d8ac0306
+      internalID: -8501618480214458463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic_RAM_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6
+        width: 20
+        height: 64
+      alignment: 9
+      pivot: {x: 0.55, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242e1d8d2f916444fa7bbfff4019eb7b
+      internalID: -4678192127204330413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 80ccdeca2b71fdf4da0eb10043b0a6c4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

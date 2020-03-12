@@ -8,6 +8,49 @@ using UnityEngine;
 
 public class EnemyController : CharacterController
 {
-    // ASSSSSSSSSS
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+    }
+
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        currentHealth = maxHealth;
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
+
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }
+
+    protected override void Movement(Vector2 move, bool yMovement)
+    //Function for movement
+    {
+        base.Movement(move, yMovement);
+    }
+
+    protected override void ComputeVelocity() // no implentation in this class, but called in update
+    {
+        base.ComputeVelocity();
+    }
+
+    protected override void OnDeath()
+    {
+        //onCharacterDeath();
+    }
 
 }
