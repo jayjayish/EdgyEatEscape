@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: 4e86879682e71514781276914a802f6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7928983949192116740
+    second: Spin_Dab_0
+  - first:
+      213: -7963252735281174282
+    second: Spin_Dab_1
+  - first:
+      213: -7337311797512261296
+    second: Spin_Dab_2
+  - first:
+      213: 989581855572753936
+    second: Spin_Dab_3
+  - first:
+      213: -8146419639459573148
+    second: Spin_Dab_4
+  - first:
+      213: 9184379006733420495
+    second: Spin_Dab_5
+  - first:
+      213: 6833741054990430530
+    second: Spin_Dab_6
+  - first:
+      213: -7567875966852088885
+    second: Spin_Dab_7
+  - first:
+      213: 307724861977983367
+    second: Spin_Dab_8
+  - first:
+      213: -5709154253317151691
+    second: Spin_Dab_9
+  - first:
+      213: 4562319069625863753
+    second: Spin_Dab_10
+  - first:
+      213: 3712265582679610648
+    second: Spin_Dab_11
+  - first:
+      213: 4561333776718490841
+    second: Spin_Dab_12
+  - first:
+      213: -983523551280803090
+    second: Spin_Dab_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spin_Dab_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.62857145, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6c48eab2d2a1c49803f4be22fba072
+      internalID: 7928983949192116740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6571429, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e0ebfda6e5660498bcfbb49a8006c9
+      internalID: -7963252735281174282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6571429, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a652f4343241b4da2aaa798238e03d
+      internalID: -7337311797512261296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.67142856, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bde94027cd58244f851821fa105bf39
+      internalID: 989581855572753936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.67142856, y: 0.21428572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3692efed930193e43a549c9dca19c80b
+      internalID: -8146419639459573148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.67142856, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251b31fcf299c2f489fa2d601dcac678
+      internalID: 9184379006733420495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 56
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bc9e3edfd7ee546bce5dbe28669f7c
+      internalID: 6833741054990430530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48539eb01da521c498e027a8a4da972e
+      internalID: -7567875966852088885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aee55012e7ef9468a5b1990ec2a7fa
+      internalID: 307724861977983367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88852fe5ffd954a4690a2e85c72bf599
+      internalID: -5709154253317151691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb5e067f003dc14696ef4e58f0ed55f
+      internalID: 4562319069625863753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_11
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bbe25376408254d82cfe4884f7fab7
+      internalID: 3712265582679610648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_12
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7d2f84d3fc96042b5c6968ed8d53cb
+      internalID: 4561333776718490841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Dab_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 70
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39c67e3f36700d4088e7e7876b93680
+      internalID: -983523551280803090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 60fc9b45e011e664eb288089fd2e193b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

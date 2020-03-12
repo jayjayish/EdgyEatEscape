@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shootingEnemy : CharacterController
+public class ShootingEnemy : EnemyController
 {
 
 
