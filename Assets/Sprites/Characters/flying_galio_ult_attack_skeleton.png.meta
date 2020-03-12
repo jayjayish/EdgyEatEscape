@@ -1,0 +1,328 @@
+fileFormatVersion: 2
+guid: 0b3a663e9ca7126438a3466e78aa3332
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3891853744388535637
+    second: flying_galio_ult_attack_skeleton_0
+  - first:
+      213: 1593238311091851940
+    second: flying_galio_ult_attack_skeleton_1
+  - first:
+      213: 4306336862525139506
+    second: flying_galio_ult_attack_skeleton_2
+  - first:
+      213: 5409161731479690635
+    second: flying_galio_ult_attack_skeleton_3
+  - first:
+      213: 1766915983127761388
+    second: flying_galio_ult_attack_skeleton_4
+  - first:
+      213: 2065696540923950459
+    second: flying_galio_ult_attack_skeleton_5
+  - first:
+      213: 3156925013604306584
+    second: flying_galio_ult_attack_skeleton_6
+  - first:
+      213: -1650771449280844864
+    second: flying_galio_ult_attack_skeleton_7
+  - first:
+      213: -5283978805067009071
+    second: flying_galio_ult_attack_skeleton_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 201
+        width: 17
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5882353, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263c80c2d631ea54695f80b32ebd28be
+      internalID: -3891853744388535637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 200
+        width: 18
+        height: 21
+      alignment: 9
+      pivot: {x: 0.9444444, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fceeae896516048ae5a84f5905f81b
+      internalID: 1593238311091851940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 199
+        width: 25
+        height: 23
+      alignment: 9
+      pivot: {x: 0.84, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8028966829ffc3442a8cf2d8c0dc6f92
+      internalID: 4306336862525139506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 117
+        width: 27
+        height: 23
+      alignment: 9
+      pivot: {x: 0.7777778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8dc830cc1a4d91429b4089f4986b9d5
+      internalID: 5409161731479690635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 115
+        width: 23
+        height: 24
+      alignment: 9
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c816753649b20449fb9077a7ef9e7a
+      internalID: 1766915983127761388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 104
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: 0.9047619, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e4ea4a5e38fa54cb5021a03d6a3839
+      internalID: 2065696540923950459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 15
+        width: 19
+        height: 31
+      alignment: 9
+      pivot: {x: 0.94736844, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443890ea678b121488d1f07a9e1a1732
+      internalID: 3156925013604306584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 6
+        width: 36
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7222222, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cbcffc783663b45adb929f54778e2b
+      internalID: -1650771449280844864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_galio_ult_attack_skeleton_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 6
+        width: 39
+        height: 21
+      alignment: 9
+      pivot: {x: 0.74358976, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeca481284b0c20488be2072cb5548f5
+      internalID: -5283978805067009071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 71a06d898d93a7149ad58586964ebac8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

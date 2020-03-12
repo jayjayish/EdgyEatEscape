@@ -1,0 +1,784 @@
+fileFormatVersion: 2
+guid: 50ec4767b5ea14845a24351b0842b550
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8875958734046466623
+    second: Bird_Scream_Meme_Attack_0
+  - first:
+      213: -3632388135077964246
+    second: Bird_Scream_Meme_Attack_1
+  - first:
+      213: -3157121895591719539
+    second: Bird_Scream_Meme_Attack_2
+  - first:
+      213: -786518835273392386
+    second: Bird_Scream_Meme_Attack_3
+  - first:
+      213: -1588387022189955499
+    second: Bird_Scream_Meme_Attack_4
+  - first:
+      213: 643094878662425979
+    second: Bird_Scream_Meme_Attack_5
+  - first:
+      213: -8053476259537238832
+    second: Bird_Scream_Meme_Attack_6
+  - first:
+      213: -6692769610700054508
+    second: Bird_Scream_Meme_Attack_7
+  - first:
+      213: 2974678883877664573
+    second: Bird_Scream_Meme_Attack_8
+  - first:
+      213: 4663439156828352536
+    second: Bird_Scream_Meme_Attack_9
+  - first:
+      213: -6344735417089144173
+    second: Bird_Scream_Meme_Attack_10
+  - first:
+      213: -8325483023652906302
+    second: Bird_Scream_Meme_Attack_11
+  - first:
+      213: 4367697045060135232
+    second: Bird_Scream_Meme_Attack_12
+  - first:
+      213: 6829973717903341031
+    second: Bird_Scream_Meme_Attack_13
+  - first:
+      213: -4650033829334832766
+    second: Bird_Scream_Meme_Attack_14
+  - first:
+      213: -6144667742666693418
+    second: Bird_Scream_Meme_Attack_15
+  - first:
+      213: -2848668494302719695
+    second: Bird_Scream_Meme_Attack_16
+  - first:
+      213: 6452390227491934813
+    second: Bird_Scream_Meme_Attack_17
+  - first:
+      213: 6179402410746431079
+    second: Bird_Scream_Meme_Attack_18
+  - first:
+      213: -3548485209062357688
+    second: Bird_Scream_Meme_Attack_19
+  - first:
+      213: 9157937250070540371
+    second: Bird_Scream_Meme_Attack_20
+  - first:
+      213: 6410725139599072711
+    second: Bird_Scream_Meme_Attack_21
+  - first:
+      213: -7539079738662109463
+    second: Bird_Scream_Meme_Attack_22
+  - first:
+      213: 3054620081198458283
+    second: Bird_Scream_Meme_Attack_23
+  - first:
+      213: -4826989961541039087
+    second: Bird_Scream_Meme_Attack_24
+  - first:
+      213: -7890642865843980622
+    second: Bird_Scream_Meme_Attack_25
+  - first:
+      213: -7183797423187386550
+    second: Bird_Scream_Meme_Attack_26
+  - first:
+      213: -7724753490383624649
+    second: Bird_Scream_Meme_Attack_27
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.7, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa253fc86c9bd2408a4e10796571b6e
+      internalID: 8875958734046466623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 300
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.7, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4a3b583f0860f4db6f01ef71e5d157
+      internalID: -3632388135077964246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.7, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc7ccc121ffbbf49969c1babf96d62b
+      internalID: -3157121895591719539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.71333337, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e86595763c412408147b55f67f8cd2
+      internalID: -786518835273392386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.71333337, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861e4b7a38de8994f8df5fe597637a37
+      internalID: -1588387022189955499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.71333337, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b4366bc0a418c4a97be9891640e0b6
+      internalID: 643094878662425979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 240
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.71333337, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e5e55aa56e1d7419c3b2f76d6f1690
+      internalID: -8053476259537238832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 240
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.71333337, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99d51d23ee718d44acd33a43f76d312
+      internalID: -6692769610700054508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 240
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.7266667, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e78d1bdcf5ac64cb216ac3c45ad622
+      internalID: 2974678883877664573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 240
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.74, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce83cb6c1a78ecc42b12c0ea179b9bbf
+      internalID: 4663439156828352536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.74666667, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f62fc876e18a34a9cc6c5548323ad3
+      internalID: -6344735417089144173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 180
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7877e9939bfda084d8f1fe6cebf3b69d
+      internalID: -8325483023652906302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 180
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec20b035ad87844aa8ebdfe4fd60651
+      internalID: 4367697045060135232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 180
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984f4400dced0e34dadeb1744b8e3631
+      internalID: 6829973717903341031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 180
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcf660317f28db4484dcf3119bf0115
+      internalID: -4650033829334832766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b066e85dfa8bc442ac4d97a06094a8d
+      internalID: -6144667742666693418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 120
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cb848c6e625db43ad65b23b55b0eef
+      internalID: -2848668494302719695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 120
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48cd6e6203f29542b541b79d6d00fe2
+      internalID: 6452390227491934813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 120
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd0df8ffbdb21444b71043574568ede
+      internalID: 6179402410746431079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 120
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84323b071c2cd624e8361d6df6c42068
+      internalID: -3548485209062357688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a336c61e5ba5f43a064ad22c455772
+      internalID: 9157937250070540371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_21
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 60
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc64a6009c1f0354686fd9d5faccf3e2
+      internalID: 6410725139599072711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 60
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d73af705d90a5140aebd0e9c538be40
+      internalID: -7539079738662109463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 60
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73be7162961db5040a272ebd3acf41e7
+      internalID: 3054620081198458283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 60
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.76, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c293521132ac7b4b893bd844f11ef3b
+      internalID: -4826989961541039087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.74666667, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d987f8df9ce80479b3de971befa880
+      internalID: -7890642865843980622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.74666667, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ed0af7b3312504aaa8edcfaaef1eb7
+      internalID: -7183797423187386550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Scream_Meme_Attack_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 60
+      alignment: 9
+      pivot: {x: 0.74666667, y: 0.18333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5217cc7c170284a953e7aa74a0c158
+      internalID: -7724753490383624649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 320523dc7c1990340962b0cd500beb75
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
