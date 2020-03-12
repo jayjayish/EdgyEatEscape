@@ -64,9 +64,9 @@
   },
    "FORK_BOMB":{
    "position":[-6.91,0.04, 0],
-   "startup":10,
-   "active":10,
-   "endlag":10,
+   "startup":20,
+   "active":25,
+   "endlag":5,
    "damage":10
   },
 }

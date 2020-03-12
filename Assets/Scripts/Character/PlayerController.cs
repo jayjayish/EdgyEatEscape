@@ -111,7 +111,7 @@ public class PlayerController : CharacterController
     IEnumerator TestRoutine()
     {
         isAttacking = true;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
 
         EndAttack();
     }
@@ -467,6 +467,7 @@ public class PlayerController : CharacterController
     private void EndAttack()
     {       
         isAttacking = false;
+        canMoveWhileAttacking = false;
         attackMovementDelegate = null;
         timeOfLastAttack = Time.time;
         AttackQueueManager();

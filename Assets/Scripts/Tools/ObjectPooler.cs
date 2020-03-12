@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour {
     [SerializeField]
-    private List<Pool> pools;
+    private List<Pool> pools = new List<Pool>();
     private Dictionary<string, Queue<GameObject>> poolDictionary;
 
 
