@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &459121351218779064
+--- !u!1 &882537556
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,14 +8,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 456733502838798946}
-  - component: {fileID: 364946149885283217}
-  - component: {fileID: 6680122185183753207}
-  - component: {fileID: 1574764898902917936}
-  - component: {fileID: 3060820095940322383}
-  - component: {fileID: 3060820095940322381}
-  - component: {fileID: 3207524329190816250}
-  - component: {fileID: 5615566388840273194}
+  - component: {fileID: 882537557}
+  - component: {fileID: 882537558}
+  m_Layer: 8
+  m_Name: HitboxPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882537557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882537556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3183080777251619504}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882537558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882537556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868233075a58042428be52402007046b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: RAIN_DROP
+    prefab: {fileID: 5892369744804449562, guid: 847923dc4656734488c8d892a2b29687,
+      type: 3}
+  - tag: HEAD_DRILL
+    prefab: {fileID: 5339765393515789685, guid: aefaf15c23df4db4c9a5385c4cb735ee,
+      type: 3}
+  - tag: SHOCKWAVE
+    prefab: {fileID: 76449018651535954, guid: 553710aac556f8a48bd19a67e2482215, type: 3}
+  - tag: DYNAMIC_RAM
+    prefab: {fileID: 9181604548428496511, guid: 4f19f12160decb345989b149f0f56ff4,
+      type: 3}
+  - tag: FORK_BOMB
+    prefab: {fileID: 2971817232440949315, guid: 0dd5f32b9fca6604792c31f513679475,
+      type: 3}
+--- !u!1 &3180974854786362218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3183080777251619504}
+  - component: {fileID: 3416749149268472643}
+  - component: {fileID: -662389693587289307}
+  - component: {fileID: -4638558098295866398}
+  - component: {fileID: 1361747101}
+  - component: {fileID: 502535961014141224}
+  - component: {fileID: 599369708}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -34,7 +91,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5615566389123303059}
+  - {fileID: 882537557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,7 +138,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.21, y: 0.23}
+  m_Size: {x: 7, y: 5.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -94,8 +151,8 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459121351218779064}
-  m_BodyType: 0
+  m_GameObject: {fileID: 3180974854786362218}
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -121,20 +178,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19944012, y: 0.018536687}
+  m_Offset: {x: -0.20321172, y: 1.1506118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1, y: 2.3}
-    newSize: {x: 0.21, y: 0.23}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.2, y: 2.3}
+    newSize: {x: 7, y: 5.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.690412, y: 2.2868924}
+  m_Size: {x: 1.5889167, y: 2.3025649}
   m_EdgeRadius: 0
---- !u!95 &3060820095940322383
+--- !u!95 &1361747101
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -153,26 +210,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3060820095940322381
+--- !u!114 &502535961014141224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459121351218779064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f84099785b6a642a1102af3d51d571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 50
---- !u!114 &3207524329190816250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459121351218779064}
+  m_GameObject: {fileID: 3180974854786362218}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afd55d7456abe904385c1e4c04d4dbf7, type: 3}
@@ -180,65 +224,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   gravityModifier: 1
-  maxSpeed: 7
-  jumpTakeOffSpeed: 15
-  dashSpeed: 0
---- !u!114 &5615566388840273194
+  maxHealth: 100
+  initialGravityModifier: 2
+  maxSpeed: 8
+  jumpTakeOffSpeed: 13
+  initialJumpTimer: 0.8
+  jumpFloatMultiplier: 0.8
+  jumpFallMultiplier: 1.75
+--- !u!114 &599369708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459121351218779064}
+  m_GameObject: {fileID: 5615566389123303058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 718dfbf20f05aa641883b84f7ac0bba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5615566389123303058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5615566389123303059}
-  - component: {fileID: 5615566389123303056}
-  m_Layer: 8
-  m_Name: HitboxPooler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5615566389123303059
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615566389123303058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 456733502838798946}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5615566389123303056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615566389123303058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868233075a58042428be52402007046b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools:
-  - tag: BASIC_ATTACK_BOX
-    prefab: {fileID: 8346580727308664543, guid: b3d8fa06c8d8bb942a413924cd946e6d,
-      type: 3}

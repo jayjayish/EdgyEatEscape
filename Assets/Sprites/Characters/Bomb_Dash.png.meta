@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: 3fe2dea3b58445e4385c1b70fde395cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6086869079406661450
+    second: Bomb_Dash_0
+  - first:
+      213: -5043371460734629213
+    second: Bomb_Dash_1
+  - first:
+      213: -4167842945514451388
+    second: Bomb_Dash_2
+  - first:
+      213: -8017504118563171455
+    second: Bomb_Dash_3
+  - first:
+      213: 535375080038265573
+    second: Bomb_Dash_4
+  - first:
+      213: 479790789732681712
+    second: Bomb_Dash_5
+  - first:
+      213: 8093344840808089918
+    second: Bomb_Dash_6
+  - first:
+      213: 5117074663175379215
+    second: Bomb_Dash_7
+  - first:
+      213: -2597745476319220497
+    second: Bomb_Dash_8
+  - first:
+      213: -2407496036383082484
+    second: Bomb_Dash_9
+  - first:
+      213: -3403117299730215140
+    second: Bomb_Dash_10
+  - first:
+      213: 848053882319320579
+    second: Bomb_Dash_11
+  - first:
+      213: -1317287031012073699
+    second: Bomb_Dash_12
+  - first:
+      213: -9182158275675603950
+    second: Bomb_Dash_13
+  - first:
+      213: -2427520798498498201
+    second: Bomb_Dash_14
+  - first:
+      213: -4659567149723849490
+    second: Bomb_Dash_15
+  - first:
+      213: -2414156729406658004
+    second: Bomb_Dash_16
+  - first:
+      213: 3971891414490203562
+    second: Bomb_Dash_17
+  - first:
+      213: -7602366103757834464
+    second: Bomb_Dash_18
+  - first:
+      213: -6125912663876703854
+    second: Bomb_Dash_19
+  - first:
+      213: -7615110439826656927
+    second: Bomb_Dash_20
+  - first:
+      213: -1598056414907565985
+    second: Bomb_Dash_21
+  - first:
+      213: 5500314405316885105
+    second: Bomb_Dash_22
+  - first:
+      213: 8209628079458648266
+    second: Bomb_Dash_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bomb_Dash_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 286
+        width: 27
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece4a2c66bd1ce74c829b3eaa9ca08e2
+      internalID: -6086869079406661450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 286
+        width: 21
+        height: 64
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e3d894090f15d4a9d32a5f7c40eb36
+      internalID: -5043371460734629213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 286
+        width: 21
+        height: 64
+      alignment: 9
+      pivot: {x: 0.71428573, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef68f64d4571a34685911bfd5e7d7af
+      internalID: -4167842945514451388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_3
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 286
+        width: 19
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a72929a107cb504f838c71ef134e578
+      internalID: -8017504118563171455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_4
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 286
+        width: 27
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b140f4ad046f2f540a2c762284e2ad2d
+      internalID: 535375080038265573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_5
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 216
+        width: 23
+        height: 64
+      alignment: 9
+      pivot: {x: 0.65217394, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341252df02ca9d747baa0a6695f79cb1
+      internalID: 479790789732681712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_6
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 216
+        width: 23
+        height: 64
+      alignment: 9
+      pivot: {x: 0.65217394, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0ab828d925d0b47839a1f59b5aedba
+      internalID: 8093344840808089918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_7
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 216
+        width: 26
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c686885ff95fd8e43bdb45c38577fe6b
+      internalID: 5117074663175379215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_8
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 216
+        width: 24
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332ec1dc4803a2e45a2d31ae1889eba7
+      internalID: -2597745476319220497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_9
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 216
+        width: 27
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebcb29c4cf77f846b08a0c66f51edba
+      internalID: -2407496036383082484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_10
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 146
+        width: 27
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04c6951214b0024b8e270079eff1322
+      internalID: -3403117299730215140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_11
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 149
+        width: 26
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5769231, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b3162c3c0499c4b804e2d6f1d0fb8a
+      internalID: 848053882319320579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_12
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 154
+        width: 30
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56435ff86f598c54a9866e2b42c11a85
+      internalID: -1317287031012073699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_13
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 140
+        width: 28
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d37196b2e00304eb1f1d5a0610fb85
+      internalID: -9182158275675603950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_14
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 140
+        width: 28
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce126897b71a64943a37f01857ac655f
+      internalID: -2427520798498498201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_15
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 70
+        width: 24
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.114285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144da6063e829b448a07ae37ed6798e4
+      internalID: -4659567149723849490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_16
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 71
+        width: 24
+        height: 70
+      alignment: 9
+      pivot: {x: 0.7083334, y: 0.071428575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0578e05205aba4188349569e9734d4
+      internalID: -2414156729406658004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 70
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163460d1bc1741d4ba6892e86c9c9ca7
+      internalID: 3971891414490203562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 70
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eea6ebd1d2aad249a4a173baa5de09a
+      internalID: -7602366103757834464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 70
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb46afe19efae046bdbf8e2f2848a6b
+      internalID: -6125912663876703854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81848271b134d1d4fba4c61bcc782825
+      internalID: -7615110439826656927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6836b276b5f84fb4c957ea645983ef31
+      internalID: -1598056414907565985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20d8f8d50d38484e99bdd92b4da0a97
+      internalID: 5500314405316885105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Dash_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 70
+      alignment: 9
+      pivot: {x: 0.61, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8cec17c4c8a3d40bf4669662b01c27
+      internalID: 8209628079458648266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f02f0b2f700882b419722d52884e3406
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
