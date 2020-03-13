@@ -12,9 +12,9 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
 
-    [SerializeField] private float initialGravityModifier = 1f;
+
     [SerializeField] private float maxSpeed = 7;
-    [SerializeField] private float jumpTakeOffSpeed = 7;
+
     private Vector2 move;
 
     // animation variables
@@ -25,12 +25,27 @@ public class PlayerController : CharacterController
     private int playerLayer;
     private int enemyLayer;
 
+
+
+    #region JumpVariables
     [SerializeField] private float initialJumpTimer = 1f;
     [SerializeField] private float jumpFloatMultiplier = 0.8f;
     [SerializeField] private float jumpFallMultiplier = 0.8f;
 
     private float jumpTimer = 0f;
     private bool isJumping = false;
+
+    [SerializeField] private float jumpTakeOffSpeed = 7;
+
+    [SerializeField] private float jumpBufferTime = 0.10f;
+    private float jumpBufferTimer = 0f;
+    private bool jumpBufferBool = false;
+
+    #endregion
+
+
+
+
 
 
     #region DashVariables
@@ -532,7 +547,19 @@ public class PlayerController : CharacterController
             isJumping = true;
             jumpTimer = Time.time;
         }
-
+        else if (Input.GetButtonDown("Jump") && !isGrounded){
+            jumpBufferBool = true;
+            jumpBufferTimer = Time.time;
+        }
+        else if (jumpBufferBool && Time.time - jumpBufferTimer < jumpBufferTime && Input.GetButton("Jump") && isGrounded){
+            velocity.y = jumpTakeOffSpeed;
+            isJumping = true;
+            jumpTimer = Time.time;
+        }
+        else if (jumpBufferBool && ((Time.time - jumpBufferTimer < jumpBufferTime && !Input.GetButton("Jump") || Time.time - jumpBufferTimer >= jumpBufferTime))){
+            jumpBufferBool = false;
+            jumpBufferTimer = 0f;
+        }
         else if (Input.GetButton("Jump") && isJumping &&  initialJumpTimer + jumpTimer > Time.time) // reduces velocity when user lets go of jump button
         {
             gravityModifier = initialGravityModifier * jumpFloatMultiplier;
