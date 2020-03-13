@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
     private float rangeSquare;
     private float range = 1.0f;
     private float offset = 0.1f;
+    [SerializeField]
+    private string door;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class Door : MonoBehaviour
 
     private void changeScene()
     {
-        SceneManager.LoadScene("test"); // CHANGE FROM HARD CODE TO VARIABLE LATER
+        SceneManager.LoadScene(door); // CHANGE FROM HARD CODE TO VARIABLE LATER
     }
 
     void Update()
