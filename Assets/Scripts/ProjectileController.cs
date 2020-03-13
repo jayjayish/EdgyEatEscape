@@ -21,7 +21,7 @@ public abstract class ProjectileController : MonoBehaviour
         //Debug.Log(currentTimeToLive);
         if (isMoving)
         {
-            transform.Translate(-VectorFromAngle(angle) * velocity);
+            transform.Translate(-VectorFromAngle(angle) * velocity * Time.fixedDeltaTime);
             currentTimeToLive += Time.fixedDeltaTime;
             if (currentTimeToLive > timeToLive)
             {
@@ -35,7 +35,7 @@ public abstract class ProjectileController : MonoBehaviour
         CheckIfHitObject(col.tag);
     }
 
-    void CheckIfHitObject(string tag)
+    protected virtual void CheckIfHitObject(string tag)
     {
         for (int i = 0; i < listOfObstacleTags.Length; i++)
         {
@@ -52,7 +52,7 @@ public abstract class ProjectileController : MonoBehaviour
 
 
     #region Tools
-    private Vector2 VectorFromAngle(float theta)
+    protected Vector2 VectorFromAngle(float theta)
     {
         return new Vector2(Mathf.Cos(theta * Mathf.PI / 180), Mathf.Sin(theta * Mathf.PI / 180));
     }
