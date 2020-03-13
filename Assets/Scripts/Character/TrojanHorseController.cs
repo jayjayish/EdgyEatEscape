@@ -44,4 +44,9 @@ public class TrojanHorseController : MonoBehaviour, IPooledObject
         direction = dir;
         transform.localScale = new Vector2(-dir, 1f);
     }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }
