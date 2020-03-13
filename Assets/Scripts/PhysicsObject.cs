@@ -6,8 +6,9 @@ public class PhysicsObject : MonoBehaviour
 {
     [SerializeField]
     protected float minGroundNormalY = .65f;
-    [SerializeField]
-    protected float gravityModifier = 1f;
+
+    [SerializeField] protected float initialGravityModifier = 1f;
+    protected float gravityModifier;
 
     protected bool isGrounded;
     protected Vector2 groundNormal;
@@ -38,6 +39,7 @@ public class PhysicsObject : MonoBehaviour
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer)); 
         //use physics2D settings to determine what layers we're going to check collisions against
         contactFilter.useLayerMask = true;
+        gravityModifier = initialGravityModifier;
     }
 
     protected virtual void Awake()
