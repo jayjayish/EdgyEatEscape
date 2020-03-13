@@ -349,12 +349,15 @@ public class PlayerController : CharacterController
     {
         animator.SetTrigger("SHOCKWAVE");
         isAttacking = true;
+
+        yield return new WaitForSeconds(80f / 60f);
+
         velocity.y = jumpTakeOffSpeed;
         gravityModifier = 0f;
         yield return new WaitForSeconds(20f / 60f);
         velocity.y = 0;
 
-        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 20f) * (1f / 60f));
+        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 100f) * (1f / 60f));
 
 
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("SHOCKWAVE", comboJSON.getPosition("SHOCKWAVE"));
