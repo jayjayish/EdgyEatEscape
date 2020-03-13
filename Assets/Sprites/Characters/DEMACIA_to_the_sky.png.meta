@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 80accd3e5d9f0b84995a84653deec160
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6928042673483953549
+    second: DEMACIA_to_the_sky_0
+  - first:
+      213: -9152312576013076487
+    second: DEMACIA_to_the_sky_1
+  - first:
+      213: 6011024165265173491
+    second: DEMACIA_to_the_sky_2
+  - first:
+      213: 2034483518885871382
+    second: DEMACIA_to_the_sky_3
+  - first:
+      213: -77065277000847779
+    second: DEMACIA_to_the_sky_4
+  - first:
+      213: -4748676771657655117
+    second: DEMACIA_to_the_sky_5
+  - first:
+      213: 3910727312836199827
+    second: DEMACIA_to_the_sky_6
+  - first:
+      213: 1742876311158818880
+    second: DEMACIA_to_the_sky_7
+  - first:
+      213: -779195487319893318
+    second: DEMACIA_to_the_sky_8
+  - first:
+      213: 3938861409151283297
+    second: DEMACIA_to_the_sky_9
+  - first:
+      213: -3960903615476199654
+    second: DEMACIA_to_the_sky_10
+  - first:
+      213: -1062457857362038571
+    second: DEMACIA_to_the_sky_11
+  - first:
+      213: -3502399251452661956
+    second: DEMACIA_to_the_sky_12
+  - first:
+      213: 9165829528375070207
+    second: DEMACIA_to_the_sky_13
+  - first:
+      213: -8767774902050835312
+    second: DEMACIA_to_the_sky_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bea03030ac506441985f9b6fd582f24
+      internalID: -6928042673483953549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1000
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f160c7fc37f59c049912d57e500ea3b9
+      internalID: -9152312576013076487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1000
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75b5741b7b2aab4aa832c9ac475ca65
+      internalID: 6011024165265173491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1000
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf5fb2bc4ad5674b8b006cb5bd182b8
+      internalID: 2034483518885871382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1000
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7a3e3081f8cae43aa5f990966bfd73
+      internalID: -77065277000847779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c81904ff16fd1d4da3126d5aeddfe1a
+      internalID: -4748676771657655117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead1b8f1bb4da964585febbfb4d100e3
+      internalID: 3910727312836199827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d095c42b9bbf4e42a9c1547f4e5d84b
+      internalID: 1742876311158818880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f97f321e9fb06443bb59c1b6e2b903f
+      internalID: -779195487319893318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8357d458159d71c4d80b44e0d9122e96
+      internalID: 3938861409151283297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226eb76a45bf07a4fa35fe2284a42bc3
+      internalID: -3960903615476199654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a6c0ba1aa278946bd2528e4c12e44e
+      internalID: -1062457857362038571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04708d181cd3934181c494f229d8c5a
+      internalID: -3502399251452661956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45b49101a4229d45a8bf649f06caf05
+      internalID: 9165829528375070207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEMACIA_to_the_sky_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 500
+      alignment: 9
+      pivot: {x: 0.53, y: 0.066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3320889e8b70baa40a44f8f8c8630f9c
+      internalID: -8767774902050835312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 85d0abb9e6430394d9d046643d23a961
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
