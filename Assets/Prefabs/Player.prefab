@@ -227,7 +227,7 @@ MonoBehaviour:
   maxHealth: 100
   initialGravityModifier: 2
   maxSpeed: 8
-  jumpTakeOffSpeed: 13
+  jumpTakeOffSpeed: 11
   initialJumpTimer: 0.8
   jumpFloatMultiplier: 0.8
   jumpFallMultiplier: 1.75
