@@ -30,8 +30,8 @@
   "SHOCKWAVE":{
    "position":[-4.75, -2.14, 0],
    "startup":130,
-   "active":95,
-   "endlag":70,
+   "active":90,
+   "endlag":75,
    "damage":10
   },
   "SPINDAB":{
