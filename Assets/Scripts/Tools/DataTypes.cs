@@ -14,6 +14,11 @@ public struct Tags
 public struct Pool
 {
     public static readonly string HORIZONTAL_ENEMY_BULLET = "HorizontalEnemyBullet";
+    public static readonly string LASER_GEYSER_BOX = "LaserGeyserBox";
+    public static readonly string LASER_GEYSER = "LaserGeyser";
+    
+    public static readonly string TROJAN_HORSE = "TrojanHorse";
+
 }
 
 // Tags for player attacks

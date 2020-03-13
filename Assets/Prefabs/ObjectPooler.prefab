@@ -48,10 +48,14 @@ MonoBehaviour:
     prefab: {fileID: 3698597588525878704, guid: 757436c9390f05b45a286b6e133ed010,
       type: 3}
     size: 5
-  - tag: TROJAN_HORSE
+  - tag: TrojanHorse
     prefab: {fileID: 647619245416045865, guid: 5bf966939947a4f429e06a8fcbbf6183, type: 3}
     size: 2
-  - tag: LASER_GEYSER
-    prefab: {fileID: 3533804759657173343, guid: 6a3a86b9796300c4d822eb11bbfa581f,
+  - tag: LaserGeyser
+    prefab: {fileID: 8654923569397214545, guid: 6a0d2f85d159ed344bd51d3f3b468e6e,
+      type: 3}
+    size: 2
+  - tag: LaserGeyserBox
+    prefab: {fileID: 2082724347058833771, guid: 5356015da4212644f87fad4ca948f717,
       type: 3}
     size: 2

@@ -302,7 +302,7 @@ public class PlayerController : CharacterController
         } else {
             geyserOffset = new Vector3(3f, 0f, 0f);
         }
-        GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position + geyserOffset, Quaternion.identity);
+        GameObject laser = ObjectPooler.Instance.SpawnFromPool(Pool.LASER_GEYSER, transform.position + geyserOffset, Quaternion.identity);
         GeyserController geyser = laser.GetComponent<GeyserController>();
         geyser.PassPlayerObject(gameObject);
         geyser.OnObjectSpawn();
@@ -329,7 +329,7 @@ public class PlayerController : CharacterController
     {
         isAttacking = true;
         animator.SetTrigger("TROJAN_HORSE");
-        GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        GameObject horse = ObjectPooler.Instance.SpawnFromPool(Pool.TROJAN_HORSE, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
         TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
         horseController.OnObjectSpawn();
         if (facingLeft)

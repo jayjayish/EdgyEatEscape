@@ -13,12 +13,14 @@ public class GeyserController : MonoBehaviour, IPooledObject
     Animator animator;
     PlayerController player;
     GameObject hitbox;
+    float width;
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();    
+        width = GetComponent<SpriteRenderer>().bounds.size.x / 7f;
         // find hitbox??
         // hitbox = ???
     }
@@ -27,7 +29,7 @@ public class GeyserController : MonoBehaviour, IPooledObject
     {
         startTime = Time.time;
         playerInitiateExplode = false;
-        hitbox.SetActive(false); 
+        //hitbox.SetActive(false); 
     }
 
     public void PassPlayerObject(GameObject pla){
@@ -59,13 +61,19 @@ public class GeyserController : MonoBehaviour, IPooledObject
         animator.SetTrigger("TIME_UP");
         // time for active store in json or in this file?
         // yield return new WaitForSeconds(20f * (1f / 60f));
+        
+
 
         player.StopLaserControl();
     }
 
+
+    
+
     public void StartHitbox()
     {
-        hitbox.SetActive(true);
+        //hitbox.SetActive(true);
+        hitbox = ObjectPooler.Instance.SpawnFromPool(Pool.LASER_GEYSER_BOX, new Vector3(transform.position.x-width, transform.position.y, 0f), Quaternion.identity);
     }
 
     public void StopHitbox()
@@ -76,5 +84,6 @@ public class GeyserController : MonoBehaviour, IPooledObject
     public void StopGeyser()
     {
         gameObject.SetActive(false);
+        player.StopLaserControl();
     }
 }
