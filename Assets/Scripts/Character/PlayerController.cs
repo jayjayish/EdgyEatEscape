@@ -296,6 +296,7 @@ public class PlayerController : CharacterController
     {
         isAttacking = true;
         isControllingLaser = true;
+        animator.SetTrigger("LASER_GEYSER");
 
         GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position, Quaternion.identity);
         GeyserController geyser = laser.GetComponent<GeyserController>();
