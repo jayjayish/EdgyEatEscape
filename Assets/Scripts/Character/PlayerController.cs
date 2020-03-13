@@ -101,8 +101,6 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectCombo();
-                
-        ControlLaser();
     }
 
     protected override void FixedUpdate()
@@ -297,8 +295,14 @@ public class PlayerController : CharacterController
         isAttacking = true;
         isControllingLaser = true;
         animator.SetTrigger("LASER_GEYSER");
-
-        GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(comboJSON.getStartup("LASER_GEYSER") * (1f / 60f));
+        Vector3 geyserOffset;
+        if (facingLeft){
+            geyserOffset = new Vector3(-3f, 0f, 0f);
+        } else {
+            geyserOffset = new Vector3(3f, 0f, 0f);
+        }
+        GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position + geyserOffset, Quaternion.identity);
         GeyserController geyser = laser.GetComponent<GeyserController>();
         geyser.PassPlayerObject(gameObject);
         geyser.OnObjectSpawn();
@@ -361,7 +365,6 @@ public class PlayerController : CharacterController
         velocity.y = 0;
 
         yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 90f) * (1f / 60f));
-
 
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("SHOCKWAVE", comboJSON.getPosition("SHOCKWAVE"));
 
@@ -475,14 +478,6 @@ public class PlayerController : CharacterController
         }     
 
         EndAttack();
-    }
-
-    
-    private void ControlLaser()
-    {
-        if (isControllingLaser){
-            
-        }
     }
     
 

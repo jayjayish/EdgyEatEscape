@@ -69,4 +69,11 @@
    "endlag":5,
    "damage":10
   },
+  "LASER_GEYSER":{
+  "position":[-1.4,0, 0],
+  "startup":60,
+  "active":25,
+  "endlag":5,
+  "damage":10
+  },
 }
