@@ -568,7 +568,7 @@ public class PlayerController : CharacterController
         {
             gravityModifier = initialGravityModifier * jumpFallMultiplier;
         }
-        else if (!Input.GetButton("Jump") || initialJumpTimer + jumpTimer <= Time.time)
+        else if (isJumping && isGrounded)
         {
             isJumping = false;
             jumpTimer = 0f;
@@ -577,7 +577,6 @@ public class PlayerController : CharacterController
         else
         {
             gravityModifier = initialGravityModifier;
-            isJumping = false;
         }
     }
 
@@ -695,6 +694,23 @@ public class PlayerController : CharacterController
     }
 
     #endregion
+
+    public override void DecrementHealth(float damage)
+    {
+        Debug.Log(damage);
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
+        if (IsHealthZero())
+        {
+            OnDeath();
+        }
+       // updateHealthBar();
+    }
+
+
+    private void ActivateInvul(){
+
+    }
+
 
 
     private void IgnoreEnemyCollision(bool value)
