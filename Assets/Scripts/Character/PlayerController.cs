@@ -468,13 +468,10 @@ public class PlayerController : CharacterController
         {
             attackMovementDelegate += MoveForward;     
             yield return new WaitForSeconds(runningTime * (1f / 60f));  
-            // drop bomb  
             attackMovementDelegate = null;
             yield return new WaitForSeconds(runningTime * (1f / 60f));  
-        }
-
-        
-
+            // drop bomb  
+        }     
 
         EndAttack();
     }
