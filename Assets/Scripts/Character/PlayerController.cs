@@ -24,6 +24,7 @@ public class PlayerController : CharacterController
 
     private int playerLayer;
     private int enemyLayer;
+    private int platformLayer;
 
     [SerializeField] private float initialJumpTimer = 1f;
     [SerializeField] private float jumpFloatMultiplier = 0.8f;
@@ -79,6 +80,7 @@ public class PlayerController : CharacterController
         comboQueue = new Queue<IEnumerator>();
         playerLayer = LayerMask.NameToLayer("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
+        platformLayer = LayerMask.NameToLayer("Platform");
     }
 
     protected override void Update()
@@ -673,4 +675,11 @@ public class PlayerController : CharacterController
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
     }
 
+    /*
+    public void IgnorePlatformCollision(bool value)
+    {
+        Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, value);
+        contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+    }
+    */
 }
