@@ -174,6 +174,7 @@ public class PlayerController : CharacterController
             else if (string.Equals(currentCombo, "shh"))
             {
                 //BOMB_DASH 
+                comboQueue.Enqueue(DoBombDash());
             }
             else if (string.Equals(currentCombo, "hss"))
             {
@@ -322,6 +323,7 @@ public class PlayerController : CharacterController
     IEnumerator DoTrojanHorse()
     {
         isAttacking = true;
+        animator.SetTrigger("TROJAN_HORSE");
         GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
         TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
         horseController.OnObjectSpawn();
@@ -451,8 +453,28 @@ public class PlayerController : CharacterController
 
         //Endlag
         hitbox.SetActive(false);
-        //canMoveWhileAttacking = false;
         yield return new WaitForSeconds(comboJSON.getEndlag("DYNAMIC_RAM") * (1f / 60f));
+
+        EndAttack();
+    }
+
+    IEnumerator DoBombDash()
+    {
+        float runningTime = 40f;
+        isAttacking = true;
+        animator.SetTrigger("BOMB_DASH");
+        
+        for (int i = 0; i < 3; i++)
+        {
+            attackMovementDelegate += MoveForward;     
+            yield return new WaitForSeconds(runningTime * (1f / 60f));  
+            // drop bomb  
+            attackMovementDelegate = null;
+            yield return new WaitForSeconds(runningTime * (1f / 60f));  
+        }
+
+        
+
 
         EndAttack();
     }
