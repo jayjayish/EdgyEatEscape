@@ -2,32 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ProjectileController : MonoBehaviour
+public abstract class ProjectileController : MonoBehaviour, IPooledObject
 {
-    [SerializeField] float velocity;
+    [SerializeField] float velocity = 1f;
     [SerializeField] protected float timeToLive;
-    [SerializeField] protected float damage;
+    [SerializeField] protected int damage;
     protected float angle;
-    protected float currentTimeToLive; //currentDuration
-    protected bool isMoving = true;
+    protected float timeSpawned; //currentDuration
 
     protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE };
 
-
+    public virtual void OnObjectSpawn(){
+        timeSpawned = Time.time;
+    }
 
     // Update is called once per frame
     protected virtual void Update()
     {
         //Debug.Log(currentTimeToLive);
-        if (isMoving)
+
+        transform.Translate(-VectorFromAngle(angle) * velocity);
+        if (Time.time - timeSpawned > timeToLive)
         {
-            transform.Translate(-VectorFromAngle(angle) * velocity);
-            currentTimeToLive += Time.fixedDeltaTime;
-            if (currentTimeToLive > timeToLive)
-            {
-                OnMovementTimeToLiveStopped();
-            }
+            OnMovementTimeToLiveStopped();
         }
+        
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D col)
@@ -35,7 +34,7 @@ public abstract class ProjectileController : MonoBehaviour
         CheckIfHitObject(col.tag);
     }
 
-    void CheckIfHitObject(string tag)
+    protected void CheckIfHitObject(string tag)
     {
         for (int i = 0; i < listOfObstacleTags.Length; i++)
         {

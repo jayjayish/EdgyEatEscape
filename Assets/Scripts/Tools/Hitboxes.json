@@ -76,4 +76,11 @@
   "endlag":5,
   "damage":10
   },
+  "BIRD_SCREAM":{
+    "position":[-8.45,0.89, 0],
+    "startup":45,
+    "active":55,
+    "endlag":10,
+    "damage":10
+  }
 }

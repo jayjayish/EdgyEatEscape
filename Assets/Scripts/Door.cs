@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     private float range = 1.0f;
     private float offset = 0.1f;
     [SerializeField]
-    private string door;
+    private string door = null;
 
     // Start is called before the first frame update
     void Start()

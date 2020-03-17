@@ -64,6 +64,9 @@ MonoBehaviour:
   - tag: BIND
     prefab: {fileID: 5400019921343949298, guid: f1e8382ca10788447985de1c0671a30e,
       type: 3}
+  - tag: BIRD_SCREAM
+    prefab: {fileID: 8189441531933125272, guid: 8c499a5ed6d29034dac7fbd241cac1b7,
+      type: 3}
 --- !u!1 &3180974854786362218
 GameObject:
   m_ObjectHideFlags: 0
