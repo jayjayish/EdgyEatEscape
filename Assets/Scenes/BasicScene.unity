@@ -215,7 +215,7 @@ Transform:
   m_Children:
   - {fileID: 1422302315}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799701358
 GameObject:
@@ -430,7 +430,7 @@ Transform:
   m_LocalScale: {x: 10, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &834566130
 MonoBehaviour:
@@ -499,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 2228328337809856684, guid: d618baf3defe57141819d2b941327026,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2228328337809856684, guid: d618baf3defe57141819d2b941327026,
         type: 3}
@@ -649,7 +649,7 @@ Transform:
   m_LocalScale: {x: 50, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &981764521
 PrefabInstance:
@@ -1198,10 +1198,6 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpTakeOffSpeed
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 882537558, guid: cba6586479c624e428eefcd799be36c1, type: 3}
-      propertyPath: pools.Array.data[5].tag
-      value: LASER_GEYSER
       objectReference: {fileID: 0}
     - target: {fileID: 882537557, guid: cba6586479c624e428eefcd799be36c1, type: 3}
       propertyPath: m_RootOrder

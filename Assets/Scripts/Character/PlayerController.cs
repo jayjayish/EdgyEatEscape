@@ -147,11 +147,11 @@ public class PlayerController : CharacterController
         }
         else if (comboCount == 1 && lastButtonPressed == "h")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoAttack("PUNCH"));
         }
         else if (comboCount == 2 && lastButtonPressed == "h")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoAttack("BIND"));
 
         }
         else if (comboCount == 3)

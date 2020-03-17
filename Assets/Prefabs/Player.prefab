@@ -58,6 +58,12 @@ MonoBehaviour:
   - tag: FORK_BOMB
     prefab: {fileID: 2971817232440949315, guid: 0dd5f32b9fca6604792c31f513679475,
       type: 3}
+  - tag: PUNCH
+    prefab: {fileID: 4004213531027145839, guid: 208e970fd2da94442b7463babef2c1f5,
+      type: 3}
+  - tag: BIND
+    prefab: {fileID: 5400019921343949298, guid: f1e8382ca10788447985de1c0671a30e,
+      type: 3}
 --- !u!1 &3180974854786362218
 GameObject:
   m_ObjectHideFlags: 0
