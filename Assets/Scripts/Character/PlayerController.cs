@@ -417,7 +417,7 @@ public class PlayerController : CharacterController
         canMoveWhileAttacking = true;
         isAttacking = true;
         animator.SetTrigger("RAIN_DROP");
-        velocity.y = jumpTakeOffSpeed;
+        velocity.y = jumpTakeOffSpeed * 1.2f;
 
         yield return new WaitForSeconds(comboJSON.getStartup("RAIN_DROP") * (1f / 60f));
 

@@ -43,9 +43,9 @@
   },
   "RAIN_DROP":{
    "position":[-3.07, 0, 0],
-   "startup":10,
-   "active":10,
-   "endlag":10,
+   "startup":80,
+   "active":25,
+   "endlag":0,
    "damage":10
   },
   "BIND":{
