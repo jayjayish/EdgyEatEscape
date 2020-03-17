@@ -18,7 +18,7 @@ public class LeftRightPatrolJUMP : EnemyController
     [SerializeField]
     private bool movingRight = true;
     [SerializeField]
-    private Transform groundDetection;
+    private Transform groundDetection = null;
 
 
 

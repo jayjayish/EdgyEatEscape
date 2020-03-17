@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerBallController : ProjectileController, IPooledObject
 {
 
-    private float direction = 1f;
 
     // Update is called once per frame
 

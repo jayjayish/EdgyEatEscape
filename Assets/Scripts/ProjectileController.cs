@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ProjectileController : MonoBehaviour, IPooledObject
 {
-    [SerializeField] float velocity;
+    [SerializeField] float velocity = 1f;
     [SerializeField] protected float timeToLive;
     [SerializeField] protected int damage;
     protected float angle;
