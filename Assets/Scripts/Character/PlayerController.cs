@@ -139,7 +139,7 @@ public class PlayerController : CharacterController
 
         if (comboCount == 1 && lastButtonPressed == "s")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoAttack("BIRD_SCREAM"));
         }
         else if (comboCount == 2 && lastButtonPressed == "s")
         {
@@ -342,13 +342,8 @@ public class PlayerController : CharacterController
         {
             horseController.ChangeDirection(1);
         }
-        //Spawn stuff asofijaseofijaesofj
-
 
         yield return new WaitForSeconds(1f);
-
-
-        //
 
         EndAttack();
 
