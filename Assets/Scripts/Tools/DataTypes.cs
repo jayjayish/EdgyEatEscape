@@ -18,6 +18,7 @@ public struct Pool
     public static readonly string LASER_GEYSER = "LaserGeyser";
     
     public static readonly string TROJAN_HORSE = "TrojanHorse";
+    public static readonly string PLAYER_BALL = "PlayerBall";
 
 }
 

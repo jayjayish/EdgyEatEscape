@@ -9,7 +9,9 @@ public class TrojanHorseController : MonoBehaviour, IPooledObject
     [SerializeField] private float speed = 20f;
     private float spawnTime = 0f;
     [SerializeField] private float liveTime = 3f;
+    [SerializeField] private int damage = 20;
 
+    protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE };
     // Start is called before the first frame update
     void Start()
     {
@@ -49,4 +51,13 @@ public class TrojanHorseController : MonoBehaviour, IPooledObject
     {
         gameObject.SetActive(false);
     }
+
+    protected virtual void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == Tags.ENEMY){
+            col.gameObject.GetComponent<EnemyController>().DecrementHealthMagic(damage);
+        }
+    }
+
+
 }

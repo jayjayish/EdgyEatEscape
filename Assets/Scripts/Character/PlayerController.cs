@@ -292,6 +292,30 @@ public class PlayerController : CharacterController
 
     }
 
+
+    IEnumerator DoThrowing()
+    {
+        isAttacking = true;
+        animator.SetTrigger("Throwing");
+        GameObject ball = ObjectPooler.Instance.SpawnFromPool(Pool.PLAYER_BALL, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        PlayerBallController ballController = ball.GetComponent<PlayerBallController>();
+        ballController.OnObjectSpawn();
+        if (facingLeft){
+            ballController.SetAngle(180f);
+        }
+        else{
+            ballController.SetAngle(0f);
+        }
+       
+
+
+
+        yield return new WaitForSeconds(1f);
+
+        EndAttack();
+
+    }
+
     IEnumerator DoLaserGeyser()
     {
         isAttacking = true;
@@ -334,14 +358,7 @@ public class PlayerController : CharacterController
         GameObject horse = ObjectPooler.Instance.SpawnFromPool(Pool.TROJAN_HORSE, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
         TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
         horseController.OnObjectSpawn();
-        if (facingLeft)
-        {
-            horseController.ChangeDirection(-1);
-        }
-        else
-        {
-            horseController.ChangeDirection(1);
-        }
+        horseController.ChangeDirection(-transform.localScale.x);
 
         yield return new WaitForSeconds(1f);
 
