@@ -394,11 +394,10 @@ public class PlayerController : CharacterController
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("HEAD_DRILL", comboJSON.getPosition("HEAD_DRILL"));
         hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage("HEAD_DRILL"));
 
-        // yield return new WaitForSeconds(comboJSON.getActive("HEAD_DRILL") * (1f / 60f));
         float maxDrillTime = comboJSON.getActive("HEAD_DRILL");
 
 
-        while ((Input.GetButton("TriggerL") || Input.GetButton("TriggerR")) && Time.time - headDrillStart < maxDrillTime) 
+        while (((Input.GetButton("TriggerL") || Input.GetButton("TriggerR"))) && ((Time.time - headDrillStart) < (maxDrillTime * 1f / 60f))) 
         {
             yield return new WaitForSeconds(1f / 60f);
         }
@@ -406,7 +405,7 @@ public class PlayerController : CharacterController
 
         //Endlag
         hitbox.SetActive(false);
-        //animator.SetTrigger("HEAD_DRILL"); RETURN TO IDLE ANIMATION TODO
+        animator.SetTrigger("HEAD_DRILL_END");
         canMoveWhileAttacking = false;
         yield return new WaitForSeconds(comboJSON.getEndlag("HEAD_DRILL") * (1f / 60f));
 

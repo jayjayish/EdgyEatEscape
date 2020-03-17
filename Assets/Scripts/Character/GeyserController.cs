@@ -61,10 +61,7 @@ public class GeyserController : MonoBehaviour, IPooledObject
         animator.SetTrigger("TIME_UP");
         // time for active store in json or in this file?
         // yield return new WaitForSeconds(20f * (1f / 60f));
-        
-
-
-        player.StopLaserControl();
+    
     }
 
 
