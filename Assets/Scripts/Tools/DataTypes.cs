@@ -19,6 +19,9 @@ public struct Pool
     
     public static readonly string TROJAN_HORSE = "TrojanHorse";
 
+    public static readonly string BOMB = "Bomb";
+    public static readonly string BOMB_BOX = "BombBox";
+
 }
 
 // Tags for player attacks

@@ -474,8 +474,11 @@ public class PlayerController : CharacterController
             attackMovementDelegate += MoveForward;     
             yield return new WaitForSeconds(runningTime * (1f / 60f));  
             attackMovementDelegate = null;
+            velocity.y = 5f;
             yield return new WaitForSeconds(runningTime * (1f / 60f));  
             // drop bomb  
+            GameObject bombPrefab = ObjectPooler.Instance.SpawnFromPool(Pool.BOMB, transform.position, Quaternion.identity);
+            BombDashController bomb = bombPrefab.GetComponent<BombDashController>();
         }     
 
         EndAttack();

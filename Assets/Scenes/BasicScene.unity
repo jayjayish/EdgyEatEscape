@@ -1021,6 +1021,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[4].tag
+      value: Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 2533267732622222917, guid: 6d150cb20f9688b49ba856780892411d,
+        type: 3}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[4].size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[5].tag
+      value: BombBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[5].prefab
+      value: 
+      objectReference: {fileID: 4256791349415973301, guid: d9a4dc0dbd79fc84ab052ebfed7569a8,
+        type: 3}
+    - target: {fileID: 4634234841820423745, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285,
+        type: 3}
+      propertyPath: pools.Array.data[5].size
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26ccd0c0e9dcbcb449eb2352dc4a9285, type: 3}
 --- !u!1001 &4829420057764927987
