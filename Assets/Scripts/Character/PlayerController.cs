@@ -73,7 +73,7 @@ public class PlayerController : CharacterController
 
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
-    private readonly float COMBO_TIME = 1f;
+    private readonly float COMBO_TIME = 0.3f;
     private float timeOfLastAttack = 0;
     private string currentCombo = "";     //combo string
     private int comboCount = 0;
@@ -139,11 +139,12 @@ public class PlayerController : CharacterController
 
         if (comboCount == 1 && lastButtonPressed == "s")
         {
-            comboQueue.Enqueue(DoAttack("BIRD_SCREAM"));
+            comboQueue.Enqueue(DoThrowing());
         }
         else if (comboCount == 2 && lastButtonPressed == "s")
         {
-            comboQueue.Enqueue(TestRoutine());
+            
+            comboQueue.Enqueue(DoAttack("BIRD_SCREAM"));
         }
         else if (comboCount == 1 && lastButtonPressed == "h")
         {
@@ -296,21 +297,21 @@ public class PlayerController : CharacterController
     IEnumerator DoThrowing()
     {
         isAttacking = true;
-        animator.SetTrigger("Throwing");
-        GameObject ball = ObjectPooler.Instance.SpawnFromPool(Pool.PLAYER_BALL, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        animator.SetTrigger("THROWING");
+        GameObject ball = ObjectPooler.Instance.SpawnFromPool(Pool.PLAYER_BALL, transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
         PlayerBallController ballController = ball.GetComponent<PlayerBallController>();
         ballController.OnObjectSpawn();
         if (facingLeft){
-            ballController.SetAngle(180f);
+            ballController.SetAngle(0f);
         }
         else{
-            ballController.SetAngle(0f);
+            ballController.SetAngle(180f);
         }
        
 
 
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
 
         EndAttack();
 
