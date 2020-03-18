@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Soil_Left_End
+  m_Name: Soil
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: df6174cd72762ed449425d6a04286584, type: 3}
+  m_Sprite: {fileID: -6751816516141551381, guid: e5aef0f188cd8e74c9f110d9f43d6149,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
