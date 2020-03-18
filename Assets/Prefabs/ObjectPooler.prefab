@@ -59,6 +59,14 @@ MonoBehaviour:
     prefab: {fileID: 2082724347058833771, guid: 5356015da4212644f87fad4ca948f717,
       type: 3}
     size: 2
+  - tag: Bomb
+    prefab: {fileID: 2533267732622222917, guid: 6d150cb20f9688b49ba856780892411d,
+      type: 3}
+    size: 6
+  - tag: BombBox
+    prefab: {fileID: 4256791349415973301, guid: d9a4dc0dbd79fc84ab052ebfed7569a8,
+      type: 3}
+    size: 6
   - tag: PlayerBall
     prefab: {fileID: 5466218556229795556, guid: 4845cccf379006240b4208ef0dce60d5,
       type: 3}
