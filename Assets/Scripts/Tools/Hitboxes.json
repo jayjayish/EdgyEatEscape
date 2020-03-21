@@ -22,9 +22,9 @@
   },
   "PUNCH":{
   "position":[-1.77, 0.8, 0],
-  "startup":10,
-  "active":10,
-  "endlag":10,
+  "startup":6,
+  "active":6,
+  "endlag":3,
   "damage":10
   },
   "SHOCKWAVE":{
@@ -50,9 +50,9 @@
   },
   "BIND":{
    "position":[-3.37, 0.271, 0],
-   "startup":10,
-   "active":10,
-   "endlag":10,
+   "startup":15,
+   "active":21,
+   "endlag":3,
    "damage":10
   },
    "DYNAMIC_RAM":{
@@ -78,9 +78,16 @@
   },
   "BIRD_SCREAM":{
     "position":[-8.45,0.89, 0],
-    "startup":45,
-    "active":55,
-    "endlag":10,
+    "startup":18,
+    "active":18,
+    "endlag":8,
+    "damage":10
+  },
+  "THROWING":{
+    "position":[0,0,0],
+    "startup":14,
+    "active":0,
+    "endlag":16,
     "damage":10
   }
 }
