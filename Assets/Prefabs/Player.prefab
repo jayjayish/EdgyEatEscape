@@ -58,6 +58,15 @@ MonoBehaviour:
   - tag: FORK_BOMB
     prefab: {fileID: 2971817232440949315, guid: 0dd5f32b9fca6604792c31f513679475,
       type: 3}
+  - tag: PUNCH
+    prefab: {fileID: 4004213531027145839, guid: 208e970fd2da94442b7463babef2c1f5,
+      type: 3}
+  - tag: BIND
+    prefab: {fileID: 5400019921343949298, guid: f1e8382ca10788447985de1c0671a30e,
+      type: 3}
+  - tag: BIRD_SCREAM
+    prefab: {fileID: 8189441531933125272, guid: 8c499a5ed6d29034dac7fbd241cac1b7,
+      type: 3}
 --- !u!1 &3180974854786362218
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +97,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3180974854786362218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2651545, y: -0.25984564, z: -0.3608949}
+  m_LocalPosition: {x: 1.2651545, y: -0.25984564, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 882537557}
@@ -129,8 +138,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2106582223
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8227008933381841998, guid: 0bc89ad9ab963a648b045ceec2f92bea,
     type: 3}
@@ -178,7 +187,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20321172, y: 1.1506118}
+  m_Offset: {x: -0.19944012, y: 1.1640289}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -189,7 +198,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5889167, y: 2.3025649}
+  m_Size: {x: 1.690412, y: 2.2868915}
   m_EdgeRadius: 0
 --- !u!95 &1361747101
 Animator:
@@ -223,14 +232,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityModifier: 1
-  maxHealth: 100
   initialGravityModifier: 2
+  maxHealth: 100
   maxSpeed: 8
-  jumpTakeOffSpeed: 11
   initialJumpTimer: 0.8
   jumpFloatMultiplier: 0.8
   jumpFallMultiplier: 1.75
+  jumpTakeOffSpeed: 15
+  jumpBufferTime: 0.1
 --- !u!114 &599369708
 MonoBehaviour:
   m_ObjectHideFlags: 0
