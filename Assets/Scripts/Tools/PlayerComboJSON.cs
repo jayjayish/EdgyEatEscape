@@ -22,21 +22,14 @@ public class PlayerComboJSON : MonoBehaviour
     private int damage;
 
     // tables loaded at the start
-    // private JSONObject comboTable;
     private JSONObject hitboxTable;
 
     // load all JSON tables at the start
     void loadJSON() {
-        //Debug.Log(comboTable);
         string path = Application.dataPath + "/Scripts/Tools/Hitboxes.json";
         string jsonString = File.ReadAllText(path);
         hitboxTable = (JSONObject)JSON.Parse(jsonString);
-        //Debug.Log(hitboxTable);
     }
-
-    // public JSONArray getHitboxes(string comboInput) {
-    //     return comboTable[comboInput].AsArray;
-    // }
 
     public Vector3 getPosition(string hitboxName) {
         return hitboxTable[hitboxName]["position"].ReadVector3();

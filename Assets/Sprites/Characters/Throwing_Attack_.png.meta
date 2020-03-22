@@ -1,67 +1,61 @@
 fileFormatVersion: 2
-guid: c4c771d203f218e468d749da53b0318d
+guid: 26a46eefbaad9634e887517934a9ac7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5538032772617673024
-    second: Sonic_Slam_0
+      213: 2413924234836607766
+    second: Throwing_Attack__0
   - first:
-      213: -6196765113223573270
-    second: Sonic_Slam_1
+      213: 6961315355078777305
+    second: Throwing_Attack__1
   - first:
-      213: 1838665820190908307
-    second: Sonic_Slam_2
+      213: 2840091871481059414
+    second: Throwing_Attack__2
   - first:
-      213: -6420514467094541029
-    second: Sonic_Slam_3
+      213: 5747427862472984272
+    second: Throwing_Attack__3
   - first:
-      213: -5874536133423076538
-    second: Sonic_Slam_4
+      213: 6260396416926373252
+    second: Throwing_Attack__4
   - first:
-      213: -3997796617337122672
-    second: Sonic_Slam_5
+      213: 7009309799114556571
+    second: Throwing_Attack__5
   - first:
-      213: 4453555333356593424
-    second: Sonic_Slam_6
+      213: 8679198298583944603
+    second: Throwing_Attack__6
   - first:
-      213: 6412372856800980009
-    second: Sonic_Slam_7
+      213: 2809387659601771777
+    second: Throwing_Attack__7
   - first:
-      213: -2496797036880799346
-    second: Sonic_Slam_8
+      213: 2555250605880456212
+    second: Throwing_Attack__8
   - first:
-      213: -8755548210878182749
-    second: Sonic_Slam_9
+      213: 6458847751184732953
+    second: Throwing_Attack__9
   - first:
-      213: -1130939354273112536
-    second: Sonic_Slam_10
+      213: 7128342512923900271
+    second: Throwing_Attack__10
   - first:
-      213: -6110158239974856471
-    second: Sonic_Slam_11
+      213: 197432813720171096
+    second: Throwing_Attack__11
   - first:
-      213: -838779633798967423
-    second: Sonic_Slam_12
+      213: -7496205272691526966
+    second: Throwing_Attack__12
   - first:
-      213: 6588590419686690810
-    second: Sonic_Slam_13
+      213: -3765518953287727533
+    second: Throwing_Attack__13
   - first:
-      213: -6392684737780313181
-    second: Sonic_Slam_14
+      213: -4456225960944851244
+    second: Throwing_Attack__14
   - first:
-      213: 1465834148534257492
-    second: Sonic_Slam_15
+      213: -3465245013742638141
+    second: Throwing_Attack__15
   - first:
-      213: 7895314231761517356
-    second: Sonic_Slam_16
+      213: -2360441649548787484
+    second: Throwing_Attack__16
   - first:
-      213: -1817781394536201946
-    second: Sonic_Slam_17
-  - first:
-      213: 7737108148238331575
-    second: Sonic_Slam_18
-  - first:
-      213: 3059059128792804622
-    second: Sonic_Slam_19
+      213: -8774506813479897566
+    second: Throwing_Attack__17
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -140,425 +134,394 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sonic_Slam_0
+      name: Throwing_Attack__0
       rect:
         serializedVersion: 2
-        x: 92
-        y: 304
-        width: 15
-        height: 23
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.6666667, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 111dcfaf063a53742884a86f7d837d84
-      internalID: -5538032772617673024
+      spriteID: fb9468eb2a12a0446a304b4643aa5ae6
+      internalID: 2413924234836607766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_1
+      name: Throwing_Attack__1
       rect:
         serializedVersion: 2
-        x: 201
-        y: 304
-        width: 17
-        height: 19
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.5882353, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd1397e379d60c49a3ed02df55f8cc5
-      internalID: -6196765113223573270
+      spriteID: a982537e5477a9c4ab30e91902572466
+      internalID: 6961315355078777305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_2
+      name: Throwing_Attack__2
       rect:
         serializedVersion: 2
-        x: 306
-        y: 311
-        width: 21
-        height: 25
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.6666667, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 506053f595f99ca4e95690fda8842be4
-      internalID: 1838665820190908307
+      spriteID: 1812b33dad32a394aa5ea7c06486ae31
+      internalID: 2840091871481059414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_3
+      name: Throwing_Attack__3
       rect:
         serializedVersion: 2
-        x: 413
-        y: 320
-        width: 23
-        height: 27
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.65217394, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae64cb1a02154d46914ca2e48de52ba
-      internalID: -6420514467094541029
+      spriteID: 4be4479108c962c4b80ded467e2a3cdd
+      internalID: 5747427862472984272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_4
+      name: Throwing_Attack__4
       rect:
         serializedVersion: 2
-        x: 520
-        y: 327
-        width: 25
-        height: 30
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.76, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bfd62c4b9f72e8469e725a7403de3ee
-      internalID: -5874536133423076538
+      spriteID: c4bb008c399d52f4c95aa4b008d64e46
+      internalID: 6260396416926373252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_5
+      name: Throwing_Attack__5
       rect:
         serializedVersion: 2
-        x: 82
-        y: 238
-        width: 20
-        height: 30
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.65000004, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a9e5a412c14b95459e214124faeb361
-      internalID: -3997796617337122672
+      spriteID: 00620feed1d4ca147bf81f73b06e3ad7
+      internalID: 7009309799114556571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_6
+      name: Throwing_Attack__6
       rect:
         serializedVersion: 2
-        x: 174
-        y: 251
-        width: 31
-        height: 33
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.7096774, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574c0b1eb9c7be847b1982c83c3daeae
-      internalID: 4453555333356593424
+      spriteID: 572a9fa3f401e9947963901632e0a80a
+      internalID: 8679198298583944603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_7
+      name: Throwing_Attack__7
       rect:
         serializedVersion: 2
-        x: 278
-        y: 263
-        width: 33
-        height: 27
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.69696975, y: -0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c326479ea29e217408fb9fb3e99680cc
-      internalID: 6412372856800980009
+      spriteID: 340da0a3733f56b478d60741a8cea0eb
+      internalID: 2809387659601771777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_8
+      name: Throwing_Attack__8
       rect:
         serializedVersion: 2
-        x: 382
-        y: 265
-        width: 27
-        height: 24
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.7407408, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e902c2f43b47564a9f314805fa077f3
-      internalID: -2496797036880799346
+      spriteID: 0cb53ee71dc7cae43a0024bb06c2d398
+      internalID: 2555250605880456212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_9
+      name: Throwing_Attack__9
       rect:
         serializedVersion: 2
-        x: 487
-        y: 261
-        width: 24
-        height: 27
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.75, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c37d5f4352450054fb861ab00d250c1a
-      internalID: -8755548210878182749
+      spriteID: 5e762aa31ed928b489b7328a5f2dadf2
+      internalID: 6458847751184732953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_10
+      name: Throwing_Attack__10
       rect:
         serializedVersion: 2
-        x: 39
-        y: 153
-        width: 23
-        height: 25
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.65217394, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d6f3deea681f4644bd147417bf8d9d8
-      internalID: -1130939354273112536
+      spriteID: 0b984cdb1e21b6d408eb44d130c1a829
+      internalID: 7128342512923900271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_11
+      name: Throwing_Attack__11
       rect:
         serializedVersion: 2
-        x: 144
-        y: 142
-        width: 24
-        height: 29
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.7083334, y: -0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64b906e0adc606419ac9247e4adefbd
-      internalID: -6110158239974856471
+      spriteID: 6c39be8d38996134aa88488e1de8ada9
+      internalID: 197432813720171096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_12
+      name: Throwing_Attack__12
       rect:
         serializedVersion: 2
-        x: 249
-        y: 136
-        width: 25
-        height: 24
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.76, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5498997b8908f044790b1f2ab4e8d046
-      internalID: -838779633798967423
+      spriteID: 6a7c8bfd58b537e41865c22ddeddb3c7
+      internalID: -7496205272691526966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_13
+      name: Throwing_Attack__13
       rect:
         serializedVersion: 2
-        x: 355
-        y: 122
-        width: 23
-        height: 27
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.73913044, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81fb21da42c330d488886c22b3ed5afd
-      internalID: 6588590419686690810
+      spriteID: 442181c1c67ee3f43940b9d7cea2163a
+      internalID: -3765518953287727533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_14
+      name: Throwing_Attack__14
       rect:
         serializedVersion: 2
-        x: 462
-        y: 116
-        width: 26
-        height: 27
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.7307693, y: 0}
+      pivot: {x: 0.59375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8714c0114fddef44996d049c7998f85f
-      internalID: -6392684737780313181
+      spriteID: 0602c05d7440aae4ab6161b3fff357a8
+      internalID: -4456225960944851244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_15
+      name: Throwing_Attack__15
       rect:
         serializedVersion: 2
-        x: 15
-        y: 3
-        width: 37
-        height: 28
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.7297298, y: 0.14285715}
-      border: {x: 7, y: 4, z: 4, w: 0}
+      pivot: {x: 0.59375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f23503967b28343b9ee9d3b036e080
-      internalID: 1465834148534257492
+      spriteID: e0604f5feadff4043b1958591365b9d8
+      internalID: -3465245013742638141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_16
+      name: Throwing_Attack__16
       rect:
         serializedVersion: 2
-        x: 123
-        y: 4
-        width: 39
-        height: 24
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.5897436, y: 0.041666668}
-      border: {x: 9, y: 0, z: 6, w: 0}
+      pivot: {x: 0.59375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134bbd22ff8ac924d8719ed12a4ec27e
-      internalID: 7895314231761517356
+      spriteID: f8e6b5bb7d900f5479314ff7f8bb4cde
+      internalID: -2360441649548787484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sonic_Slam_17
+      name: Throwing_Attack__17
       rect:
         serializedVersion: 2
-        x: 223
-        y: 4
-        width: 62
-        height: 17
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.516129, y: 0}
-      border: {x: 17, y: 0, z: 20, w: 0}
+      pivot: {x: 0.59375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e75e5043e59305048a7542d65b0dd3a7
-      internalID: -1817781394536201946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sonic_Slam_18
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 4
-        width: 65
-        height: 20
-      alignment: 9
-      pivot: {x: 0.4923077, y: 0}
-      border: {x: 20, y: 0, z: 27, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b26a3165e6d99d47a7c9886b1dba352
-      internalID: 7737108148238331575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sonic_Slam_19
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 4
-        width: 49
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5102041, y: -0}
-      border: {x: 15, y: 0, z: 19, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ea8a2ae72a0cff4ca60a882340f7a37
-      internalID: 3059059128792804622
+      spriteID: 7cd758ff653ddf8438c93402afc1fa11
+      internalID: -8774506813479897566
       vertices: []
       indices: 
       edges: []
@@ -566,7 +529,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ae70a39f4edb3b54c92b169bfaa19462
+    spriteID: 0587b2e4552d14b4a99e0023f1ac9194
     internalID: 0
     vertices: []
     indices: 

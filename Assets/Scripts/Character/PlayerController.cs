@@ -12,7 +12,9 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
 
+
     private ComboUI comboUI;
+
     [SerializeField] private float maxSpeed = 7;
     [SerializeField] private float invulTime = 0.66f;
     private bool isInvulerable = false;
@@ -76,7 +78,7 @@ public class PlayerController : CharacterController
 
     // 'h' for hardware and 's' for software
     private PlayerComboJSON comboJSON;
-    private readonly float COMBO_TIME = 1f;
+    private readonly float COMBO_TIME = 0.3f;
     private float timeOfLastAttack = 0;
     private string currentCombo = "";     //combo string
     private int comboCount = 0;
@@ -107,8 +109,6 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectCombo();
-                
-        ControlLaser();
     }
 
     protected override void FixedUpdate()
@@ -147,19 +147,20 @@ public class PlayerController : CharacterController
 
         if (comboCount == 1 && lastButtonPressed == "s")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoThrowing());
         }
         else if (comboCount == 2 && lastButtonPressed == "s")
         {
-            comboQueue.Enqueue(TestRoutine());
+            
+            comboQueue.Enqueue(DoAttack("BIRD_SCREAM"));
         }
         else if (comboCount == 1 && lastButtonPressed == "h")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoAttack("PUNCH"));
         }
         else if (comboCount == 2 && lastButtonPressed == "h")
         {
-            comboQueue.Enqueue(TestRoutine());
+            comboQueue.Enqueue(DoAttack("BIND"));
 
         }
         else if (comboCount == 3)
@@ -182,6 +183,7 @@ public class PlayerController : CharacterController
             else if (string.Equals(currentCombo, "shh"))
             {
                 //BOMB_DASH 
+                comboQueue.Enqueue(DoBombDash());
             }
             else if (string.Equals(currentCombo, "hss"))
             {
@@ -301,12 +303,44 @@ public class PlayerController : CharacterController
 
     }
 
+
+    IEnumerator DoThrowing()
+    {
+        isAttacking = true;
+        animator.SetTrigger("THROWING");
+        yield return new WaitForSeconds(comboJSON.getStartup("THROWING") * (1f / 60f));
+        GameObject ball = ObjectPooler.Instance.SpawnFromPool(Pool.PLAYER_BALL, transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
+        PlayerBallController ballController = ball.GetComponent<PlayerBallController>();
+        ballController.OnObjectSpawn();
+        if (facingLeft){
+            ballController.SetAngle(0f);
+        }
+        else{
+            ballController.SetAngle(180f);
+        }
+       
+
+
+
+        yield return new WaitForSeconds(comboJSON.getEndlag("THROWING") * (1f / 60f));
+
+        EndAttack();
+
+    }
+
     IEnumerator DoLaserGeyser()
     {
         isAttacking = true;
         isControllingLaser = true;
-
-        GameObject laser = ObjectPooler.Instance.SpawnFromPool("LASER_GEYSER", transform.position, Quaternion.identity);
+        animator.SetTrigger("LASER_GEYSER");
+        yield return new WaitForSeconds(comboJSON.getStartup("LASER_GEYSER") * (1f / 60f));
+        Vector3 geyserOffset;
+        if (facingLeft){
+            geyserOffset = new Vector3(-3f, 0f, 0f);
+        } else {
+            geyserOffset = new Vector3(3f, 0f, 0f);
+        }
+        GameObject laser = ObjectPooler.Instance.SpawnFromPool(Pool.LASER_GEYSER, transform.position + geyserOffset, Quaternion.identity);
         GeyserController geyser = laser.GetComponent<GeyserController>();
         geyser.PassPlayerObject(gameObject);
         geyser.OnObjectSpawn();
@@ -332,24 +366,13 @@ public class PlayerController : CharacterController
     IEnumerator DoTrojanHorse()
     {
         isAttacking = true;
-        GameObject horse = ObjectPooler.Instance.SpawnFromPool("TROJAN_HORSE", transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        animator.SetTrigger("TROJAN_HORSE");
+        GameObject horse = ObjectPooler.Instance.SpawnFromPool(Pool.TROJAN_HORSE, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
         TrojanHorseController horseController = horse.GetComponent<TrojanHorseController>();
         horseController.OnObjectSpawn();
-        if (facingLeft)
-        {
-            horseController.ChangeDirection(-1);
-        }
-        else
-        {
-            horseController.ChangeDirection(1);
-        }
-        //Spawn stuff asofijaseofijaesofj
-
+        horseController.ChangeDirection(-transform.localScale.x);
 
         yield return new WaitForSeconds(1f);
-
-
-        //
 
         EndAttack();
 
@@ -360,15 +383,14 @@ public class PlayerController : CharacterController
         animator.SetTrigger("SHOCKWAVE");
         isAttacking = true;
 
-        yield return new WaitForSeconds(80f / 60f);
+        yield return new WaitForSeconds(60f / 60f);
 
         velocity.y = jumpTakeOffSpeed;
         gravityModifier = 0f;
-        yield return new WaitForSeconds(20f / 60f);
+        yield return new WaitForSeconds(30f / 60f);
         velocity.y = 0;
 
-        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 100f) * (1f / 60f));
-
+        yield return new WaitForSeconds((comboJSON.getStartup("SHOCKWAVE") - 90f) * (1f / 60f));
 
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("SHOCKWAVE", comboJSON.getPosition("SHOCKWAVE"));
 
@@ -396,11 +418,10 @@ public class PlayerController : CharacterController
         GameObject hitbox = HitboxPooler.Instance.SpawnFromPool("HEAD_DRILL", comboJSON.getPosition("HEAD_DRILL"));
         hitbox.GetComponent<PlayerHitboxController>().setDamage(comboJSON.getDamage("HEAD_DRILL"));
 
-        // yield return new WaitForSeconds(comboJSON.getActive("HEAD_DRILL") * (1f / 60f));
         float maxDrillTime = comboJSON.getActive("HEAD_DRILL");
 
 
-        while ((Input.GetButton("TriggerL") || Input.GetButton("TriggerR")) && Time.time - headDrillStart < maxDrillTime) 
+        while (((Input.GetButton("TriggerL") || Input.GetButton("TriggerR"))) && ((Time.time - headDrillStart) < (maxDrillTime * 1f / 60f))) 
         {
             yield return new WaitForSeconds(1f / 60f);
         }
@@ -408,7 +429,7 @@ public class PlayerController : CharacterController
 
         //Endlag
         hitbox.SetActive(false);
-        //animator.SetTrigger("HEAD_DRILL"); RETURN TO IDLE ANIMATION TODO
+        animator.SetTrigger("HEAD_DRILL_END");
         canMoveWhileAttacking = false;
         yield return new WaitForSeconds(comboJSON.getEndlag("HEAD_DRILL") * (1f / 60f));
 
@@ -421,7 +442,7 @@ public class PlayerController : CharacterController
         canMoveWhileAttacking = true;
         isAttacking = true;
         animator.SetTrigger("RAIN_DROP");
-        velocity.y = jumpTakeOffSpeed;
+        velocity.y = jumpTakeOffSpeed * 1.2f;
 
         yield return new WaitForSeconds(comboJSON.getStartup("RAIN_DROP") * (1f / 60f));
 
@@ -461,18 +482,30 @@ public class PlayerController : CharacterController
 
         //Endlag
         hitbox.SetActive(false);
-        //canMoveWhileAttacking = false;
         yield return new WaitForSeconds(comboJSON.getEndlag("DYNAMIC_RAM") * (1f / 60f));
 
         EndAttack();
     }
 
-    
-    private void ControlLaser()
+    IEnumerator DoBombDash()
     {
-        if (isControllingLaser){
-            
-        }
+        float runningTime = 40f;
+        isAttacking = true;
+        animator.SetTrigger("BOMB_DASH");
+        IgnoreEnemyCollision(true);
+        for (int i = 0; i < 3; i++)
+        {
+            attackMovementDelegate += MoveForward;     
+            yield return new WaitForSeconds(runningTime * (1f / 60f));  
+            attackMovementDelegate = null;
+            velocity.y = 5f;
+            yield return new WaitForSeconds(runningTime * (1f / 60f));  
+            // drop bomb  
+            GameObject bombPrefab = ObjectPooler.Instance.SpawnFromPool(Pool.BOMB, transform.position, Quaternion.identity);
+            BombDashController bomb = bombPrefab.GetComponent<BombDashController>();
+        }     
+        IgnoreEnemyCollision(false);
+        EndAttack();
     }
     
 

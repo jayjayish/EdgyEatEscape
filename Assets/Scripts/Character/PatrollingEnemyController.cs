@@ -13,9 +13,9 @@ public class PatrollingEnemyController : EnemyController
     private bool movingRight = true;
 
     [SerializeField]
-    private Transform RightGroundRay;
+    private Transform RightGroundRay = null;
     [SerializeField]
-    private Transform LeftGroundRay;
+    private Transform LeftGroundRay = null;
 
     protected override void Update()
     {

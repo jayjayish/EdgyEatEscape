@@ -15,23 +15,23 @@
 	},
   "HEAD_DRILL":{
     "position":[-2.2, 0, 0],
-    "startup":0,
-    "active":24,
+    "startup":20,
+    "active":180,
     "endlag":0,
     "damage":10
   },
   "PUNCH":{
   "position":[-1.77, 0.8, 0],
-  "startup":10,
-  "active":10,
-  "endlag":10,
+  "startup":12,
+  "active":12,
+  "endlag":6,
   "damage":10
   },
   "SHOCKWAVE":{
    "position":[-4.75, -2.14, 0],
    "startup":130,
-   "active":95,
-   "endlag":70,
+   "active":90,
+   "endlag":75,
    "damage":10
   },
   "SPINDAB":{
@@ -43,16 +43,16 @@
   },
   "RAIN_DROP":{
    "position":[-3.07, 0, 0],
-   "startup":10,
-   "active":10,
-   "endlag":10,
+   "startup":80,
+   "active":25,
+   "endlag":0,
    "damage":10
   },
   "BIND":{
    "position":[-3.37, 0.271, 0],
-   "startup":10,
-   "active":10,
-   "endlag":10,
+   "startup":15,
+   "active":21,
+   "endlag":3,
    "damage":10
   },
    "DYNAMIC_RAM":{
@@ -69,4 +69,25 @@
    "endlag":5,
    "damage":10
   },
+  "LASER_GEYSER":{
+  "position":[-1.4,0, 0],
+  "startup":60,
+  "active":25,
+  "endlag":5,
+  "damage":10
+  },
+  "BIRD_SCREAM":{
+    "position":[-8.45,0.89, 0],
+    "startup":18,
+    "active":18,
+    "endlag":6,
+    "damage":10
+  },
+  "THROWING":{
+    "position":[0,0,0],
+    "startup":14,
+    "active":0,
+    "endlag":16,
+    "damage":10
+  }
 }

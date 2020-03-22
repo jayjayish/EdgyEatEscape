@@ -16,16 +16,15 @@ public class HorizontalEnemyBullet : ProjectileController, IPooledObject
     }
 
 
-    public void OnObjectSpawn()
+    public override void OnObjectSpawn()
     {
         
         target = GameObject.FindObjectOfType<PlayerController>();
         angle = Mathf.Sign(target.transform.position.x - transform.position.x) * 90 + 90;
-        currentTimeToLive = 0;
-        GetComponent<CircleCollider2D>().enabled = true;
-        isMoving = true;
 
-        //Debug.Log(angle);
+        GetComponent<CircleCollider2D>().enabled = true;
+
+        base.OnObjectSpawn();
     }
 
     protected override void OnTriggerEnter2D(Collider2D col)
@@ -42,7 +41,6 @@ public class HorizontalEnemyBullet : ProjectileController, IPooledObject
 
     protected override void OnHitObject()
     {
-        isMoving = false;
         GetComponent<CircleCollider2D>().enabled = false;
         gameObject.SetActive(false);
     }
