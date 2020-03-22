@@ -32,6 +32,12 @@ TextureImporter:
   - first:
       213: 8887427167596187570
     second: Trojan_Horse_Horse_9
+  - first:
+      213: -8315886627030358534
+    second: Trojan_Horse_Horse_10
+  - first:
+      213: -9034589633232172278
+    second: Trojan_Horse_Horse_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -330,6 +336,48 @@ TextureImporter:
       bones: []
       spriteID: 597ec3e34045d8149ad64bc74079d715
       internalID: 8887427167596187570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_Horse_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 150
+        height: 70
+      alignment: 9
+      pivot: {x: 0.3, y: 0.44285715}
+      border: {x: 41, y: 6, z: 56, w: 28}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16db7fbee74f0854fb765287b6c979bd
+      internalID: -8315886627030358534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trojan_Horse_Horse_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 151
+        height: 69
+      alignment: 9
+      pivot: {x: 0.4834437, y: 0.44927537}
+      border: {x: 69, y: 6, z: 39, w: 27}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2df76da7422e564d86b95ad4261223e
+      internalID: -9034589633232172278
       vertices: []
       indices: 
       edges: []
