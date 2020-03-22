@@ -13,6 +13,9 @@ public class PlayerController : CharacterController
 {
 
 
+    private ComboUI comboUI;
+
+    [SerializeField] private float initialGravityModifier = 1f;
     [SerializeField] private float maxSpeed = 7;
 
     private Vector2 move;
@@ -85,7 +88,6 @@ public class PlayerController : CharacterController
     private attackDelegate attackMovementDelegate;
     #endregion
 
-
     protected override void Start()
     {
         base.Start();
@@ -96,6 +98,7 @@ public class PlayerController : CharacterController
         playerLayer = LayerMask.NameToLayer("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
         platformLayer = LayerMask.NameToLayer("Platform");
+        comboUI = FindObjectOfType<ComboUI>();
     }
 
     protected override void Update()
@@ -136,6 +139,8 @@ public class PlayerController : CharacterController
         currentCombo = string.Concat(currentCombo, lastButtonPressed);
         Debug.Log(comboCount + "  " + currentCombo);
         //comboQueue.Enqueue(DoAttack("HEAD_DRILL"));
+
+        comboUI.drawCombo(comboCount, lastButtonPressed);
 
         if (comboCount == 1 && lastButtonPressed == "s")
         {
@@ -244,6 +249,8 @@ public class PlayerController : CharacterController
             comboQueueAlive = false;
             currentCombo = "";
             comboCount = 0;
+
+            comboUI.drawCombo(comboCount, " ");
         }
     }
 
