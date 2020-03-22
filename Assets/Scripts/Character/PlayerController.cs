@@ -298,6 +298,7 @@ public class PlayerController : CharacterController
     {
         isAttacking = true;
         animator.SetTrigger("THROWING");
+        yield return new WaitForSeconds(comboJSON.getStartup("THROWING") * (1f / 60f));
         GameObject ball = ObjectPooler.Instance.SpawnFromPool(Pool.PLAYER_BALL, transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
         PlayerBallController ballController = ball.GetComponent<PlayerBallController>();
         ballController.OnObjectSpawn();
@@ -311,7 +312,7 @@ public class PlayerController : CharacterController
 
 
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(comboJSON.getEndlag("THROWING") * (1f / 60f));
 
         EndAttack();
 
