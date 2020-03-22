@@ -12,19 +12,24 @@ public class GeyserController : MonoBehaviour, IPooledObject
 
     Animator animator;
     PlayerController player;
+    GameObject hitbox;
+    float width;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //animator.GetComponent<Animator>();
-
+        animator = GetComponent<Animator>();    
+        width = GetComponent<SpriteRenderer>().bounds.size.x / 7f;
+        // find hitbox??
+        // hitbox = ???
     }
 
     public void OnObjectSpawn()
     {
         startTime = Time.time;
         playerInitiateExplode = false;
+        //hitbox.SetActive(false); 
     }
 
     public void PassPlayerObject(GameObject pla){
@@ -36,7 +41,6 @@ public class GeyserController : MonoBehaviour, IPooledObject
     {
         if (playerInitiateExplode)
         {
-            //animator.SetTrigger("TIME_UP");
             ExplodeLaser();
         }
         else if (Time.time - startTime < timeToLive){
@@ -45,7 +49,6 @@ public class GeyserController : MonoBehaviour, IPooledObject
         }
         else
         {
-            //animator.SetTrigger("TIME_UP");
             ExplodeLaser();
         }
 
@@ -54,8 +57,30 @@ public class GeyserController : MonoBehaviour, IPooledObject
 
     public void ExplodeLaser()
     {
-        //Spawn Laser box
+        // TODO Spawn Laser box
+        animator.SetTrigger("TIME_UP");
+        // time for active store in json or in this file?
+        // yield return new WaitForSeconds(20f * (1f / 60f));
+    
+    }
+
+
+    
+
+    public void StartHitbox()
+    {
+        //hitbox.SetActive(true);
+        hitbox = ObjectPooler.Instance.SpawnFromPool(Pool.LASER_GEYSER_BOX, new Vector3(transform.position.x-width, transform.position.y, 0f), Quaternion.identity);
+    }
+
+    public void StopHitbox()
+    {        
+        hitbox.SetActive(false);
+    }
+
+    public void StopGeyser()
+    {
+        gameObject.SetActive(false);
         player.StopLaserControl();
-        gameObject.SetActive(false); //Change this later?? TODO
     }
 }
