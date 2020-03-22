@@ -6,21 +6,19 @@ public class LeftRightPatrolJUMP : EnemyController
 {
 
     [SerializeField]
-    private float speed;
+    private float speed = 1f;
     [SerializeField]
-    private float distance;
+    private float distance = 1f;
     [SerializeField]
-    private float nextJump =0;
+    private float nextJump = 1f;
     [SerializeField]
-    private float jumpSpeed;
+    private float jumpSpeed = 1f;
     [SerializeField]
     private float jumpRate = 1f;
     [SerializeField]
     private bool movingRight = true;
     [SerializeField]
-    private Transform groundDetection;
-
-
+    private Transform groundDetection = null;
 
 
 
