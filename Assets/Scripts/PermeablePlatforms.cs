@@ -10,7 +10,7 @@ public class PermeablePlatforms : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("Check");
+        //Debug.Log("Check");
         player = GameObject.FindObjectOfType<PlayerController>();
     }
 
@@ -19,12 +19,12 @@ public class PermeablePlatforms : MonoBehaviour
     {
         if (player.transform.position.y >= gameObject.transform.position.y)
         {
-            Debug.Log("Solid");
+            //Debug.Log("Solid");
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
         else
         {
-            Debug.Log("Permeable");
+            //Debug.Log("Permeable");
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
