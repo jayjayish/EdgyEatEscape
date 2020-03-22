@@ -13,8 +13,6 @@ public class PlayerController : CharacterController
 {
 
     private ComboUI comboUI;
-
-    [SerializeField] private float initialGravityModifier = 1f;
     [SerializeField] private float maxSpeed = 7;
     [SerializeField] private float invulTime = 0.66f;
     private bool isInvulerable = false;
