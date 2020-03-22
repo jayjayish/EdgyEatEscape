@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Enemy Markers.meta
 guid: 542c9a874a3e01f4d890c91175d173c7
 folderAsset: yes
 DefaultImporter:
+=======
+guid: d9a4dc0dbd79fc84ab052ebfed7569a8
+PrefabImporter:
+>>>>>>> master:Assets/Prefabs/Hitboxes/BOMB.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
