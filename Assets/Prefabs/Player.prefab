@@ -238,7 +238,7 @@ MonoBehaviour:
   initialJumpTimer: 0.8
   jumpFloatMultiplier: 0.8
   jumpFallMultiplier: 1.75
-  jumpTakeOffSpeed: 11
+  jumpTakeOffSpeed: 15
   jumpBufferTime: 0.1
 --- !u!114 &599369708
 MonoBehaviour:

@@ -1173,11 +1173,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 58056cbe2e778324e8c38054945ad3f9, type: 2}
-    - target: {fileID: 502535961014141224, guid: cba6586479c624e428eefcd799be36c1,
-        type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 882537557, guid: cba6586479c624e428eefcd799be36c1, type: 3}
       propertyPath: m_RootOrder
       value: 0

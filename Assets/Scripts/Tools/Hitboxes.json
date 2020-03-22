@@ -22,9 +22,9 @@
   },
   "PUNCH":{
   "position":[-1.77, 0.8, 0],
-  "startup":6,
-  "active":6,
-  "endlag":3,
+  "startup":12,
+  "active":12,
+  "endlag":6,
   "damage":10
   },
   "SHOCKWAVE":{
@@ -80,7 +80,7 @@
     "position":[-8.45,0.89, 0],
     "startup":18,
     "active":18,
-    "endlag":8,
+    "endlag":6,
     "damage":10
   },
   "THROWING":{

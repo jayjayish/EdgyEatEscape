@@ -482,7 +482,7 @@ public class PlayerController : CharacterController
         float runningTime = 40f;
         isAttacking = true;
         animator.SetTrigger("BOMB_DASH");
-        
+        IgnoreEnemyCollision(true);
         for (int i = 0; i < 3; i++)
         {
             attackMovementDelegate += MoveForward;     
@@ -494,7 +494,7 @@ public class PlayerController : CharacterController
             GameObject bombPrefab = ObjectPooler.Instance.SpawnFromPool(Pool.BOMB, transform.position, Quaternion.identity);
             BombDashController bomb = bombPrefab.GetComponent<BombDashController>();
         }     
-
+        IgnoreEnemyCollision(false);
         EndAttack();
     }
     
