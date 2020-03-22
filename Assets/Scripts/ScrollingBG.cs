@@ -5,9 +5,9 @@ using UnityEngine;
 public class ScrollingBG : MonoBehaviour
 {
     private float x, y, newX, newY;
-    private float offsetX = 22.5f;
+    private float offsetX = 50f;
     private float offsetY = 9.0f;
-    private float displacement = 22.5f;
+    private float displacement = 50f;
     public GameObject background;
     private GameObject[] backgroundInst = new GameObject[3];
 
@@ -143,7 +143,7 @@ public class ScrollingBG : MonoBehaviour
         newY = gameObject.transform.position.y;
 
         checkX();
-        checkY();
+        // checkY(); 
     }
     
 }
