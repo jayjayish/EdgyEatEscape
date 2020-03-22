@@ -15,7 +15,6 @@ public class PlayerController : CharacterController
 
     private ComboUI comboUI;
 
-    [SerializeField] private float initialGravityModifier = 1f;
     [SerializeField] private float maxSpeed = 7;
 
     private Vector2 move;
