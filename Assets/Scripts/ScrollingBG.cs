@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScrollingBG : MonoBehaviour
 {
     private float x, y, newX, newY;
-    private float offsetX = 50f;
+    private float offsetX = 25f;
     private float offsetY = 9.0f;
     private float displacement = 50f;
     public GameObject background;
