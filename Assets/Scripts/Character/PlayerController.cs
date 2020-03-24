@@ -623,6 +623,14 @@ public class PlayerController : CharacterController
         }
     }
 
+    private void DetectRespawn()
+    {
+        if (Input.GetButtonDown("Respawn"))
+        {
+
+        }
+    }
+
     private void DetectDash()
     {
         // detect dash
