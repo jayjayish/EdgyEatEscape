@@ -17,11 +17,14 @@ public class PlayerController : CharacterController
     private cpManager cpManager;
 
     [SerializeField] private float maxSpeed = 7;
-
+    [SerializeField] private float invulTime = 0.66f;
+    private bool isInvulerable = false;
     private Vector2 move;
 
     // animation variables
     Animator animator;
+
+    SpriteRenderer spriteRenderer;
     //private bool isPlayerMoving;
     private bool facingLeft = true;
 
@@ -94,6 +97,7 @@ public class PlayerController : CharacterController
         animator = GetComponent<Animator>();
         comboJSON = GetComponent<PlayerComboJSON>();
         rb2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         comboQueue = new Queue<IEnumerator>();
         playerLayer = LayerMask.NameToLayer("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
@@ -613,7 +617,7 @@ public class PlayerController : CharacterController
         {
             gravityModifier = initialGravityModifier * jumpFallMultiplier;
         }
-        else if (!Input.GetButton("Jump") || initialJumpTimer + jumpTimer <= Time.time)
+        else if (isJumping && isGrounded)
         {
             isJumping = false;
             jumpTimer = 0f;
@@ -622,7 +626,6 @@ public class PlayerController : CharacterController
         else
         {
             gravityModifier = initialGravityModifier;
-            isJumping = false;
         }
     }
 
@@ -749,6 +752,53 @@ public class PlayerController : CharacterController
 
     #endregion
 
+    public override void DecrementHealth(float damage)
+    {
+        
+        if (!isInvulerable){
+            currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
+        
+            Debug.Log(currentHealth);
+            
+            if (!IsHealthZero()){
+                StartCoroutine(ActivateInvul());
+            }
+            else
+            {
+                OnDeath();
+            }
+        }
+
+       // updateHealthBar();
+    }
+
+
+    IEnumerator ActivateInvul(){
+        Color none = new Color(255, 255, 255, 0);
+        Color white = new Color(255,255,255,255);
+        IgnoreEnemyCollision(false);
+        isInvulerable = true;
+        
+
+        float time = invulTime / 5f;
+
+
+        for (int i = 0; i < 2; i++){
+            spriteRenderer.color = none;
+            yield return new WaitForSeconds(time);
+            spriteRenderer.color = white;
+            yield return new WaitForSeconds(time);
+        }
+        spriteRenderer.color = none;
+        yield return new WaitForSeconds(time);
+        spriteRenderer.color = white;
+
+        isInvulerable = false;
+        IgnoreEnemyCollision(true);
+
+    }
+
+
 
     private void IgnoreEnemyCollision(bool value)
     {
@@ -756,11 +806,6 @@ public class PlayerController : CharacterController
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
     }
 
-    /*
-    public void IgnorePlatformCollision(bool value)
-    {
-        Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, value);
-        contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
-    }
-    */
+
+
 }

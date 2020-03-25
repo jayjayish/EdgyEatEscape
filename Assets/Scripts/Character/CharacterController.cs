@@ -26,13 +26,14 @@ public class CharacterController : PhysicsObject
     protected override void Start()
     {
         base.Start();
+        
+        currentHealth = maxHealth;
     }
 
     protected override void Awake()
     {
         base.Awake();
 
-        currentHealth = maxHealth;
     }
 
     protected override void Update()
