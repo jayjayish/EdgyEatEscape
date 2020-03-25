@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class EnemyController : CharacterController
 {
+    [SerializeField] protected float touchDamage = 1f;
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -51,6 +52,16 @@ public class EnemyController : CharacterController
     protected override void OnDeath()
     {
         //onCharacterDeath();
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D col) //check for collisions, aka dmg
+    {
+        GameObject hitTarget = col.gameObject;
+        if (hitTarget.tag == Tags.PLAYER)
+        {
+            hitTarget.GetComponent<PlayerController>().DecrementHealth(touchDamage);
+        }
+
     }
 
 }
