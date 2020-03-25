@@ -51,7 +51,7 @@ public abstract class ProjectileController : MonoBehaviour, IPooledObject
 
 
     #region Tools
-    private Vector2 VectorFromAngle(float theta)
+    protected Vector2 VectorFromAngle(float theta)
     {
         return new Vector2(Mathf.Cos(theta * Mathf.PI / 180), Mathf.Sin(theta * Mathf.PI / 180));
     }
