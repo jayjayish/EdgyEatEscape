@@ -761,6 +761,11 @@ public class PlayerController : CharacterController
        // updateHealthBar();
     }
 
+    public virtual void FallDown(float damage, Vector2 respawnLocation){
+        DecrementHealth(damage);
+        transform.position = respawnLocation;
+    }
+
 
     IEnumerator ActivateInvul(){
         Color none = new Color(255, 255, 255, 0);
