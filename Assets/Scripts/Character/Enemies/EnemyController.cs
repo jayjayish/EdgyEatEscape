@@ -60,8 +60,9 @@ public class EnemyController : CharacterController, IPooledObject
         if (hitTarget.tag == Tags.PLAYER)
         {
             hitTarget.GetComponent<PlayerController>().DecrementHealth(touchDamage);
+            Debug.Log("ow");
         }
-
+        Debug.Log(col.gameObject);
     }
 
     public virtual void OnObjectSpawn(){

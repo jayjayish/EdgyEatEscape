@@ -8,7 +8,7 @@ public class EnemyMarkerController : MonoBehaviour
     public string enemyType = "";
     void Start()
     {
-        Debug.Log(enemyType);
+        //Debug.Log(enemyType);
         GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemyType, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
     }
 

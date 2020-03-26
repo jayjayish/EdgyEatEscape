@@ -42,7 +42,7 @@ public class PlayerController : CharacterController
     private float jumpTimer = 0f;
     private bool isJumping = false;
 
-    private float jumpTakeOffSpeed = 11;
+    [SerializeField] private float jumpTakeOffSpeed = 11;
 
     [SerializeField] private float jumpBufferTime = 0.10f;
     private float jumpBufferTimer = 0f;
