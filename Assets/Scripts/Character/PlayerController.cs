@@ -14,6 +14,7 @@ public class PlayerController : CharacterController
 
 
     private ComboUI comboUI;
+    private cpManager cpManager;
 
     [SerializeField] private float maxSpeed = 7;
     [SerializeField] private float invulTime = 0.66f;
@@ -41,7 +42,7 @@ public class PlayerController : CharacterController
     private float jumpTimer = 0f;
     private bool isJumping = false;
 
-    [SerializeField] private float jumpTakeOffSpeed = 7;
+    private float jumpTakeOffSpeed = 11;
 
     [SerializeField] private float jumpBufferTime = 0.10f;
     private float jumpBufferTimer = 0f;
@@ -102,6 +103,7 @@ public class PlayerController : CharacterController
         enemyLayer = LayerMask.NameToLayer("Enemy");
         platformLayer = LayerMask.NameToLayer("Platform");
         comboUI = FindObjectOfType<ComboUI>();
+        cpManager = cpManager.FindObjectOfType<cpManager>();
     }
 
     protected override void Update()
@@ -109,6 +111,7 @@ public class PlayerController : CharacterController
         base.Update();
         UpdateAnimator();
         DetectCombo();
+        DetectRespawn();
     }
 
     protected override void FixedUpdate()
@@ -623,6 +626,14 @@ public class PlayerController : CharacterController
         else
         {
             gravityModifier = initialGravityModifier;
+        }
+    }
+
+    private void DetectRespawn()
+    {
+        if (Input.GetButtonDown("Respawn"))
+        {
+            cpManager.callCP();
         }
     }
 
