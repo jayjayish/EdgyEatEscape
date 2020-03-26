@@ -14,6 +14,7 @@ public struct Tags
 public struct Pool
 {
     public static readonly string HORIZONTAL_ENEMY_BULLET = "HorizontalEnemyBullet";
+    public static readonly string HOMING_ENEMY_BULLET = "HomingEnemyBullet";
     public static readonly string LASER_GEYSER_BOX = "LaserGeyserBox";
     public static readonly string LASER_GEYSER = "LaserGeyser";
     

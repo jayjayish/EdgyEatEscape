@@ -7,8 +7,8 @@ public class FlyingPatrolController : EnemyController
 
     private bool movingTowardsB = true;
 
-    private Vector2 pointA = new Vector2(0f,0f);
-    public Vector2 pointB = new Vector2(0f,0f);
+    private Vector2 pointA;
+    private Vector2 pointB;
     public float speed = 3f;
     private Vector2 direction;
     private Vector2 dirVector;
@@ -22,11 +22,12 @@ public class FlyingPatrolController : EnemyController
     {
         initialGravityModifier = 0f;
         pointA = transform.position;
+        pointB = new Vector2(transform.position.x, transform.position.y) + new Vector2(15f, 0f);
         dirVector = pointB - pointA;
         length = dirVector.magnitude;
         direction = dirVector.normalized;
-        Debug.Log(direction);
-        Debug.Log(pointA);
+        //Debug.Log(direction);
+        //Debug.Log(pointA);
         base.Start();
         groundNormal = new Vector2 (0f, 1f);
         isGrounded = false;

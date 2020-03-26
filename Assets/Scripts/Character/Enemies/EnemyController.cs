@@ -62,7 +62,7 @@ public class EnemyController : CharacterController, IPooledObject
             hitTarget.GetComponent<PlayerController>().DecrementHealth(touchDamage);
             Debug.Log("ow");
         }
-        Debug.Log(col.gameObject);
+        //Debug.Log(col.gameObject);
     }
 
     public virtual void OnObjectSpawn(){

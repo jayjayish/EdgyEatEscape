@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemy : EnemyController
+public class HomingShootingEnemyController : EnemyController
 {
 
 
@@ -29,8 +29,8 @@ public class ShootingEnemy : EnemyController
     {
         if (Time.time > nextFire)
         {
-            GameObject bullet = ObjectPooler.Instance.SpawnFromPool(Pool.HORIZONTAL_ENEMY_BULLET, transform.position, Quaternion.identity);
-            bullet.GetComponent<HorizontalEnemyBullet>().OnObjectSpawn();
+            GameObject bullet = ObjectPooler.Instance.SpawnFromPool(Pool.HOMING_ENEMY_BULLET, transform.position, Quaternion.identity);
+            bullet.GetComponent<TrackingEnemyBullet>().OnObjectSpawn();
            // Debug.Log("Spawn Bullet");
             nextFire = Time.time + fireRate;
         }
