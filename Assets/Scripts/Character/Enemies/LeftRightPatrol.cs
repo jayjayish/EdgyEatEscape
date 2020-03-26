@@ -13,9 +13,13 @@ public class LeftRightPatrol : EnemyController
     public Transform groundDetection;
 
 
+    private float timer = 0f;
 
 
-
+    protected override void Start(){
+        base.Start();
+        timer = Time.time;
+    }
 
     protected override void ComputeVelocity()
     {
@@ -36,7 +40,7 @@ public class LeftRightPatrol : EnemyController
         base.Update();
        
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        if(groundInfo.collider == false)
+        if(groundInfo.collider == false && Time.time - timer > 0.5f)
         {
             if (movingRight)
             {
@@ -48,6 +52,7 @@ public class LeftRightPatrol : EnemyController
             }
 
             movingRight = !movingRight;
+            timer = Time.time;
         }
     }
 }
