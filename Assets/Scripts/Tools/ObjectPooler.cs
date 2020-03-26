@@ -22,6 +22,7 @@ public class ObjectPooler : MonoBehaviour {
     private void Awake()
     {
         Instance = this;
+        Initialize();
     }
     #endregion Singleton
 
@@ -29,7 +30,7 @@ public class ObjectPooler : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Initialize () {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach(Pool pool in pools)

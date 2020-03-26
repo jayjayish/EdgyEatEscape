@@ -6,7 +6,7 @@ using UnityEngine;
 // Interactions with the prefab, spawning, and prefab cleanup will be here
 
 
-public class EnemyController : CharacterController
+public class EnemyController : CharacterController, IPooledObject
 {
     [SerializeField] protected float touchDamage = 1f;
     protected override void OnEnable()
@@ -61,6 +61,10 @@ public class EnemyController : CharacterController
         {
             hitTarget.GetComponent<PlayerController>().DecrementHealth(touchDamage);
         }
+
+    }
+
+    public virtual void OnObjectSpawn(){
 
     }
 
