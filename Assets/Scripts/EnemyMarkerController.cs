@@ -10,6 +10,8 @@ public class EnemyMarkerController : MonoBehaviour
     {
         //Debug.Log(enemyType);
         GameObject enemy = ObjectPooler.Instance.SpawnFromPool(enemyType, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+        enemy.GetComponent<EnemyController>().OnObjectSpawn();
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

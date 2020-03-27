@@ -20,17 +20,11 @@ public class FlyingPatrolController : EnemyController
     // Start is called before the first frame update
     protected override void Start()
     {
-        initialGravityModifier = 0f;
-        pointA = transform.position;
-        pointB = new Vector2(transform.position.x, transform.position.y) + new Vector2(15f, 0f);
-        dirVector = pointB - pointA;
-        length = dirVector.magnitude;
-        direction = dirVector.normalized;
+
         //Debug.Log(direction);
         //Debug.Log(pointA);
         base.Start();
-        groundNormal = new Vector2 (0f, 1f);
-        isGrounded = false;
+
     }
 
     // Update is called once per frame
@@ -86,4 +80,16 @@ public class FlyingPatrolController : EnemyController
 
         base.ComputeVelocity();
     }
+
+    public override void OnObjectSpawn(){
+        initialGravityModifier = 0f;
+        pointA = transform.position;
+        pointB = new Vector2(transform.position.x, transform.position.y) + new Vector2(15f, 0f);
+        dirVector = pointB - pointA;
+        length = dirVector.magnitude;
+        direction = dirVector.normalized;
+        groundNormal = new Vector2 (0f, 1f);
+        isGrounded = false;
+    }
+
 }
