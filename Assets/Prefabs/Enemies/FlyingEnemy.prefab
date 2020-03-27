@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4962080071229837192}
   - component: {fileID: 4962080071229837195}
   - component: {fileID: 4962080071229837188}
+  - component: {fileID: 7313370374630636343}
   m_Layer: 13
   m_Name: FlyingEnemy
   m_TagString: Enemy
@@ -71,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: -362981875
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d7f77bc8c875fb42bfc7d5471d001f1, type: 3}
+  m_Sprite: {fileID: 7750559097885561702, guid: 3a424543edac62b40b8934d93f0a4638,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +100,6 @@ MonoBehaviour:
   initialGravityModifier: 1.05
   maxHealth: 1
   touchDamage: 1
-  pointB: {x: -15, y: -2}
   speed: 3
 --- !u!50 &4962080071229837195
 Rigidbody2D:
@@ -138,7 +139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.44}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1.28, y: 1.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +148,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.44}
   m_EdgeRadius: 0
+--- !u!95 &7313370374630636343
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962080071229837199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c203b693a05c814c8eb74af5d3695a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
