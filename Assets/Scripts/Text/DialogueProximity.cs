@@ -98,6 +98,7 @@ public class DialogueProximity : MonoBehaviour
             Debug.Log("Free Aspect");
             ratio = 1.0f;
         }
+        ratio *= 12.0f / 7.0f;
 
         rangeSquare = Mathf.Pow(range, 2);
         player = GameObject.FindGameObjectWithTag("Player");
@@ -139,7 +140,6 @@ public class DialogueProximity : MonoBehaviour
                 PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f, -6.8f, 4.0f), Quaternion.identity);
                 //PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x * ratio, PortraitInst.transform.localScale.y * ratio, PortraitInst.transform.localScale.z);
                 PortraitInst.transform.parent = dialogueBoxInst.transform;
-                ratio *= 12.0f / 7.0f;
                 dialogueBoxInst.transform.localScale = new Vector3(dialogueBoxInst.transform.localScale.x * ratio, dialogueBoxInst.transform.localScale.y * ratio, dialogueBoxInst.transform.localScale.z);
                 dialogueBoxInst.setDialogue(Dialogue);
                 talking = true;
