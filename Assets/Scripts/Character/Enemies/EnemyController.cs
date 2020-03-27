@@ -51,7 +51,7 @@ public class EnemyController : CharacterController, IPooledObject
 
     protected override void OnDeath()
     {
-        //onCharacterDeath();
+        gameObject.SetActive(false);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D col) //check for collisions, aka dmg
