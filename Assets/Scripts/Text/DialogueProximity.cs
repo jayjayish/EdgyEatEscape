@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueProximity : MonoBehaviour
 {
-    Vector3 dialoguePos = new Vector3(0.0f, -2.5f, 5.0f);
+    Vector3 dialoguePos = new Vector3(0.0f, -6.0f, 5.0f);
 
     //resizing from Free Aspect
     private float refWidth = 898.0f;
@@ -98,6 +98,7 @@ public class DialogueProximity : MonoBehaviour
             Debug.Log("Free Aspect");
             ratio = 1.0f;
         }
+        ratio *= 12.0f / 7.0f;
 
         rangeSquare = Mathf.Pow(range, 2);
         player = GameObject.FindGameObjectWithTag("Player");
@@ -134,9 +135,9 @@ public class DialogueProximity : MonoBehaviour
                 dialogueBoxInst.transform.parent = camera.transform;
                 nameTag = Instantiate(texter, camera.transform.position, Quaternion.identity);
                 nameTag.transform.parent = dialogueBoxInst.transform;
-                nameTag.printer(Name, -13.0f, -0.7f, 4.0f);
+                nameTag.printer(Name, -13.0f, -4.2f, 4.0f);
                 //nameTag.transform.localScale = new Vector3(nameTag.transform.localScale.x, nameTag.transform.localScale.y, nameTag.transform.localScale.z);
-                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f, -3.3f, 4.0f), Quaternion.identity);
+                PortraitInst = Instantiate(Portrait, camera.transform.position + new Vector3(-11.8f, -6.8f, 4.0f), Quaternion.identity);
                 //PortraitInst.transform.localScale = new Vector3(PortraitInst.transform.localScale.x * ratio, PortraitInst.transform.localScale.y * ratio, PortraitInst.transform.localScale.z);
                 PortraitInst.transform.parent = dialogueBoxInst.transform;
                 dialogueBoxInst.transform.localScale = new Vector3(dialogueBoxInst.transform.localScale.x * ratio, dialogueBoxInst.transform.localScale.y * ratio, dialogueBoxInst.transform.localScale.z);

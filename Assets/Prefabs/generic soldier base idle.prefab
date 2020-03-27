@@ -92,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 6631956203660542252}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88eb08ff82728314babb8dc3b1bd7e83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -113,11 +113,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8e6319101c00446a746a1ea3741ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Portrait: {fileID: 0}
-  Name: Holder of Places
-  Dialogue: I want die
+  Name: Bill Peet
+  Dialogue: The Wump World was a small world, very much smaller than our world. There
+    were no great oceans, lofty mountains, giant forests, or broad sandy deserts.   The
+    Wump World was mostly grassy meadows and clumps of leafy green trees with a few
+    winding rivers and lakes. But it was perfect for the   Wumps, who were the only
+    creatures living there. The Wumps were simple grass-eaters and spent most of their
+    time grazing on the tall tender grass   that grew in the meadows. In warm weather
+    they cooled themselves in the crystal-clear rivers and lakes. And at night they
+    slept in the shelter of the   bumbershoot trees to keep the dew off their backs.
+    Since the Wumps had no enemies they wandered around just as they pleased with
+    nothing whatever to   worry about. ever, the Wumps would have worried if they
+    had known that someone a million miles away was watching their little world. One   morning
+    the Wumps were awakened by a far-off humming sound. It seemed to be coming from
+    somewhere above, and as the humming grew into a heavy roar,   the sleepy-eyed
+    Wumps crept through the trees for a peek at the sky. Zooming straight for the
+    earth came a great flock of potbellied monsters,   with tails and fins, spitting
+    fire and shooting out streaks of black smoke. As the monsters swooped down to
+    land, huge legs sprang from their bulging  sides, and like gaping mouths doors
+    flew open, then ramps shot to the ground. And down the ramps came a horde of tiny
+    creatures swarming out   onto the meadow. These were the Pollutians from the planet
+    Pollutus. = gay?
+  Portrait: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
+    type: 3}
   offX: 0.1
-  offY: 0.5
+  offY: 2.5
   exclam: {fileID: 2308769304944645822, guid: 3c06c45ddf7a7b04fbf039fb0905df75, type: 3}
   dialogueBox: {fileID: 4511431600369790456, guid: b54865720dbb18d47ae28d17f72c53d3,
     type: 3}
+  empty: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51, type: 3}
+  texter: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73, type: 3}

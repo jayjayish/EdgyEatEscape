@@ -732,91 +732,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: generic soldier base idle
       objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: offY
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: empty
-      value: 
-      objectReference: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Dialogue
-      value: The Wump World was a small world, very much smaller than our world. There
-        were no great oceans, lofty mountains, giant forests, or broad sandy deserts.
-        The Wump World was mostly grassy meadows and clumps of leafy green trees with
-        a few winding rivers and lakes. But it was perfect for the Wumps, who were
-        the only creatures living there. The Wumps were simple grass-eaters and spent
-        most of their time grazing on the tall tender grass that grew in the meadows.
-        In warm weather they cooled themselves in the crystal-clear rivers and lakes.
-        And at night they slept in the shelter of the bumbershoot trees to keep the
-        dew off their backs. Since the Wumps had no enemies they wandered around just
-        as they pleased with nothing whatever to worry about. ever, the Wumps would
-        have worried if they had known that someone a million miles away was watching
-        their little world. One morning the Wumps were awakened by a far-off humming
-        sound. It seemed to be coming from somewhere above, and as the humming grew
-        into a heavy roar, the sleepy-eyed Wumps crept through the trees for a peek
-        at the sky. Zooming straight for the earth came a great flock of potbellied
-        monsters, with tails and fins, spitting fire and shooting out streaks of black
-        smoke. As the monsters swooped down to land, huge legs sprang from their bulging
-        sides, and like gaping mouths doors flew open, then ramps shot to the ground.
-        And down the ramps came a horde of tiny creatures swarming out onto the meadow.
-        These were the Pollutians from the planet Pollutus.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Name
-      value: Bill Peet
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: texter
-      value: 
-      objectReference: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Portrait
-      value: 
-      objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: offY
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: empty
-      value: 
-      objectReference: {fileID: 2272291354796440195, guid: 24b7f9cf2352ca2479416cec2a23ed51,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Dialogue
-      value: Liking bois is gay? June likes bois? june = gay?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Name
-      value: Bill Peet
-      objectReference: {fileID: 0}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: texter
-      value: 
-      objectReference: {fileID: 7981857848069300584, guid: 2b83e074c3f225c42a2ae73100ba0c73,
-        type: 3}
-    - target: {fileID: 3465582209770100077, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: Portrait
-      value: 
-      objectReference: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
-        type: 3}
     - target: {fileID: 6965256790920480730, guid: d2cdcb43bf806dd40a958b59b7018f20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -872,11 +787,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7100451442931292907, guid: d2cdcb43bf806dd40a958b59b7018f20,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 88eb08ff82728314babb8dc3b1bd7e83, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cdcb43bf806dd40a958b59b7018f20, type: 3}
 --- !u!1001 &1124640676
