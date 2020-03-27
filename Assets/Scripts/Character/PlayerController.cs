@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
-
+    private GameObject healthBar;
 
     private ComboUI comboUI;
     private cpManager cpManager;
@@ -104,6 +104,7 @@ public class PlayerController : CharacterController
         platformLayer = LayerMask.NameToLayer("Platform");
         comboUI = FindObjectOfType<ComboUI>();
         cpManager = cpManager.FindObjectOfType<cpManager>();
+        healthBar = GameObject.FindGameObjectWithTag("PlayerHealth");
     }
 
     protected override void Update()
@@ -112,6 +113,7 @@ public class PlayerController : CharacterController
         UpdateAnimator();
         DetectCombo();
         DetectRespawn();
+        updateHealthBar();
     }
 
     protected override void FixedUpdate()
@@ -769,7 +771,15 @@ public class PlayerController : CharacterController
             }
         }
 
-       // updateHealthBar();
+       updateHealthBar();
+    }
+
+    private void updateHealthBar() {
+        float ratio = (float)currentHealth / (float)maxHealth;
+        if (ratio < 0) {
+            ratio = 0;
+        }
+        healthBar.transform.localScale = new Vector3((float) 10 * ratio, 10, 10);
     }
 
 
