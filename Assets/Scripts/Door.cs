@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     private GameObject player;
     private bool inRange;
     private float rangeSquare;
-    private float range = 1.0f;
+    private float range = 2.0f;
     private float offset = 0.1f;
     [SerializeField]
     private string door = null;
