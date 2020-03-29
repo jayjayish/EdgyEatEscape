@@ -43,7 +43,7 @@ public class PlayerController : CharacterController
     private float jumpTimer = 0f;
     private bool isJumping = false;
 
-    private float jumpTakeOffSpeed = 11;
+    [SerializeField] private float jumpTakeOffSpeed = 11;
 
     [SerializeField] private float jumpBufferTime = 0.10f;
     private float jumpBufferTimer = 0f;
@@ -782,6 +782,11 @@ public class PlayerController : CharacterController
             ratio = 0;
         }
         healthBar.transform.localScale = new Vector3(healthX * ratio, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+    }
+
+    public virtual void FallDown(float damage, Vector2 respawnLocation){
+        DecrementHealth(damage);
+        transform.position = respawnLocation;
     }
 
 
