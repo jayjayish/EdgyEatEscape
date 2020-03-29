@@ -14,7 +14,7 @@ public class CharacterController : PhysicsObject
     [SerializeField]
     protected float maxHealth = 1;
 
-    protected float currentHealth;
+    protected float currentHealth=1;
 
     // Add stuff here as needed asssssssssss
     protected override void OnEnable()

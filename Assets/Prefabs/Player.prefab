@@ -232,13 +232,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  initialGravityModifier: 2
+  initialGravityModifier: 3
   maxHealth: 100
   maxSpeed: 8
+  invulTime: 0.66
   initialJumpTimer: 0.8
   jumpFloatMultiplier: 0.8
-  jumpFallMultiplier: 1.75
-  jumpTakeOffSpeed: 15
+  jumpFallMultiplier: 2
+  jumpTakeOffSpeed: 20
   jumpBufferTime: 0.1
 --- !u!114 &599369708
 MonoBehaviour:

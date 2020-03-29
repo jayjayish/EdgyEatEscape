@@ -6,15 +6,17 @@ using UnityEngine;
 // Interactions with the prefab, spawning, and prefab cleanup will be here
 
 
-public class EnemyController : CharacterController
+public class EnemyController : CharacterController, IPooledObject
 {
-    private GameObject enemyHealth; //The full bar itself
-    private GameObject enemyHealthBar; //The red stuff
+    [SerializeField] protected float touchDamage = 1f;
+    protected GameObject enemyHealth; //The full bar itself
+    protected GameObject enemyHealthBar; //The red stuff
 
     //Instances for above
-    private GameObject enemyHealthInst;
-    private GameObject enemyHealthBarInst;
-    private float healthX;
+    protected GameObject enemyHealthInst;
+    protected GameObject enemyHealthBarInst;
+    protected float healthX = 1;
+    
 
     protected override void OnEnable()
     {
@@ -41,16 +43,18 @@ public class EnemyController : CharacterController
         enemyHealthInst = Instantiate(enemyHealth);
         enemyHealthBarInst = Instantiate(enemyHealthBar);
 
-        enemyHealthInst.transform.position = gameObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f);
-        enemyHealthBarInst.transform.position = gameObject.transform.position + new Vector3(-0.5f, 1.0f, -1.0f);
+        enemyHealthInst.transform.position = gameObject.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
+        enemyHealthBarInst.transform.position = gameObject.transform.position + new Vector3(-0.5f, 2.0f, -1.0f);
         enemyHealthInst.transform.parent = gameObject.transform;
         enemyHealthBarInst.transform.parent = gameObject.transform;
         healthX = enemyHealthBarInst.transform.localScale.x;
 
+
+        
         //Debug.Log("Current Health = " + currentHealth + " | Max Health = " + maxHealth);
     }
 
-    private void updateHealth() {
+    protected void updateHealth() {
         //Debug.Log("Current Health = " + currentHealth + " | Max Health = " + maxHealth);
 
         float ratio = (float)currentHealth / (float)maxHealth;
@@ -89,7 +93,22 @@ public class EnemyController : CharacterController
 
     protected override void OnDeath()
     {
-        //onCharacterDeath();
+        gameObject.SetActive(false);
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D col) //check for collisions, aka dmg
+    {
+        GameObject hitTarget = col.gameObject;
+        if (hitTarget.tag == Tags.PLAYER)
+        {
+            hitTarget.GetComponent<PlayerController>().DecrementHealth(touchDamage);
+            Debug.Log("ow");
+        }
+        //Debug.Log(col.gameObject);
+    }
+
+    public virtual void OnObjectSpawn(){
+
     }
 
 }

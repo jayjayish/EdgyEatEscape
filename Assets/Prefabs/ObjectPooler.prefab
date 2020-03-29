@@ -71,3 +71,30 @@ MonoBehaviour:
     prefab: {fileID: 5466218556229795556, guid: 4845cccf379006240b4208ef0dce60d5,
       type: 3}
     size: 10
+  - tag: Flying
+    prefab: {fileID: 4962080071229837199, guid: 03623af999df79340b6f0e114a61cc70,
+      type: 3}
+    size: 10
+  - tag: Patrolling
+    prefab: {fileID: 2577356373656637479, guid: 208913462584e1542889705b0c70a45d,
+      type: 3}
+    size: 10
+  - tag: Shooting
+    prefab: {fileID: 2228328339112945490, guid: d618baf3defe57141819d2b941327026,
+      type: 3}
+    size: 10
+  - tag: Homing
+    prefab: {fileID: 8188805833161202237, guid: 986c9bbbf5204a341a3168c3a47a8b88,
+      type: 3}
+    size: 10
+  - tag: PatrolJumping
+    prefab: {fileID: 5401993704553126948, guid: 2fc3166040216dc4e9ba1f48ca59533d,
+      type: 3}
+    size: 10
+  - tag: Stationary
+    prefab: {fileID: 8796061084851217395, guid: 934ef6769bb0cbe43ba1de2330acf5af,
+      type: 3}
+    size: 10
+  - tag: HomingEnemyBullet
+    prefab: {fileID: 273949989396166053, guid: 14a819502060dec4f9dc607a059037fc, type: 3}
+    size: 10

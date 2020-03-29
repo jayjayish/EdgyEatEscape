@@ -121,13 +121,13 @@ MonoBehaviour:
     yellow raincoat so you won\u2019t melt when acid rain comes down. You know what,
     why don\u2019t I give you a tutorial as well since this is clearly the start of
     your *bleep* adventure. Use A and D to walk. Double Tapping lets you dash. W lets
-    you Jump. You can Press J or K for an attack or whatever. A\u2019ight, tutorial\u2019s
-    over. You\u2019ve mastered the basics, here\u2019s a *bleep* medal for your major
-    achievements. Now leave me alone and go on your *bleep* adventure. Oh, and remember
-    to skip through every dialogue with every new unfinished characters you encounter
-    so you can make sure to not give a damn about how much effort was put into this
-    game. "
-  Portrait: {fileID: 7025803657705879957, guid: a18bd9c71baa86749bab53a8868d6ed0,
+    you Jump. You can Press J or K for an attack or whatever. If you die. Just press
+    F to respawn. A\u2019ight, tutorial\u2019s over. You\u2019ve mastered the basics,
+    here\u2019s a *bleep* medal for your major achievements. Now leave me alone and
+    go on your *bleep* adventure. Oh, and remember to skip through every dialogue
+    with every new unfinished characters you encounter so you can make sure to not
+    give a damn about how much effort was put into this game. "
+  Portrait: {fileID: 1273201825019533621, guid: 86462ce3ece98384784e1d956e16d127,
     type: 3}
   offX: -0.3
   offY: 2.5

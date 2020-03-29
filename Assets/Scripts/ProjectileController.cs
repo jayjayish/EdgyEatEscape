@@ -10,7 +10,7 @@ public abstract class ProjectileController : MonoBehaviour, IPooledObject
     protected float angle;
     protected float timeSpawned; //currentDuration
 
-    protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE };
+    protected string[] listOfObstacleTags = {Tags.SOLID_OBSTACLE , "Ground"};
 
     public virtual void OnObjectSpawn(){
         timeSpawned = Time.time;
