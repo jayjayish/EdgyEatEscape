@@ -26,9 +26,10 @@ public class PlayerComboJSON : MonoBehaviour
 
     // load all JSON tables at the start
     void loadJSON() {
-        string path = Application.dataPath + "/Scripts/Tools/Hitboxes.json";
-        string jsonString = File.ReadAllText(path);
-        hitboxTable = (JSONObject)JSON.Parse(jsonString);
+
+        TextAsset txtAsset = Resources.Load("Hitboxes") as TextAsset;
+        string parseThis = txtAsset.text;
+        hitboxTable = (JSONObject)JSON.Parse(parseThis);
     }
 
     public Vector3 getPosition(string hitboxName) {
