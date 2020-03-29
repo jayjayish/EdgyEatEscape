@@ -43,8 +43,8 @@ public class EnemyController : CharacterController, IPooledObject
         enemyHealthInst = Instantiate(enemyHealth);
         enemyHealthBarInst = Instantiate(enemyHealthBar);
 
-        enemyHealthInst.transform.position = gameObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f);
-        enemyHealthBarInst.transform.position = gameObject.transform.position + new Vector3(-0.5f, 1.0f, -1.0f);
+        enemyHealthInst.transform.position = gameObject.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
+        enemyHealthBarInst.transform.position = gameObject.transform.position + new Vector3(-0.5f, 2.0f, -1.0f);
         enemyHealthInst.transform.parent = gameObject.transform;
         enemyHealthBarInst.transform.parent = gameObject.transform;
         healthX = enemyHealthBarInst.transform.localScale.x;
