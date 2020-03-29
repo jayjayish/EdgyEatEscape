@@ -133,6 +133,7 @@ public class Dialogue : MonoBehaviour
             ratio = 1.0f;
         }
 
+        ratio *= 12.0f / 7.0f;
         words.transform.localScale = new Vector3(words.transform.localScale.x * ratio, words.transform.localScale.y * ratio, words.transform.localScale.z);
         dialogueExists = true;
         //Debug.Log("dialogue Exists = " + dialogueExists);

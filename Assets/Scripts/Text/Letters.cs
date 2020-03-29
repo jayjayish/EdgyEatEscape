@@ -30,7 +30,10 @@ public class Letters : MonoBehaviour
         letters.Add('!', (GameObject)letterObjects[42]);
         letters.Add('.', (GameObject)letterObjects[43]);
         letters.Add('?', (GameObject)letterObjects[44]);
-        
+        //Debug.Log((int)'\u0027');
+        letters.Add((char) 8217, (GameObject)letterObjects[45]); //Apostrophes are hard :/
+        letters.Add('*', (GameObject)letterObjects[46]);
+
     }
 
     // Update is called once per frame

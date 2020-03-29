@@ -11,7 +11,8 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
-
+    private GameObject healthBar;
+    private float healthX;
 
     private ComboUI comboUI;
     private cpManager cpManager;
@@ -104,6 +105,8 @@ public class PlayerController : CharacterController
         platformLayer = LayerMask.NameToLayer("Platform");
         comboUI = FindObjectOfType<ComboUI>();
         cpManager = cpManager.FindObjectOfType<cpManager>();
+        healthBar = GameObject.FindGameObjectWithTag("PlayerHealth");
+        healthX = healthBar.transform.localScale.x;
     }
 
     protected override void Update()
@@ -112,6 +115,7 @@ public class PlayerController : CharacterController
         UpdateAnimator();
         DetectCombo();
         DetectRespawn();
+        updateHealthBar();
     }
 
     protected override void FixedUpdate()
@@ -769,7 +773,15 @@ public class PlayerController : CharacterController
             }
         }
 
-       // updateHealthBar();
+       updateHealthBar();
+    }
+
+    private void updateHealthBar() {
+        float ratio = (float)currentHealth / (float)maxHealth;
+        if (ratio < 0) {
+            ratio = 0;
+        }
+        healthBar.transform.localScale = new Vector3(healthX * ratio, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
     public virtual void FallDown(float damage, Vector2 respawnLocation){
