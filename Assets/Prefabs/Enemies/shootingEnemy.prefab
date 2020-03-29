@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
   initialGravityModifier: 1
-  maxHealth: 0
+  maxHealth: 1
   touchDamage: 1
 --- !u!50 &2228328339112945491
 Rigidbody2D:

@@ -11,14 +11,19 @@ public class PatrollingEnemyController : EnemyController
     private bool movingRight = true;
     
     public Transform groundDetection;
+    public Transform forwardDetection;
 
 
     private float timer = 0f;
 
+    protected int groundLayer = 0;
+
+   
 
     protected override void Start(){
         base.Start();
         timer = Time.time;
+        groundLayer = LayerMask.NameToLayer("Ground");
     }
 
     protected override void ComputeVelocity()
@@ -40,8 +45,17 @@ public class PatrollingEnemyController : EnemyController
         base.Update();
        
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
-        //Debug.Log(groundInfo.collider);
-        if(groundInfo.collider == false && Time.time - timer > 0.5f)
+        RaycastHit2D forwardInfo = Physics2D.Raycast(forwardDetection.position, new Vector2(1f, 0f), 0.1f);
+    
+        int forwardLayer = 0;
+
+        if (forwardInfo.collider){
+            forwardLayer = forwardInfo.collider.gameObject.layer;
+        }
+        
+
+
+        if((groundInfo.collider == false && Time.time - timer > 0.5f) || (forwardLayer == groundLayer))
         {
             if (movingRight)
             {

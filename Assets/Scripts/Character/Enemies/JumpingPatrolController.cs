@@ -17,6 +17,8 @@ public class JumpingPatrolController : EnemyController
 
     [SerializeField] private Transform frontGroundDetection = null;
     [SerializeField] private Transform centerGroundDetection = null;
+    [SerializeField] private Transform forwardDetection = null;
+
     private bool isJumping = false;
 
     private bool canJump = true;
@@ -28,12 +30,15 @@ public class JumpingPatrolController : EnemyController
     private float timer = 0f;
 
     private float jumpTimer = 0f;
+    
+    protected int groundLayer = 0;
 
 
     protected override void Start(){
         base.Start();
         timer = Time.time;
         jumpTimer = Time.time;
+        groundLayer = LayerMask.NameToLayer("Ground");
     }
 
     protected override void ComputeVelocity()
@@ -69,11 +74,19 @@ public class JumpingPatrolController : EnemyController
 
         RaycastHit2D centerGroundInfo = Physics2D.Raycast(centerGroundDetection.position, Vector2.down, distance);
 
+        RaycastHit2D forwardInfo = Physics2D.Raycast(forwardDetection.position, new Vector2(1f, 0f), 0.1f);
+    
+        int forwardLayer = 0;
+
+        if (forwardInfo.collider){
+            forwardLayer = forwardInfo.collider.gameObject.layer;
+        }
+
         if (isJumping && centerGroundInfo.collider && Time.time - jumpTimer > 0.2){
             isJumping = false;
         }
         
-        if(!centerGroundInfo.collider && !isJumping  && Time.time - timer > 0.5f)
+        if((!centerGroundInfo.collider && !isJumping  && Time.time - timer > 0.5f) || forwardLayer == groundLayer)
         {
             if (movingRight)
             {

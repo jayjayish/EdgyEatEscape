@@ -9,13 +9,14 @@ using UnityEngine;
 public class EnemyController : CharacterController, IPooledObject
 {
     [SerializeField] protected float touchDamage = 1f;
-    private GameObject enemyHealth; //The full bar itself
-    private GameObject enemyHealthBar; //The red stuff
+    protected GameObject enemyHealth; //The full bar itself
+    protected GameObject enemyHealthBar; //The red stuff
 
     //Instances for above
-    private GameObject enemyHealthInst;
-    private GameObject enemyHealthBarInst;
-    private float healthX;
+    protected GameObject enemyHealthInst;
+    protected GameObject enemyHealthBarInst;
+    protected float healthX = 1;
+    
 
     protected override void OnEnable()
     {
@@ -48,10 +49,12 @@ public class EnemyController : CharacterController, IPooledObject
         enemyHealthBarInst.transform.parent = gameObject.transform;
         healthX = enemyHealthBarInst.transform.localScale.x;
 
+
+        
         //Debug.Log("Current Health = " + currentHealth + " | Max Health = " + maxHealth);
     }
 
-    private void updateHealth() {
+    protected void updateHealth() {
         //Debug.Log("Current Health = " + currentHealth + " | Max Health = " + maxHealth);
 
         float ratio = (float)currentHealth / (float)maxHealth;
